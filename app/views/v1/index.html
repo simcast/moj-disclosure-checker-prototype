@@ -1,0 +1,50 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Check if you need to tell people about your criminal record
+      </h1>
+      <p>
+        Use this service to check if you need to tell anyone about a caution or conviction on your criminal record.
+      </p>
+
+      <p>
+        You might be asked about your criminal record when applying for:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>jobs</li>
+        <li>college or university</li>
+        <li>insurance</li>
+      </ul>
+
+      <p>
+        Most cautions and convictions expire (become 'spent') after a certain length of time. You don't usually need to tell anyone about them after they become spent.
+      </p>
+
+      <div class="govuk-inset-text">
+        An employer might need to know about spent cautions or convictions when you apply for <a href="https://www.gov.uk/exoffenders-and-employment?#when-employers-still-need-to-know-about-your-conviction">certain types of job</a>.
+      </div>
+
+      <p>
+        This service is for people in England and Wales.
+      </p>
+
+      <a href="v1/cautioned-or-convicted" role="button" draggable="false" class="govuk-button govuk-button--start">
+        Start now
+      </a>
+
+    </div>
+</div>
+
+{% endblock %}
