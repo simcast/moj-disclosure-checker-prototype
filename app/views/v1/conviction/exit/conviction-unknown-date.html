@@ -13,10 +13,10 @@
 
       <div class="govuk-panel govuk-panel--confirmation">
           <h1 class="govuk-panel__title">
-            Your caution expired on the day it was given to you
+            Your conviction will expire 6 months after the sentence ends
           </h1>
           <div class="govuk-panel__body">
-            You do not need to tell anyone about this caution unless an <a href="https://www.gov.uk/exoffenders-and-employment?#when-employers-still-need-to-know-about-your-conviction" target="_blank"">exception applies</a>.
+            As soon as the conviction expires you will not need to tell anyone about it unless you're <a href="https://www.gov.uk/exoffenders-and-employment?#when-employers-still-need-to-know-about-your-conviction" target="_blank"">applying for a job that needs a full criminal record check</a>.
           </div>
       </div>
 
@@ -29,6 +29,16 @@
     <div class="govuk-grid-column-two-thirds">
 
       <br/>
+
+      <h2 class="govuk-heading-s">Example</h2>
+
+      <p>
+        If your sentence ended on 17 September 2018, it would expire on 17 March 2019.
+      </p>
+
+      <p>
+        You would not need to tell people about the conviction after 17 March 2019.
+      </p>
 
       <h2 class="govuk-heading-s">About the expiry date</h2>
 
@@ -46,38 +56,28 @@
       </p>
 
       <table class="govuk-table">
-        <!-- <caption class="govuk-table__caption">Dates and amounts</caption> -->
-        <!-- <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="col">Date</th>
-            <th class="govuk-table__header" scope="col">Amount</th>
-          </tr>
-        </thead> -->
+
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
             <th class="govuk-table__header" scope="row">Criminal record type</th>
             <td class="govuk-table__cell">{{ data['cautioned-or-convicted'] }}</td>
           </tr>
           <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Type of caution</th>
-            <td class="govuk-table__cell">{{ data['simple-or-conditional-caution'] }}</td>
+            <th class="govuk-table__header" scope="row">Type of conviction</th>
+            <td class="govuk-table__cell">{{ data['conviction-type'] }}</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Name of conviction</th>
+            <td class="govuk-table__cell">{{ data['conviction-name'] }}</td>
           </tr>
           <tr class="govuk-table__row">
             <th class="govuk-table__header" scope="row">Age at time of caution</th>
-            <td class="govuk-table__cell">{{ data['age-at-caution'] }}</td>
+            <td class="govuk-table__cell">{{ data['age-at-conviction'] }}</td>
           </tr>
           <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Date caution given</th>
+            <th class="govuk-table__header" scope="row">Date conviction given</th>
             <td class="govuk-table__cell">Not known</td>
           </tr>
-
-          {% if data['conditions-met'] %}
-          <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Conditions stuck to</th>
-            <td class="govuk-table__cell">{{ data['conditions-met'] }}</td>
-          </tr>
-          {% endif %}
-
 
         </tbody>
       </table>

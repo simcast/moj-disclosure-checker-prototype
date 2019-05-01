@@ -72,6 +72,28 @@ router.post('/v1/caution/exit/caution-with-date', function (req, res) {
 
 // CONVICTION ROUTES
 
+router.post('/v1/conviction/date', function (req, res) {
+
+  let isConvictionDateKnown = req.session.data['is-conviction-date-known']
+
+  if (isConvictionDateKnown === 'no') {
+    res.redirect('/v1/conviction/age')
+  } else {
+    res.redirect('/v1/conviction/date')
+  }
+})
+
+router.post('/v1/conviction/exit/conviction-with-date', function (req, res) {
+
+  let isConvictionDateKnown = req.session.data['is-conviction-date-known']
+
+  if (isConvictionDateKnown === 'no') {
+    res.redirect('/v1/conviction/exit/conviction-unknown-date')
+  } else {
+    res.redirect('/v1/conviction/exit/conviction-with-date')
+  }
+})
+
 // Add your routes here - above the module.exports line
 
 module.exports = router

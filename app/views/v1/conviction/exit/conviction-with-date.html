@@ -13,10 +13,10 @@
 
       <div class="govuk-panel govuk-panel--confirmation">
           <h1 class="govuk-panel__title">
-            Your caution expired on 17 March 2019
+            Your conviction expired on 17 March 2019
           </h1>
           <div class="govuk-panel__body">
-            You do not need to tell anyone about this caution unless an <a href="https://www.gov.uk/exoffenders-and-employment?#when-employers-still-need-to-know-about-your-conviction" target="_blank"">exception applies</a>.
+            You do not need to tell anyone about this conviction unless you're <a href="https://www.gov.uk/exoffenders-and-employment?#when-employers-still-need-to-know-about-your-conviction" target="_blank"">applying for a job that needs a full criminal record check</a>.
           </div>
       </div>
 
@@ -29,11 +29,11 @@
     <div class="govuk-grid-column-two-thirds">
 
       <br/>
-      
+
       <h2 class="govuk-heading-m">How this date has been worked out</h2>
 
       <p>
-        The expiry date of your caution is based on:
+        The expiry date of your conviction is based on:
       </p>
 
       <ul class="govuk-list govuk-list--bullet">
@@ -59,15 +59,19 @@
             <td class="govuk-table__cell">{{ data['cautioned-or-convicted'] }}</td>
           </tr>
           <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Type of caution</th>
-            <td class="govuk-table__cell">{{ data['simple-or-conditional-caution'] }}</td>
+            <th class="govuk-table__header" scope="row">Type of conviction</th>
+            <td class="govuk-table__cell">{{ data['conviction-type'] }}</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Name of conviction</th>
+            <td class="govuk-table__cell">{{ data['conviction-name'] }}</td>
           </tr>
           <tr class="govuk-table__row">
             <th class="govuk-table__header" scope="row">Age at time of caution</th>
-            <td class="govuk-table__cell">{{ data['age-at-caution'] }}</td>
+            <td class="govuk-table__cell">{{ data['age-at-conviction'] }}</td>
           </tr>
           <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Date caution given</th>
+            <th class="govuk-table__header" scope="row">Date conviction given</th>
             <td class="govuk-table__cell">17 March 2019</td>
           </tr>
         </tbody>
