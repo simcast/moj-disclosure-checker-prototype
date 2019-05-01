@@ -1,0 +1,155 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="date-known" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What was your community order?
+            </h1>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="alcohol-abstinence" name="conviction-name" type="radio" value="Alcohol abstinence">
+              <label class="govuk-label govuk-radios__label" for="community-order">
+                Alcohol abstinence
+                <span class="govuk-hint">
+                  You were ordered not to drink for a certain period of time
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="alcohol-treatment" name="conviction-name" type="radio" value="Alcohol treatment">
+              <label class="govuk-label govuk-radios__label" for="alcohol-treatment">
+                Alcohol treatment
+                <span class="govuk-hint">
+                  You were given treatment to help you stop drinking
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="behavioural-change-programme" name="conviction-name" type="radio" value="Behavioural change programme">
+              <label class="govuk-label govuk-radios__label" for="behavioural-change-programme">
+                Behavioural change programme
+                <span class="govuk-hint">
+                  You were helped to change any dangerous or unwanted behaviour
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="curfew" name="conviction-name" type="radio" value="Curfew">
+              <label class="govuk-label govuk-radios__label" for="curfew">
+                Curfew
+                <span class="govuk-hint">
+                  You were ordered to stay indoors at certain times
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="drug-rehabilitation" name="conviction-name" type="radio" value="Drug rehabilitation">
+              <label class="govuk-label govuk-radios__label" for="drug-rehabilitation">
+                Drug rehabilitation
+                <span class="govuk-hint">
+                  You were given treatment to help you stop taking drugs
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="exclusion-requirement" name="conviction-name" type="radio" value="Exclusion requirement">
+              <label class="govuk-label govuk-radios__label" for="exclusion-requirement">
+                Exclusion requirement
+                <span class="govuk-hint">
+                  You were ordered to stay away from a certain place
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="foreign-travel-prohibition" name="conviction-name" type="radio" value="Foreign travel prohibition">
+              <label class="govuk-label govuk-radios__label" for="foreign-travel-prohibition">
+                Foreign travel prohibition
+                <span class="govuk-hint">
+                  You were ordered not to travel to any other country
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="prohibition" name="conviction-name" type="radio" value="Prohibition">
+              <label class="govuk-label govuk-radios__label" for="prohibition">
+                Prohibition
+                <span class="govuk-hint">
+                  You were banned from doing something, such as using the internet or going to football matches
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="referral-order" name="conviction-name" type="radio" value="Referral order">
+              <label class="govuk-label govuk-radios__label" for="referral-order">
+                Referral order
+                <span class="govuk-hint">
+                  You were referred to community volunteers and the youth offending team (YOT)
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rehabilitation-activity-requirement" name="conviction-name" type="radio" value="Rehabilitation activity requirement (RAR)">
+              <label class="govuk-label govuk-radios__label" for="rehabilitation-activity-requirement">
+                Rehabilitation activity requirement (RAR)
+                <span class="govuk-hint">
+                  You were given activities to help with your rehabilitation
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="residence-requirement" name="conviction-name" type="radio" value="Residence requirement">
+              <label class="govuk-label govuk-radios__label" for="residence-requirement">
+                Residence requirement
+                <span class="govuk-hint">
+                  You were ordered to live somewhere for a certain length of time
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="unpaid-work" name="conviction-name" type="radio" value="Unpaid work">
+              <label class="govuk-label govuk-radios__label" for="unpaid-work">
+                Unpaid work
+                <span class="govuk-hint">
+                  You were ordered to do community work without being paid
+                </span>
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

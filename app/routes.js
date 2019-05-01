@@ -1,6 +1,19 @@
 const express = require('express')
 const router = express.Router()
 
+// CAUTION OR CONVICTION
+router.post('/v1/caution/age', function (req, res) {
+
+  let cautionedOrConvicted = req.session.data['cautioned-or-convicted']
+
+  if (cautionedOrConvicted === 'Conviction') {
+    res.redirect('/v1/conviction/type')
+  } else {
+    res.redirect('/v1/caution/age')
+  }
+})
+
+// CAUTION ROUTES
 router.post('/v1/caution/youth-type', function (req, res) {
 
   let ageAtCaution = req.session.data['age-at-caution']
@@ -56,6 +69,8 @@ router.post('/v1/caution/exit/caution-with-date', function (req, res) {
     res.redirect('/v1/caution/exit/caution-with-date')
   }
 })
+
+// CONVICTION ROUTES
 
 // Add your routes here - above the module.exports line
 
