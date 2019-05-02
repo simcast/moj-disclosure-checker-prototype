@@ -13,10 +13,10 @@
 
       <div class="govuk-panel govuk-panel--confirmation">
           <h1 class="govuk-panel__title">
-            Your conviction expired on 17 March 2019
+            Your conviction will expire on 17 September 2019
           </h1>
           <div class="govuk-panel__body">
-            You do not need to declare this conviction unless you're applying for a job that needs a full <a href="https://www.gov.uk/exoffenders-and-employment?#when-employers-still-need-to-know-about-your-conviction" target="_blank"">criminal record check</a>.
+            After this date you will not need to declare this conviction unless you’re applying for a job that needs a full <a href="https://www.gov.uk/exoffenders-and-employment?#when-employers-still-need-to-know-about-your-conviction" target="_blank"">criminal record check</a>.
           </div>
       </div>
 
@@ -30,15 +30,15 @@
 
       <br/>
 
-      <h2 class="govuk-heading-m">How this date has been worked out</h2>
+      <h2 class="govuk-heading-s">How this date has been worked out</h2>
 
       <p>
         The expiry date of your conviction is based on:
       </p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>the information you’ve provided</li>
-        <li>the current law on when cautions and convictions expire</li>
+        <li>what you told us about your conviction</li>
+        <li>the current law on when convictions expire</li>
       </ul>
 
       <p>
@@ -67,11 +67,16 @@
             <td class="govuk-table__cell">{{ data['conviction-name'] }}</td>
           </tr>
           <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Age at time of caution</th>
+            <th class="govuk-table__header" scope="row">Age at time of conviction</th>
             <td class="govuk-table__cell">{{ data['age-at-conviction'] }}</td>
           </tr>
           <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Date conviction given</th>
+            <th class="govuk-table__header" scope="row">Date of conviction</th>
+            <td class="govuk-table__cell">17 September 2018</td>
+          </tr>
+        </tbody>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Date conviction ended</th>
             <td class="govuk-table__cell">17 March 2019</td>
           </tr>
         </tbody>
