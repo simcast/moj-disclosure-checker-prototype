@@ -77,7 +77,7 @@ router.post('/v1/conviction/date', function (req, res) {
   let isConvictionDateKnown = req.session.data['is-conviction-date-known']
 
   if (isConvictionDateKnown === 'no') {
-    res.redirect('/v1/conviction/age')
+    res.redirect('/v1/conviction/exit/conviction-unknown-date')
   } else {
     res.redirect('/v1/conviction/date')
   }
