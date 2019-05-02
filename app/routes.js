@@ -72,11 +72,28 @@ router.post('/v1/caution/exit/caution-with-date', function (req, res) {
 
 // CONVICTION ROUTES
 
+//Conviction type
+
+router.post('/v1/conviction/community', function (req, res) {
+
+  let convictionType = req.session.data['conviction-type']
+
+  if (convictionType === 'Custodial sentence') {
+    res.redirect('/v1/conviction/custodial')
+  } else {
+    res.redirect('/v1/conviction/community')
+  }
+})
+
+//After conviction type
 router.post('/v1/conviction/date', function (req, res) {
 
   let isConvictionDateKnown = req.session.data['is-conviction-date-known']
+  let convictionType = req.session.data['conviction-type']
 
-  if (isConvictionDateKnown === 'no') {
+  if ((isConvictionDateKnown === 'no') && (convictionType === 'Custodial sentence')) {
+    res.redirect('/v1/conviction/conviction-months-weeks')
+  } else if (isConvictionDateKnown === 'no') {
     res.redirect('/v1/conviction/exit/conviction-unknown-date')
   } else {
     res.redirect('/v1/conviction/date')
@@ -86,8 +103,11 @@ router.post('/v1/conviction/date', function (req, res) {
 router.post('/v1/conviction/exit/conviction-with-date', function (req, res) {
 
   let isConvictionDateKnown = req.session.data['is-conviction-date-known']
+  let convictionType = req.session.data['conviction-type']
 
-  if (isConvictionDateKnown === 'no') {
+  if ((isConvictionDateKnown === 'no') && (convictionType === 'Custodial sentence')) {
+    res.redirect('/v1/conviction/exit/conviction-unknown-date-custodial')
+  } else if (isConvictionDateKnown === 'no') {
     res.redirect('/v1/conviction/exit/conviction-unknown-date')
   } else {
     res.redirect('/v1/conviction/exit/conviction-with-date')
