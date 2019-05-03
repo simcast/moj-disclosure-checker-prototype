@@ -31,11 +31,11 @@ router.post('/v1/caution/date', function (req, res) {
   let youthSimpleOrConditionalCaution = req.session.data['youth-simple-or-conditional-caution']
   let simpleOrConditionalCaution = req.session.data['simple-or-conditional-caution']
 
-  if ((isCautionDateKnown === 'no') && (youthSimpleOrConditionalCaution === 'Simple')) {
+  if ((isCautionDateKnown === 'no') && (simpleOrConditionalCaution === 'Youth caution')) {
     res.redirect('/v1/caution/exit/simple-unknown-date')
   } else if ((isCautionDateKnown === 'no') && (simpleOrConditionalCaution === 'Simple')) {
     res.redirect('/v1/caution/exit/simple-unknown-date')
-  } else if ((isCautionDateKnown === 'no') && (youthSimpleOrConditionalCaution === 'Conditional')) {
+  } else if ((isCautionDateKnown === 'no') && (simpleOrConditionalCaution === 'Youth conditional caution')) {
     res.redirect('/v1/caution/conditions-met')
   } else if ((isCautionDateKnown === 'no') && (simpleOrConditionalCaution === 'Conditional')) {
     res.redirect('/v1/caution/conditions-met')
@@ -49,7 +49,7 @@ router.post('/v1/caution/conditions-end', function (req, res) {
   let youthSimpleOrConditionalCaution = req.session.data['youth-simple-or-conditional-caution']
   let simpleOrConditionalCaution = req.session.data['simple-or-conditional-caution']
 
-  if ((youthSimpleOrConditionalCaution === 'Simple') || (simpleOrConditionalCaution === 'Simple')) {
+  if ((simpleOrConditionalCaution === 'Simple') || (simpleOrConditionalCaution === 'Youth caution')) {
     res.redirect('/v1/caution/exit/caution-with-date')
   } else {
     res.redirect('/v1/caution/conditions-end')
