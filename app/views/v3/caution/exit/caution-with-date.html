@@ -1,0 +1,97 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Your caution expired on 17 March 2019
+          </h1>
+          <div class="govuk-panel__body">
+            You do not need to declare this caution unless you're applying for a job that needs a full <a href="http://hub.unlock.org.uk/knowledgebase/eligibility-criminal-record-checks/" target="_blank"">criminal record check</a>.
+          </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <br/>
+
+      <h2 class="govuk-heading-m">How this date has been worked out</h2>
+
+      <p>
+        The expiry date of your caution is based on:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the information you’ve provided</li>
+        <li>the current law on when cautions and convictions expire</li>
+      </ul>
+
+      <p>
+        This table shows the information you provided, which was used to work out the expiry date. If you entered any incorrect information, the expiry date will be incorrect.
+      </p>
+
+      <table class="govuk-table">
+        <!-- <caption class="govuk-table__caption">Dates and amounts</caption> -->
+        <!-- <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Date</th>
+            <th class="govuk-table__header" scope="col">Amount</th>
+          </tr>
+        </thead> -->
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Criminal record type</th>
+            <td class="govuk-table__cell">{{ data['cautioned-or-convicted'] }}</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Type of caution</th>
+            <td class="govuk-table__cell">{{ data['simple-or-conditional-caution'] }}</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Age at time of caution</th>
+            <td class="govuk-table__cell">{{ data['age-at-caution'] }}</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Date caution given</th>
+            <td class="govuk-table__cell">17 March 2019</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        If you need to change any information, or if you have another caution or conviction you’d like to check, <a href="../../../v1">use the service again</a>.
+      </p>
+
+      <p><a href="javascript:window.print()">Print this page</a></p>
+
+    </div>
+</div>
+
+{% endblock %}
+
+<script type="text/javascript">
+
+  // var monthNo = req.session.data['first-name']
+  //
+  // var month_name = function(monthNo){
+  // mlist = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+  //   return mlist[dt.getMonth()];
+  // };
+  window.onload = console.log("Hello");
+
+</script>

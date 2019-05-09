@@ -1,0 +1,50 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="date" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              How old were you when you got convicted?
+            </h1>
+          </legend>
+
+          <div class="govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="under-18" name="age-at-conviction" type="radio" value="Under 18">
+              <label class="govuk-label govuk-radios__label" for="under-18">
+                Under 18
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="over-18" name="age-at-conviction" type="radio" value="18 or over">
+              <label class="govuk-label govuk-radios__label" for="over-18">
+                18 or over
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

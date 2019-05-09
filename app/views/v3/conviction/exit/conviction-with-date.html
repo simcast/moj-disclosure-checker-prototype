@@ -1,0 +1,94 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Your conviction will expire on 17 March 2020
+          </h1>
+          <div class="govuk-panel__body">
+            After this date you will not need to declare this conviction unless you’re applying for a job that needs a full <a href="http://hub.unlock.org.uk/knowledgebase/eligibility-criminal-record-checks/" target="_blank">criminal record check</a>.
+          </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <br/>
+
+      <h2 class="govuk-heading-s">How this date has been worked out</h2>
+
+      <p>
+        The expiry date of your conviction is based on:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>what you told us about your conviction</li>
+        <li>the current law on when convictions expire</li>
+      </ul>
+
+      <p>
+        This table shows the information you provided, which was used to work out the expiry date. If you entered any incorrect information, the expiry date will be incorrect.
+      </p>
+
+      <table class="govuk-table">
+        <!-- <caption class="govuk-table__caption">Dates and amounts</caption> -->
+        <!-- <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Date</th>
+            <th class="govuk-table__header" scope="col">Amount</th>
+          </tr>
+        </thead> -->
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Criminal record type</th>
+            <td class="govuk-table__cell">{{ data['cautioned-or-convicted'] }}</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Type of conviction</th>
+            <td class="govuk-table__cell">{{ data['conviction-type'] }}</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Name of conviction</th>
+            <td class="govuk-table__cell">{{ data['conviction-name'] }}</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Age at time of conviction</th>
+            <td class="govuk-table__cell">{{ data['age-at-conviction'] }}</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Date of conviction</th>
+            <td class="govuk-table__cell">17 September 2018</td>
+          </tr>
+        </tbody>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Date conviction ended</th>
+            <td class="govuk-table__cell">17 March 2019</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        If you need to change any information, or if you have another caution or conviction you’d like to check, <a href="../../../v1">use the service again</a>.
+      </p>
+
+      <p><a href="javascript:window.print()">Print this page</a></p>
+
+    </div>
+</div>
+
+{% endblock %}
