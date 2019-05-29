@@ -93,6 +93,20 @@ router.post('/v3/conviction/community', function (req, res) {
   }
 })
 
+//Motoring convictions
+
+router.post('/v3/conviction/conviction-months-weeks', function (req, res) {
+
+  let convictionName = req.session.data['conviction-name']
+
+  if (convictionName === 'Endorsement') {
+    res.redirect('/v3/conviction/exit/conviction-with-date')
+  } else {
+    res.redirect('/v3/conviction/conviction-months-weeks')
+  }
+})
+
+
 //After conviction type
 // router.post('/v3/conviction/date', function (req, res) {
 //
