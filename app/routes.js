@@ -87,7 +87,7 @@ router.post('/v3/conviction/community', function (req, res) {
   } else if (convictionType === 'Financial penalty') {
     res.redirect('/v3/conviction/financial-penalty')
   } else if (convictionType === 'Motoring') {
-    res.redirect('/v3/conviction/motoring')
+    res.redirect('/v3/conviction/age')
   } else {
     res.redirect('/v3/conviction/community')
   }
@@ -97,9 +97,9 @@ router.post('/v3/conviction/community', function (req, res) {
 
 router.post('/v3/conviction/conviction-months-weeks', function (req, res) {
 
-  let convictionName = req.session.data['conviction-name']
+  let convictionType = req.session.data['conviction-type']
 
-  if (convictionName === 'Endorsement') {
+  if (convictionType === 'Motoring') {
     res.redirect('/v3/conviction/exit/conviction-with-date')
   } else {
     res.redirect('/v3/conviction/conviction-months-weeks')
