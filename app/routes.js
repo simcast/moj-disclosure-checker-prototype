@@ -37,12 +37,20 @@ function calc (req, res) {
   // calculation
   var spentDate = new Date();
 
-  if (convictType == "Community order" && age == "Under 18") {
-    if (weeksOrMonths == "months") {
-      spentDate = new Date(convictYear,convictMonth + convictionLengthMonths + 6,convictDay);
-    } else if (weeksOrMonths == "weeks") {
-      spentDate = new Date(convictYear,convictMonth + 6,convictDay + (convictionLengthWeeks * 7));
-    }
+  if (convictType == "Community order") {
+    if (age == "Under 18") {
+        if (weeksOrMonths == "months") {
+          spentDate = new Date(convictYear,convictMonth + convictionLengthMonths + 6,convictDay);
+        } else if (weeksOrMonths == "weeks") {
+          spentDate = new Date(convictYear,convictMonth + 6,convictDay + (convictionLengthWeeks * 7));
+        }
+      } else if (age == "18 or over") {
+        if (weeksOrMonths == "months") {
+          spentDate = new Date(convictYear + 1,convictMonth + convictionLengthMonths,convictDay);
+        } else if (weeksOrMonths == "weeks") {
+          spentDate = new Date(convictYear + 1,convictMonth,convictDay + (convictionLengthWeeks * 7));
+        }
+      }
   }
 
   //change format
