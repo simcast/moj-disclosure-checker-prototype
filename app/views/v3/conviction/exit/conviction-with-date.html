@@ -13,7 +13,7 @@
 
       <div class="govuk-panel govuk-panel--confirmation">
           <h1 class="govuk-panel__title">
-            Your conviction will expire on 17 March 2020
+            Your conviction will expire on <br/><span id="spent-placeholder">{{ data['formatted-spent-date'] }}</span>
           </h1>
           <div class="govuk-panel__body">
             After this date you will not need to declare this conviction unless you’re applying for a job that needs a full <a href="http://hub.unlock.org.uk/knowledgebase/eligibility-criminal-record-checks/" target="_blank">criminal record check</a>.
@@ -62,22 +62,25 @@
             <th class="govuk-table__header" scope="row">Type of conviction</th>
             <td class="govuk-table__cell">{{ data['conviction-type'] }}</td>
           </tr>
-          <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Name of conviction</th>
-            <td class="govuk-table__cell">{{ data['conviction-name'] }}</td>
-          </tr>
+
+          {% if data['conviction-name'] %}
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="row">Name of conviction</th>
+              <td class="govuk-table__cell">{{ data['conviction-name'] }}</td>
+            </tr>
+          {% endif %}
+
           <tr class="govuk-table__row">
             <th class="govuk-table__header" scope="row">Age at time of conviction</th>
             <td class="govuk-table__cell">{{ data['age-at-conviction'] }}</td>
           </tr>
           <tr class="govuk-table__row">
             <th class="govuk-table__header" scope="row">Date of conviction</th>
-            <td class="govuk-table__cell">17 September 2018</td>
+            <td class="govuk-table__cell">{{ data['formatted-conviction-date'] }}</td>
           </tr>
-        </tbody>
           <tr class="govuk-table__row">
             <th class="govuk-table__header" scope="row">Date conviction ended</th>
-            <td class="govuk-table__cell">17 March 2019</td>
+            <td class="govuk-table__cell">{{ data['formatted-spent-date'] }}</td>
           </tr>
         </tbody>
       </table>
@@ -89,6 +92,7 @@
       <p><a href="javascript:window.print()">Print this page</a></p>
 
     </div>
+
 </div>
 
 {% endblock %}

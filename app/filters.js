@@ -7,6 +7,10 @@ module.exports = function (env) {
    */
   var filters = {}
 
+  filters.sayHi = function(name) {
+      return 'Hi ' + name + '!'
+  }
+
   /* ------------------------------------------------------------------
     add your methods to the filters obj below this comment block:
     @example:

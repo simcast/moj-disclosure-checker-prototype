@@ -1,7 +1,12 @@
 /* global $ */
 
-// var months = [ "January", "February", "March", "April", "May", "June",
-//                "July", "August", "September", "October", "November", "December" ];
+// var express = require('express')
+// var parseurl = require('parseurl')
+// var session = require('express-session')
+// var app = express()
+
+// const express = require('express')
+// const router = express.Router()
 
 // Warn about using the kit in production
 if (window.console && window.console.info) {
@@ -12,15 +17,6 @@ $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 })
 
-// Converting month number to Name
-
-function convertCautionMonthToString() {
-
-  var d = req.session.data['caution-month'];
-
-  d = d.getMonth();
-
-}
 
 // function getMonthFromString(mon){
 //
@@ -30,3 +26,5 @@ function convertCautionMonthToString() {
 //    }
 //    return -1;
 //  }
+
+// module.exports = app

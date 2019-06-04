@@ -3,6 +3,76 @@ const router = express.Router()
 
 // *********** VERSION 3 ***********
 
+// Calculator
+
+function calc (req, res) {
+
+  //conviction type
+  let convictType = req.session.data['conviction-type']
+
+  //age
+  let age = req.session.data['age-at-conviction']
+
+  //length of conviction
+  let weeksOrMonths = req.session.data['conviction-weeks-months']
+  let convictionLengthWeeks = req.session.data['conviction-weeks-number']
+  let convictionLengthMonths = req.session.data['conviction-months-number']
+
+
+  //get date input
+  var convictDay = req.session.data['conviction-day']
+  var convictMonth = req.session.data['conviction-month']
+  var convictYear = req.session.data['conviction-year']
+
+  //convert to number
+  convictDay = parseInt(convictDay);
+  convictMonth = parseInt(convictMonth)-1;
+  convictYear = parseInt(convictYear);
+  convictionLengthWeeks = parseInt(convictionLengthWeeks);
+  convictionLengthMonths = parseInt(convictionLengthMonths);
+
+  //assemble convict date
+  var convictDate = new Date(convictYear,convictMonth,convictDay);
+
+  // calculation
+  var spentDate = new Date();
+
+  if (convictType == "Community order" && age == "Under 18") {
+    if (weeksOrMonths == "months") {
+      spentDate = new Date(convictYear,convictMonth + convictionLengthMonths + 6,convictDay);
+    } else if (weeksOrMonths == "weeks") {
+      spentDate = new Date(convictYear,convictMonth + 6,convictDay + (convictionLengthWeeks * 7));
+    }
+  }
+
+  //change format
+
+  const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"];
+
+  // const formattedConvictDate = convictDate.toLocaleString('en-us', { day: 'numeric', month: 'long', year: 'numeric'})
+  // const formattedSpentDate = spentDate.toLocaleString('en-us', { day: 'numeric', month: 'long', year: 'numeric'})
+
+  const formattedConvictDate = convictDate.getDate() + ' ' + monthNames[convictDate.getMonth()] + ' ' + convictDate.getFullYear()
+
+  const formattedSpentDate = spentDate.getDate() + ' ' + monthNames[spentDate.getMonth()] + ' ' + spentDate.getFullYear()
+
+  //write to session data
+  req.session.data['formatted-conviction-date'] = formattedConvictDate;
+  req.session.data['formatted-spent-date'] = formattedSpentDate;
+
+  //checks
+  // console.log(convictMonth)
+  // console.log(convictMonth + convictionLengthMonths + 6)
+  // console.log(typeof convictionLengthMonths)
+  // console.log(convictionLengthMonths)
+  // console.log(convictType)
+  // console.log(formattedConvictDate)
+  // console.log(formattedSpentDate)
+
+
+}
+
 // CAUTION OR CONVICTION
 router.post('/v3/caution/age', function (req, res) {
 
@@ -86,7 +156,7 @@ router.post('/v3/conviction/community', function (req, res) {
     res.redirect('/v3/conviction/discharge')
   } else if (convictionType === 'Financial penalty') {
     res.redirect('/v3/conviction/financial-penalty')
-  } else if (convictionType === 'Motoring') {
+  } else if (convictionType === 'Motoring endorsement') {
     res.redirect('/v3/conviction/age')
   } else {
     res.redirect('/v3/conviction/community')
@@ -99,7 +169,7 @@ router.post('/v3/conviction/conviction-months-weeks', function (req, res) {
 
   let convictionType = req.session.data['conviction-type']
 
-  if (convictionType === 'Motoring') {
+  if (convictionType === 'Motoring endorsement') {
     res.redirect('/v3/conviction/exit/conviction-with-date')
   } else {
     res.redirect('/v3/conviction/conviction-months-weeks')
@@ -124,6 +194,8 @@ router.post('/v3/conviction/conviction-months-weeks', function (req, res) {
 
 router.post('/v3/conviction/exit/conviction-with-date', function (req, res) {
 
+  calc (req, res);
+
   let isConvictionDateKnown = req.session.data['is-conviction-date-known']
   let convictionType = req.session.data['conviction-type']
 
@@ -134,6 +206,7 @@ router.post('/v3/conviction/exit/conviction-with-date', function (req, res) {
   } else {
     res.redirect('/v3/conviction/exit/conviction-with-date')
   }
+
 })
 
 router.post('/v3/conviction/conviction-months-weeks', function (req, res) {
