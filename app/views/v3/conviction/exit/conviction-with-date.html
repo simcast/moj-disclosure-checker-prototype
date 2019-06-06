@@ -28,6 +28,26 @@
 
     <div class="govuk-grid-column-two-thirds">
 
+      {% if data['conviction-type'] == "Motoring endorsement" %}
+
+        <br/>
+
+        <h2 class="govuk-heading-s">Your driving record</h2>
+
+        <p>
+          Although the conviction will expire from your criminal record after this date, the DVLA will keep this information on your driving record for either <a href="https://www.gov.uk/penalty-points-endorsements/how-long-endorsements-stay-on-your-driving-licence">4 or 11 years</a>.
+        </p>
+
+        <p>
+          Insurance companies might check your driving record as well as your criminal record.
+        </p>
+
+        <p>
+          You can <a href="https://www.gov.uk/view-driving-licence">view your driving licence</a> to find out what information the DVLA holds about your driving record.
+        </p>
+
+      {% endif %}
+
       <br/>
 
       <h2 class="govuk-heading-s">How this date has been worked out</h2>
@@ -76,11 +96,23 @@
           </tr>
           <tr class="govuk-table__row">
             <th class="govuk-table__header" scope="row">Date of conviction</th>
-            <td class="govuk-table__cell">{{ data['formatted-conviction-date'] }}</td>
+            <td class="govuk-table__cell">
+              {% if data['formatted-conviction-date'] %}
+                {{ data['formatted-conviction-date'] }}
+              {% else %}
+                6 June 2018
+              {% endif %}
+            </td>
           </tr>
           <tr class="govuk-table__row">
             <th class="govuk-table__header" scope="row">Date conviction ended</th>
-            <td class="govuk-table__cell">{{ data['formatted-spent-date'] }}</td>
+            <td class="govuk-table__cell">
+              {% if data['formatted-spent-date'] %}
+                {{ data['formatted-spent-date'] }}
+              {% else %}
+                6 June 2019
+              {% endif %}
+            </td>
           </tr>
         </tbody>
       </table>

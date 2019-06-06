@@ -3,9 +3,9 @@ const router = express.Router()
 
 // *********** VERSION 3 ***********
 
-// Calculator
+// CONVICTION CALCULATION
 
-function calc (req, res) {
+function convictCalc (req, res) {
 
   //conviction type
   let convictType = req.session.data['conviction-type']
@@ -34,7 +34,7 @@ function calc (req, res) {
   //assemble convict date
   var convictDate = new Date(convictYear,convictMonth,convictDay);
 
-  // calculation
+  //calculation
   var spentDate = new Date();
 
   if (convictType == "Community order") {
@@ -58,8 +58,6 @@ function calc (req, res) {
   const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"];
 
-  // const formattedConvictDate = convictDate.toLocaleString('en-us', { day: 'numeric', month: 'long', year: 'numeric'})
-  // const formattedSpentDate = spentDate.toLocaleString('en-us', { day: 'numeric', month: 'long', year: 'numeric'})
 
   const formattedConvictDate = convictDate.getDate() + ' ' + monthNames[convictDate.getMonth()] + ' ' + convictDate.getFullYear()
 
@@ -77,6 +75,83 @@ function calc (req, res) {
   // console.log(convictType)
   // console.log(formattedConvictDate)
   // console.log(formattedSpentDate)
+
+
+}
+
+// CAUTION CALCULATION
+
+function cautionCalc (req, res) {
+
+  //conviction type
+  let cautionType = req.session.data['simple-or-conditional-caution']
+
+  //age
+  let age = req.session.data['age-at-caution']
+
+  //length of conviction
+  // let weeksOrMonths = req.session.data['conviction-weeks-months']
+  // let convictionLengthWeeks = req.session.data['conviction-weeks-number']
+  // let convictionLengthMonths = req.session.data['conviction-months-number']
+
+
+  //get date inputs
+  var cautionDay = req.session.data['caution-day']
+  var cautionMonth = req.session.data['caution-month']
+  var cautionYear = req.session.data['caution-year']
+
+  var conditionsEndDay = req.session.data['conditions-end-day']
+  var conditionsEndMonth = req.session.data['conditions-end-month']
+  var conditionsEndYear = req.session.data['conditions-end-year']
+
+  //convert to number
+  cautionDay = parseInt(cautionDay);
+  cautionMonth = parseInt(cautionMonth)-1;
+  cautionYear = parseInt(cautionYear);
+  conditionsEndDay = parseInt(conditionsEndDay);
+  conditionsEndMonth = parseInt(conditionsEndMonth)-1;
+  conditionsEndYear = parseInt(conditionsEndYear);
+  // convictionLengthWeeks = parseInt(convictionLengthWeeks);
+  // convictionLengthMonths = parseInt(convictionLengthMonths);
+
+  //assemble convict date
+  var cautionDate = new Date(cautionYear,cautionMonth,cautionDay);
+
+  //calculation
+  var spentDate = new Date();
+
+  if (cautionType == "conditional-caution" || cautionType == "youth-conditional-caution") {
+    spentDate = new Date(conditionsEndYear,conditionsEndMonth + 3,conditionsEndDay);
+  } else if (cautionType == "simple-caution" || cautionType == "youth-simple-caution") {
+    spentDate = new Date(cautionYear,cautionMonth,cautionDay);
+  }
+
+  //change format
+
+  const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"];
+
+
+  const formattedCautionDate = cautionDate.getDate() + ' ' + monthNames[cautionDate.getMonth()] + ' ' + cautionDate.getFullYear()
+
+  const formattedSpentDate = spentDate.getDate() + ' ' + monthNames[spentDate.getMonth()] + ' ' + spentDate.getFullYear()
+
+  //write to session data
+  req.session.data['formatted-caution-date'] = formattedCautionDate;
+  req.session.data['formatted-spent-date'] = formattedSpentDate;
+
+  //checks
+  // console.log(cautionMonth)
+  // console.log(convictMonth + convictionLengthMonths + 6)
+  // console.log(typeof convictionLengthMonths)
+  // console.log(convictionLengthMonths)
+  console.log(typeof conditionsEndDay)
+  console.log(typeof conditionsEndMonth)
+  console.log(typeof conditionsEndYear)
+  console.log(cautionType)
+  console.log(cautionDate)
+  console.log(formattedCautionDate)
+  console.log(formattedSpentDate)
 
 
 }
@@ -107,17 +182,10 @@ router.post('/v3/caution/youth-type', function (req, res) {
 
 router.post('/v3/caution/date', function (req, res) {
 
-  let isCautionDateKnown = req.session.data['is-caution-date-known']
   let youthSimpleOrConditionalCaution = req.session.data['youth-simple-or-conditional-caution']
   let simpleOrConditionalCaution = req.session.data['simple-or-conditional-caution']
 
-  if ((isCautionDateKnown === 'no') && (simpleOrConditionalCaution === 'Youth caution')) {
-    res.redirect('/v3/caution/exit/simple-unknown-date')
-  } else if ((isCautionDateKnown === 'no') && (simpleOrConditionalCaution === 'Simple')) {
-    res.redirect('/v3/caution/exit/simple-unknown-date')
-  } else if ((isCautionDateKnown === 'no') && (simpleOrConditionalCaution === 'Youth conditional caution')) {
-    res.redirect('/v3/caution/conditions-met')
-  } else if ((isCautionDateKnown === 'no') && (simpleOrConditionalCaution === 'Conditional')) {
+  if (simpleOrConditionalCaution === 'Youth conditional caution' || simpleOrConditionalCaution === 'Conditional') {
     res.redirect('/v3/caution/conditions-met')
   } else {
     res.redirect('/v3/caution/date')
@@ -126,28 +194,32 @@ router.post('/v3/caution/date', function (req, res) {
 
 router.post('/v3/caution/conditions-end', function (req, res) {
 
-  let youthSimpleOrConditionalCaution = req.session.data['youth-simple-or-conditional-caution']
-  let simpleOrConditionalCaution = req.session.data['simple-or-conditional-caution']
+  let conditionsMet = req.session.data['conditions-met']
 
-  if ((simpleOrConditionalCaution === 'Simple') || (simpleOrConditionalCaution === 'Youth caution')) {
-    res.redirect('/v3/caution/exit/caution-with-date')
+  if (conditionsMet === 'No') {
+    res.redirect('/v3/caution/exit/conditional-broken')
   } else {
     res.redirect('/v3/caution/conditions-end')
   }
+
 })
 
 router.post('/v3/caution/exit/caution-with-date', function (req, res) {
 
-  let isCautionDateKnown = req.session.data['is-caution-date-known']
-  let conditionsMet = req.session.data['conditions-met']
+  cautionCalc (req, res);
 
-  if ((conditionsMet === 'Yes') && (isCautionDateKnown === 'no')) {
-    res.redirect('/v3/caution/exit/conditional-unknown-date')
-  } else if (conditionsMet === 'No') {
-    res.redirect('/v3/caution/exit/conditional-broken')
-  } else {
-    res.redirect('/v3/caution/exit/caution-with-date')
-  }
+  res.redirect('/v3/caution/exit/caution-with-date')
+
+  // let isCautionDateKnown = req.session.data['is-caution-date-known']
+  // let conditionsMet = req.session.data['conditions-met']
+  //
+  // if ((conditionsMet === 'Yes') && (isCautionDateKnown === 'no')) {
+  //   res.redirect('/v3/caution/exit/conditional-unknown-date')
+  // } else if (conditionsMet === 'No') {
+  //   res.redirect('/v3/caution/exit/conditional-broken')
+  // } else {
+  //   res.redirect('/v3/caution/exit/caution-with-date')
+  // }
 })
 
 // CONVICTION ROUTES
@@ -202,7 +274,7 @@ router.post('/v3/conviction/conviction-months-weeks', function (req, res) {
 
 router.post('/v3/conviction/exit/conviction-with-date', function (req, res) {
 
-  calc (req, res);
+  convictCalc (req, res);
 
   let isConvictionDateKnown = req.session.data['is-conviction-date-known']
   let convictionType = req.session.data['conviction-type']
