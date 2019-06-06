@@ -13,7 +13,14 @@
 
       <div class="govuk-panel govuk-panel--confirmation">
           <h1 class="govuk-panel__title">
-            Your conviction will expire on <br/><span id="spent-placeholder">{{ data['formatted-spent-date'] | default }}</span>
+            Your conviction will expire on <br/>
+            <span id="spent-placeholder">
+              {% if data['formatted-spent-date'] %}
+                {{ data['formatted-spent-date'] }}
+              {% else %}
+                6 June 2018
+              {% endif %}
+            </span>
           </h1>
           <div class="govuk-panel__body">
             After this date you will not need to declare this conviction unless you’re applying for a job that needs a full <a href="http://hub.unlock.org.uk/knowledgebase/eligibility-criminal-record-checks/" target="_blank">criminal record check</a>.
