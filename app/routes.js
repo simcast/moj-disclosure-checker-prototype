@@ -264,7 +264,7 @@ router.post('/v3/conviction/community', function (req, res) {
   } else if (convictionType === 'Financial penalty') {
     res.redirect('/v3/conviction/financial-penalty')
   } else if (convictionType === 'Motoring endorsement') {
-    res.redirect('/v3/conviction/age')
+    res.redirect('/v3/conviction/date')
   } else {
     res.redirect('/v3/conviction/community')
   }
