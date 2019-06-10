@@ -162,19 +162,32 @@ router.post('/v3/caution/age', function (req, res) {
   let cautionedOrConvicted = req.session.data['cautioned-or-convicted']
 
   if (cautionedOrConvicted === 'Conviction') {
-    res.redirect('/v3/conviction/type')
+    res.redirect('/v3/conviction/age')
   } else {
     res.redirect('/v3/caution/age')
   }
 })
 
 // CAUTION ROUTES
+
+// Sendint to type vs. youth type
+// router.post('/v3/caution/youth-type', function (req, res) {
+//
+//   let ageAtCaution = req.session.data['age-at-caution']
+//
+//   if (ageAtCaution === '18 or over') {
+//     res.redirect('/v3/caution/type')
+//   } else {
+//     res.redirect('/v3/caution/youth-type')
+//   }
+// })
+
 router.post('/v3/caution/youth-type', function (req, res) {
 
   let ageAtCaution = req.session.data['age-at-caution']
 
   if (ageAtCaution === '18 or over') {
-    res.redirect('/v3/caution/type')
+    res.redirect('/v3/exit-over-18')
   } else {
     res.redirect('/v3/caution/youth-type')
   }
@@ -224,6 +237,20 @@ router.post('/v3/caution/exit/caution-with-date', function (req, res) {
 
 // CONVICTION ROUTES
 
+//Over 18 exit
+
+router.post('/v3/conviction/type', function (req, res) {
+
+  let ageAtConviction = req.session.data['age-at-conviction']
+
+  if (ageAtConviction === '18 or over') {
+    res.redirect('/v3/exit-over-18')
+  } else {
+    res.redirect('/v3/conviction/type')
+  }
+})
+
+
 //Conviction type
 
 router.post('/v3/conviction/community', function (req, res) {
@@ -272,22 +299,23 @@ router.post('/v3/conviction/conviction-months-weeks', function (req, res) {
 //   }
 // })
 
-router.post('/v3/conviction/exit/conviction-with-date', function (req, res) {
+// router.post('/v3/conviction/exit/conviction-with-date', function (req, res) {
+//
+//   convictCalc (req, res);
+//
+//   let isConvictionDateKnown = req.session.data['is-conviction-date-known']
+//   let convictionType = req.session.data['conviction-type']
+//
+//   if ((isConvictionDateKnown === 'no') && (convictionType === 'Custodial sentence')) {
+//     res.redirect('/v3/conviction/exit/conviction-unknown-date-custodial')
+//   } else if (isConvictionDateKnown === 'no') {
+//     res.redirect('/v3/conviction/exit/conviction-unknown-date')
+//   } else {
+//     res.redirect('/v3/conviction/exit/conviction-with-date')
+//   }
+//
+// })
 
-  convictCalc (req, res);
-
-  let isConvictionDateKnown = req.session.data['is-conviction-date-known']
-  let convictionType = req.session.data['conviction-type']
-
-  if ((isConvictionDateKnown === 'no') && (convictionType === 'Custodial sentence')) {
-    res.redirect('/v3/conviction/exit/conviction-unknown-date-custodial')
-  } else if (isConvictionDateKnown === 'no') {
-    res.redirect('/v3/conviction/exit/conviction-unknown-date')
-  } else {
-    res.redirect('/v3/conviction/exit/conviction-with-date')
-  }
-
-})
 
 router.post('/v3/conviction/conviction-months-weeks', function (req, res) {
 
