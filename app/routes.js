@@ -37,7 +37,7 @@ function convictCalc (req, res) {
   //calculation
   var spentDate = new Date();
 
-  if (convictType == "Community order") {
+  if (convictType == "Youth rehabilitation order") {
     if (age == "Under 18") {
         if (weeksOrMonths == "months") {
           spentDate = new Date(convictYear,convictMonth + convictionLengthMonths + 6,convictDay);

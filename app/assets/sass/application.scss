@@ -18,6 +18,14 @@ $govuk-global-styles: true;
   margin-top: 10px;
 }
 
+.govuk-panel-bullet-container {
+  display: flex;
+  justify-content: center;
+}
+.govuk-panel-body-with-bullet {
+  text-align: left;
+}
+
 // #weeksInput {
 //   display: none;
 // }
