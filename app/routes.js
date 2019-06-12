@@ -265,6 +265,8 @@ router.post('/v3/conviction/community', function (req, res) {
     res.redirect('/v3/conviction/financial-penalty')
   } else if (convictionType === 'Motoring endorsement') {
     res.redirect('/v3/conviction/date')
+  } else if (convictionType === 'Hospital and guardianship orders') {
+    res.redirect('/v3/conviction/hospital-guardianship-order')
   } else {
     res.redirect('/v3/conviction/community')
   }
