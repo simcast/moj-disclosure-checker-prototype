@@ -17,22 +17,29 @@
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Was the length of conviction given in weeks or months?
+              Was the length of conviction given in weeks, months or years?
             </h1>
           </legend>
 
           <div class="govuk-radios">
             <div class="govuk-radios__item" onclick="showWeeksInput()">
-              <input class="govuk-radios__input next" id="conviction-in-weeks" name="conviction-weeks-months" type="radio" value="weeks">
+              <input class="govuk-radios__input next" id="conviction-in-weeks" name="conviction-measure" type="radio" value="weeks">
               <label class="govuk-label govuk-radios__label" for="conviction-in-weeks">
                 Weeks
               </label>
             </div>
 
             <div class="govuk-radios__item" onclick="showMonthsInput()">
-              <input class="govuk-radios__input" id="conviction-in-months" name="conviction-weeks-months" type="radio" value="months">
+              <input class="govuk-radios__input" id="conviction-in-months" name="conviction-measure" type="radio" value="months">
               <label class="govuk-label govuk-radios__label" for="conviction-in-months">
                 Months
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="conviction-in-years" name="conviction-measure" type="radio" value="years">
+              <label class="govuk-label govuk-radios__label" for="conviction-in-years">
+                Years
               </label>
             </div>
 
