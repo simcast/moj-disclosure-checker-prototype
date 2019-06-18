@@ -11,44 +11,44 @@
 
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="conviction-months-weeks" method="post" class="form">
+      <form action="compensation-paid-months-weeks" method="post" class="form">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <span class="govuk-caption-l">{{ data['conviction-name'] }}</span>
+            <span class="govuk-caption-l">{{ data['compensation-paid-name'] }}</span>
             <h1 class="govuk-fieldset__heading">
-              When were you given the order?
+              When did you pay the compensation in full?
             </h1>
           </legend>
 
           <span id="changed-name-hint" class="govuk-hint">
-            This is the date you were convicted. For example, 23 9 2018
+            For example, 23 9 2018
           </span>
 
-          <div class="govuk-date-input" id="conviction-date">
+          <div class="govuk-date-input" id="compensation-paid-date">
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="conviction-day">
+                <label class="govuk-label govuk-date-input__label" for="compensation-paid-day">
                   Day
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="conviction-day" name="conviction-day" type="number" autocomplete="bday-day" pattern="[0-9]*">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="compensation-paid-day" name="compensation-paid-day" type="number" autocomplete="bday-day" pattern="[0-9]*">
               </div>
             </div>
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="conviction-month">
+                <label class="govuk-label govuk-date-input__label" for="compensation-paid-month">
                   Month
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="conviction-month" name="conviction-month" type="number" autocomplete="bday-month" pattern="[0-9]*">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="compensation-paid-month" name="compensation-paid-month" type="number" autocomplete="bday-month" pattern="[0-9]*">
               </div>
             </div>
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="conviction-year">
+                <label class="govuk-label govuk-date-input__label" for="compensation-paid-year">
                   Year
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="conviction-year" name="conviction-year" type="number" autocomplete="bday-year" pattern="[0-9]*">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="compensation-paid-year" name="compensation-paid-year" type="number" autocomplete="bday-year" pattern="[0-9]*">
               </div>
             </div>
           </div>
