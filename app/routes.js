@@ -285,6 +285,45 @@ router.post('/v3/conviction/conviction-months-weeks', function (req, res) {
   }
 })
 
+//Financial penalties
+
+router.post('/v3/conviction/date', function (req, res) {
+
+  let convictionName = req.session.data['conviction-name']
+
+  if (convictionName === 'Compensation to a victim') {
+    res.redirect('/v3/conviction/compensation-paid')
+  } else {
+    res.redirect('/v3/conviction/date')
+  }
+})
+
+router.post('/v3/conviction/compensation-paid-date', function (req, res) {
+
+  let compensationPaid = req.session.data['compensation-paid']
+
+  if (compensationPaid === 'No') {
+    res.redirect('/v3/conviction/exit/compensation-unpaid')
+  } else {
+    res.redirect('/v3/conviction/compensation-paid-date')
+  }
+})
+
+//Custodial sentences
+
+router.post('/v3/conviction/conviction-length', function (req, res) {
+
+  let convictionName = req.session.data['conviction-name']
+
+  if (convictionName === 'Detention') {
+    res.redirect('/v3/conviction/conviction-length-custodial-detention')
+  } else if (convictionName === 'Detention and training order (DTO)') {
+    res.redirect('/v3/conviction/conviction-length-custodial-dto')
+  } else {
+    res.redirect('/v3/conviction/conviction-length')
+  }
+})
+
 
 //After conviction type
 // router.post('/v3/conviction/date', function (req, res) {
