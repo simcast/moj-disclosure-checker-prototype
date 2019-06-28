@@ -193,15 +193,15 @@ router.post('/v3/caution/youth-type', function (req, res) {
   }
 })
 
-router.post('/v3/caution/date', function (req, res) {
+router.post('/v3/caution/conditions-end', function (req, res) {
 
   let youthSimpleOrConditionalCaution = req.session.data['youth-simple-or-conditional-caution']
   let simpleOrConditionalCaution = req.session.data['simple-or-conditional-caution']
 
-  if (simpleOrConditionalCaution === 'Youth conditional caution' || simpleOrConditionalCaution === 'Conditional') {
-    res.redirect('/v3/caution/conditions-met')
+  if (simpleOrConditionalCaution === 'Youth caution' || simpleOrConditionalCaution === 'Simple') {
+    res.redirect('/v3/caution/exit/caution-with-date')
   } else {
-    res.redirect('/v3/caution/date')
+    res.redirect('/v3/caution/conditions-end')
   }
 })
 
