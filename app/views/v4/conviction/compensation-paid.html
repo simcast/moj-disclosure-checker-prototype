@@ -1,0 +1,55 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="compensation-paid-date" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">Compensation to a victim</span>
+            <h1 class="govuk-fieldset__heading">
+              Have you paid the compensation in full?
+            </h1>
+          </legend>
+
+          <!-- <span id="changed-name-hint" class="govuk-hint">
+            This is the date the caution was given, not the date you committed the offence.
+          </span> -->
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="compensation-paid-yes" name="compensation-paid" type="radio" value="Yes">
+              <label class="govuk-label govuk-radios__label" for="compensation-paid-yes">
+                Yes
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="compensation-paid-no" name="compensation-paid" type="radio" value="No">
+              <label class="govuk-label govuk-radios__label" for="compensation-paid-no">
+                No
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

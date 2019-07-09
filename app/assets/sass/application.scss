@@ -26,6 +26,20 @@ $govuk-global-styles: true;
   text-align: left;
 }
 
+.for-dev-tag {
+  margin-left: 10px;
+  background-color:  govuk-colour("green");
+}
+
+.wip-tag {
+  margin-left: 10px;
+  background-color:  govuk-colour("orange");
+}
+
+.version-container {
+  display: flex;
+  align-items: center;
+}
 // #weeksInput {
 //   display: none;
 // }

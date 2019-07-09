@@ -1,0 +1,156 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Your conviction is spent on <br/>
+            <span id="spent-placeholder">
+              {% if data['formatted-spent-date'] %}
+                {{ data['formatted-spent-date'] }}
+              {% else %}
+                6 June 2018
+              {% endif %}
+            </span>
+          </h1>
+
+          {% if data['conviction-type'] == "Motoring endorsement" %}
+
+          <div class="govuk-panel-bullet-container">
+            <div class="govuk-panel__body-small govuk-panel-body-with-bullet">
+              After this date you will not need to tell anyone about this conviction unless:
+
+              <ul>
+                <li>you’re applying for a job that needs a full <a href="https://ex-offenders.glitch.me/guidance-v2.html#background-checks" target="_blank">criminal record check</a></li>
+                <li>an insurance company needs to check your driving record</li>
+              </ul>
+            </div>
+
+            </div>
+
+          {% else %}
+
+            <div class="govuk-panel__body">
+              After this date you will not need to tell anyone about this conviction unless you’re applying for a job that needs a full <a href="https://ex-offenders.glitch.me/guidance-v2.html#background-checks" target="_blank">criminal record check</a>.
+            </div>
+
+          {% endif %}
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      {% if data['conviction-type'] == "Motoring endorsement" %}
+
+        <br/>
+
+        <h2 class="govuk-heading-s">Your driving record</h2>
+
+        <p>
+          Although the conviction will expire from your criminal record after this date, the DVLA will keep this information on your driving record for either <a href="https://www.gov.uk/penalty-points-endorsements/how-long-endorsements-stay-on-your-driving-licence">4 or 11 years</a>.
+        </p>
+
+        <p>
+          Insurance companies might check your driving record as well as your criminal record.
+        </p>
+
+        <p>
+          You can <a href="https://www.gov.uk/view-driving-licence">view your driving record</a> to find out what information the DVLA holds about you.
+        </p>
+
+      {% endif %}
+
+      <br/>
+
+      <h2 class="govuk-heading-s">How this date has been worked out</h2>
+
+      <p>
+        The expiry date of your conviction is based on:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>what you told us about your conviction</li>
+        <li>the current law on when convictions expire</li>
+      </ul>
+
+      <p>
+        This table shows the information you provided, which was used to work out the expiry date. If you entered any incorrect information, the expiry date will be incorrect.
+      </p>
+
+      <table class="govuk-table">
+        <!-- <caption class="govuk-table__caption">Dates and amounts</caption> -->
+        <!-- <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Date</th>
+            <th class="govuk-table__header" scope="col">Amount</th>
+          </tr>
+        </thead> -->
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Criminal record type</th>
+            <td class="govuk-table__cell">{{ data['cautioned-or-convicted'] }}</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Type of conviction</th>
+            <td class="govuk-table__cell">{{ data['conviction-type'] }}</td>
+          </tr>
+
+          {% if data['conviction-name'] %}
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="row">Name of conviction</th>
+              <td class="govuk-table__cell">{{ data['conviction-name'] }}</td>
+            </tr>
+          {% endif %}
+
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Age at time of conviction</th>
+            <td class="govuk-table__cell">{{ data['age-at-conviction'] }}</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Date of conviction</th>
+            <td class="govuk-table__cell">
+              {% if data['formatted-conviction-date'] %}
+                {{ data['formatted-conviction-date'] }}
+              {% else %}
+                6 June 2018
+              {% endif %}
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Date conviction ended</th>
+            <td class="govuk-table__cell">
+              {% if data['formatted-spent-date'] %}
+                {{ data['formatted-spent-date'] }}
+              {% else %}
+                6 June 2019
+              {% endif %}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        If you need to change any information, or if you have another caution or conviction you’d like to check, <a href="../../../v1">use the service again</a>.
+      </p>
+
+      <p><a href="javascript:window.print()">Print this page</a></p>
+
+    </div>
+
+</div>
+
+{% endblock %}

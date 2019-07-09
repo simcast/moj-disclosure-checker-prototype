@@ -1,0 +1,127 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="community" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What type of conviction did you get?
+            </h1>
+          </legend>
+
+          <div class="govuk-radios">
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="community-or-youth-rehab-order" name="conviction-type" type="radio" value="Community or youth rehabilitation order">
+              <label class="govuk-label govuk-radios__label" for="community-or-youth-rehab-order">
+                Community or youth rehabilitation order (YRO)
+                <span class="govuk-hint">
+                  For example, curfew or unpaid work
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="custodial-sentence" name="conviction-type" type="radio" value="Custodial sentence">
+              <label class="govuk-label govuk-radios__label" for="custodial-sentence">
+                Custodial sentence
+                <span class="govuk-hint">
+                  For example, a prison sentence, suspended sentence or detention
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="discharge" name="conviction-type" type="radio" value="Discharge">
+              <label class="govuk-label govuk-radios__label" for="discharge">
+                Discharge
+                <span class="govuk-hint">
+                  For example, a conditional discharge order or bind over
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="financial-penalty" name="conviction-type" type="radio" value="Financial penalty">
+              <label class="govuk-label govuk-radios__label" for="financial-penalty">
+                Financial penalty
+                <span class="govuk-hint">
+                  For example, paying a fine or compensation
+                </span>
+              </label>
+            </div>
+
+            <!-- <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hospital-order" name="conviction-type" type="radio" value="Hospital order">
+              <label class="govuk-label govuk-radios__label" for="hospital-order">
+                Hospital order
+                <span class="govuk-hint">
+                  For example, mental health treatment
+                </span>
+              </label>
+            </div> -->
+
+            <!-- <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="military" name="conviction-type" type="radio" value="Military">
+              <label class="govuk-label govuk-radios__label" for="military">
+                Military
+                <span class="govuk-hint">
+                  For example, removal from Her Majesty's services
+                </span>
+              </label>
+            </div> -->
+
+            <!-- <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="motoring" name="conviction-type" type="radio" value="Motoring endorsement">
+              <label class="govuk-label govuk-radios__label" for="motoring">
+                Motoring endorsement
+                <span class="govuk-hint">
+                  For example you were given penalty points or a disqualification at court
+                </span>
+              </label>
+            </div> -->
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hospital-and-guardianship-orders" name="conviction-type" type="radio" value="Hospital and guardianship orders">
+              <label class="govuk-label govuk-radios__label" for="hospital-and-guardianship-orders">
+                Hospital or guardianship order
+                <span class="govuk-hint">
+                  For example, if there were mental health concerns
+                </span>
+              </label>
+            </div>
+
+            <!-- <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rehabilitation-or-prevention" name="conviction-type" type="radio" value="Rehabilitation or prevention">
+              <label class="govuk-label govuk-radios__label" for="rehabilitation-or-prevention">
+                Rehabilitation or prevention
+                <span class="govuk-hint">
+                  For example, an attendance centre order or supervision order
+                </span>
+              </label>
+            </div> -->
+
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

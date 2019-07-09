@@ -1,0 +1,72 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="conviction-length" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">{{ data['conviction-name'] }}</span>
+            <h1 class="govuk-fieldset__heading">
+              Was the length of the order given in weeks, months or years?
+            </h1>
+          </legend>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item" onclick="showWeeksInput()">
+              <input class="govuk-radios__input next" id="conviction-in-weeks" name="conviction-measure" type="radio" value="weeks">
+              <label class="govuk-label govuk-radios__label" for="conviction-in-weeks">
+                Weeks
+              </label>
+            </div>
+
+            <div class="govuk-radios__item" onclick="showMonthsInput()">
+              <input class="govuk-radios__input" id="conviction-in-months" name="conviction-measure" type="radio" value="months">
+              <label class="govuk-label govuk-radios__label" for="conviction-in-months">
+                Months
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="conviction-in-years" name="conviction-measure" type="radio" value="years">
+              <label class="govuk-label govuk-radios__label" for="conviction-in-years">
+                Years
+              </label>
+            </div>
+
+            <!-- <div class="govuk-radios__divider">or</div> -->
+
+
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="no-conviction-length" name="conviction-measure" type="radio" value="no conviction length">
+              <label class="govuk-label govuk-radios__label" for="no-conviction-length">
+                No length was given
+              </label>
+            </div>
+
+            <!-- {% if data['conviction-type'] == "Community or youth rehabilitation order" %} -->
+            <!-- {% endif %} -->
+
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

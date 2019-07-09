@@ -1,0 +1,58 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="exit/conviction-with-date" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              What was the length of your conviction?
+            </h1>
+          </legend>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="conviction-length">
+              Length of conviction in weeks or months
+            </label>
+            <input class="govuk-input govuk-input--width-4 conviction-length-input" id="conviction-length" name="conviction-length" type="number" pattern="[0-9]*">
+          </div>
+
+          <div class="govuk-radios--inline">
+            <div class="govuk-radios__item next">
+              <input class="govuk-radios__input next" id="conviction-in-weeks" name="conviction-weeks-months" type="radio" value="weeks">
+              <label class="govuk-label govuk-radios__label" for="conviction-in-weeks">
+                Weeks
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="conviction-in-months" name="conviction-weeks-months" type="radio" value="months">
+              <label class="govuk-label govuk-radios__label" for="conviction-in-months">
+                Months
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}
