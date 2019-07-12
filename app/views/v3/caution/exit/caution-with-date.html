@@ -12,12 +12,21 @@
     <div class="govuk-grid-column-full">
 
       <div class="govuk-panel govuk-panel--confirmation">
-          <h1 class="govuk-panel__title">
-            Your caution is spent on {{ data['formatted-spent-date'] }}
-          </h1>
-          <div class="govuk-panel__body">
-            You do not need to tell anyone about this caution unless you're applying for a job that needs a full<br/> <a href="https://ex-offenders.glitch.me/guidance-v2.html#background-checks" target="_blank"">criminal record check</a>.
-          </div>
+        <h1 class="govuk-panel__title">
+          Your caution was spent on <br/>
+          <span id="spent-placeholder">
+            {% if data['formatted-spent-date'] %}
+              {{ data['formatted-spent-date'] }}
+            {% else %}
+              6 June 2018
+            {% endif %}
+          </span>
+        </h1>
+
+        <div class="govuk-panel__body">
+          You do not need to tell anyone about this caution unless you’re applying for a job where a <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#standard-dbs">standard</a> or <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#enhanced-dbs">enhanced</a> criminal record check is needed.
+        </div>
+
       </div>
 
     </div>
@@ -33,7 +42,7 @@
       <h2 class="govuk-heading-m">How this date has been worked out</h2>
 
       <p>
-        The expiry date of your caution is based on:
+        The date your caution becomes spent is based on:
       </p>
 
       <ul class="govuk-list govuk-list--bullet">
@@ -42,7 +51,7 @@
       </ul>
 
       <p>
-        This table shows the information you provided, which was used to work out the expiry date. If you entered any incorrect information, the expiry date will be incorrect.
+        This table shows the information you provided, which was used to work out the spent date. If you entered any incorrect information, the spent date will be incorrect.
       </p>
 
       <table class="govuk-table">
@@ -67,7 +76,7 @@
             <td class="govuk-table__cell">{{ data['age-at-caution'] }}</td>
           </tr>
           <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Date caution given</th>
+            <th class="govuk-table__header" scope="row">Date caution was given</th>
             <td class="govuk-table__cell">{{ data['formatted-caution-date'] }}</td>
           </tr>
         </tbody>
@@ -77,7 +86,7 @@
         If you need to change any information, or if you have another caution or conviction you’d like to check, <a href="../../../v1">use the service again</a>.
       </p>
 
-      <p><a href="javascript:window.print()">Print this page</a></p>
+      <!-- <p><a href="javascript:window.print()">Print this page</a></p> -->
 
     </div>
 </div>
