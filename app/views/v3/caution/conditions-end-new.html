@@ -1,0 +1,90 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="exit/caution-with-date" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              When did the conditions end?
+            </h1>
+          </legend>
+
+          <span id="changed-name-hint" class="govuk-hint">
+            This is the date you agreed the conditions would end, which might have included paying a fine or compensation. For example, 23 9 2018.
+          </span>
+
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                My conditions have not ended
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+
+              <p>
+              You can enter a future date if you know when your conditions will end. The date your caution becomes spent will be correct as long as you stick to the conditions of your caution.
+              </p>
+
+              <h2 class="govuk-heading-s">If the conditions last less than 3 months</h2>
+
+              <p>Your caution will be spent on the day the conditions end.</p>
+
+              <p>If one of the conditions is to pay a fine or compensation, your caution will be spent on the day that all the conditions end - including paying the financial penalty in full.</p>
+
+              <h2 class="govuk-heading-s">If the conditions last 3 months or more</h2>
+
+              <p>Your caution will be spent 3 months after the day the caution was given to you.</p>
+
+            </div>
+          </details>
+
+          <div class="govuk-date-input" id="conditions-end-date">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="conditions-end-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="conditions-end-day" name="conditions-end-day" type="number" autocomplete="bday-day" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="conditions-end-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="conditions-end-month" name="conditions-end-month" type="number" autocomplete="bday-month" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="conditions-end-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="conditions-end-year" name="conditions-end-year" type="number" autocomplete="bday-year" pattern="[0-9]*">
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}
