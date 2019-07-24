@@ -13,7 +13,7 @@
 
       <div class="govuk-panel govuk-panel--confirmation">
           <h1 class="govuk-panel__title">
-            Your conviction is spent on <br/>
+            Your conviction was spent on <br/>
             <span id="spent-placeholder">
               {% if data['formatted-spent-date'] %}
                 {{ data['formatted-spent-date'] }}
@@ -40,7 +40,7 @@
           {% else %}
 
             <div class="govuk-panel__body">
-              After this date you will not need to tell anyone about this conviction unless you’re applying for a job that needs a full <a href="https://ex-offenders.glitch.me/guidance-v2.html#background-checks" target="_blank">criminal record check</a>.
+              You do not need to tell anyone about this conviction unless you're applying for a job where a <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#standard-dbs">standard</a> or <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#enhanced-dbs">enhanced</a> criminal record check is needed.
             </div>
 
           {% endif %}
@@ -76,19 +76,19 @@
 
       <br/>
 
-      <h2 class="govuk-heading-s">How this date has been worked out</h2>
+      <h2 class="govuk-heading-m">How this date has been worked out</h2>
 
       <p>
-        The expiry date of your conviction is based on:
+        The date your conviction becomes spent is based on:
       </p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>what you told us about your conviction</li>
-        <li>the current law on when convictions expire</li>
+        <li>the information you’ve provided</li>
+        <li>the current law on <a href="https://www.gov.uk/guidance/rehabilitation-periods" target="_blank">rehabilitation periods</a></li>
       </ul>
 
       <p>
-        This table shows the information you provided, which was used to work out the expiry date. If you entered any incorrect information, the expiry date will be incorrect.
+        This table shows the information you provided, which was used to work out the date your conviction becomes spent. If you entered any incorrect information, the date it becomes spent will be incorrect.
       </p>
 
       <table class="govuk-table">
@@ -131,7 +131,7 @@
             </td>
           </tr>
           <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Date conviction ended</th>
+            <th class="govuk-table__header" scope="row">Length of conviction</th>
             <td class="govuk-table__cell">
               {% if data['formatted-spent-date'] %}
                 {{ data['formatted-spent-date'] }}
@@ -144,10 +144,10 @@
       </table>
 
       <p>
-        If you need to change any information, or if you have another caution or conviction you’d like to check, <a href="../../../v1">use the service again</a>.
+        If you need to change any information, or if you have another caution or conviction you’d like to check, <a href="../../../v4">use the service again</a>.
       </p>
 
-      <p><a href="javascript:window.print()">Print this page</a></p>
+      <!-- <p><a href="javascript:window.print()">Print this page</a></p> -->
 
     </div>
 

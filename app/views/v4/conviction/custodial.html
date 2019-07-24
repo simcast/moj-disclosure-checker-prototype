@@ -15,29 +15,39 @@
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading">
-              What was your custodial sentence?
+              What type of sentence were you given?
             </h1>
           </legend>
           <div class="govuk-radios">
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="detention-and-training-order" name="conviction-name" type="radio" value="Detention and training order (DTO)">
+              <label class="govuk-label govuk-radios__label" for="detention-and-training-order">
+                Detention and training order (DTO)
+                <span class="govuk-hint">
+                  The first half of your sentence was spent in custody and the second half was spent in the community, supervised by the Youth Offending Team
+                </span>
+              </label>
+            </div>
 
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="long-term-detention" name="conviction-name" type="radio" value="Detention">
               <label class="govuk-label govuk-radios__label" for="long-term-detention">
                 Detention
                 <span class="govuk-hint">
-                  You were sentenced to custody in a young offender institution or secure training centre.
+                  You were sentenced to custody in a young offender institution or secure training centre
                 </span>
               </label>
             </div>
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="detention-and-training-order" name="conviction-name" type="radio" value="Detention and training order (DTO)">
-              <label class="govuk-label govuk-radios__label" for="detention-and-training-order">
-                Detention and training order
+              <input class="govuk-radios__input" id="hospital-order" name="conviction-name" type="radio" value="Hospital order">
+              <label class="govuk-label govuk-radios__label" for="hospital-order">
+                Hospital order
                 <span class="govuk-hint">
-                  The first half of your sentence was spent in custody and the second half was spent in the community, supervised by the Youth Offending Team.
+                  You were given a hospital order instead of a prison sentence because of mental health concerns
                 </span>
               </label>
             </div>

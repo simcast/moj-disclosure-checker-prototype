@@ -15,15 +15,16 @@
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading">
               When did the conditions end?
             </h1>
           </legend>
 
           <span id="changed-name-hint" class="govuk-hint">
-            This is the date you and the police agreed the conditions would end.<br/>For example, 23 9 2018.
+            This is the date you agreed the conditions would end, which might have included paying a fine or compensation. For example, 23 9 2018.
           </span>
+
 
           <div class="govuk-date-input" id="conditions-end-date">
             <div class="govuk-date-input__item">
@@ -54,6 +55,31 @@
 
         </fieldset>
       </div>
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            My conditions have not ended
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+
+          <p>
+          You can enter a future date if you know when your conditions will end. The date your caution becomes spent will be correct as long as you stick to the conditions of your caution.
+          </p>
+
+          <h2 class="govuk-heading-s">If the conditions last less than 3 months</h2>
+
+          <p>Your caution will be spent on the day the conditions end.</p>
+
+          <p>If one of the conditions is to pay a fine or compensation, your caution will be spent on the day that all the conditions end - including paying the financial penalty in full.</p>
+
+          <h2 class="govuk-heading-s">If the conditions last 3 months or more</h2>
+
+          <p>Your caution will be spent 3 months after the day the caution was given to you.</p>
+
+        </div>
+      </details>
 
       <button class="govuk-button">Continue</button>
 
