@@ -109,12 +109,18 @@ router.post('/v4/conviction/over-18/community', function (req, res) {
     res.redirect('/v4/conviction/over-18/custodial')
   } else if (convictionType === 'Discharge') {
     res.redirect('/v4/conviction/over-18/discharge')
+  } else if (convictionType === 'Prison sentence') {
+    res.redirect('/v4/conviction/over-18/custodial')
   } else if (convictionType === 'Financial penalty') {
     res.redirect('/v4/conviction/over-18/financial-penalty')
   } else if (convictionType === 'Motoring endorsement') {
     res.redirect('/v4/conviction/over-18/date')
   } else if (convictionType === 'Hospital and guardianship orders') {
     res.redirect('/v4/conviction/over-18/hospital-guardianship-order')
+  } else if (convictionType === 'Prevention and reparation orders') {
+    res.redirect('/v4/conviction/over-18/prevention-reparation-order')
+  } else if (convictionType === 'Military convictions') {
+    res.redirect('/v4/conviction/over-18/military')
   } else {
     res.redirect('/v4/conviction/over-18/community')
   }
