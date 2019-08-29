@@ -39,9 +39,20 @@
 
           {% else %}
 
+            <!-- <div class="govuk-panel__body">
+              You do not need to tell anyone about this conviction, or the offence that led to it, unless they're doing a <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#standard-dbs">standard</a> or <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#enhanced-dbs">enhanced</a> criminal record check.
+            </div> -->
+
+
+            <!-- <div class="govuk-panel__body">
+            If you entered an approximate date of your conviction, this date will be incorrect.
+            </div> -->
+
             <div class="govuk-panel__body">
-              You do not need to tell anyone about this conviction unless you're applying for a job where a <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#standard-dbs">standard</a> or <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#enhanced-dbs">enhanced</a> criminal record check is needed.
+              The following information will help you work out if you need to tell people about this conviction.
             </div>
+
+
 
           {% endif %}
       </div>
@@ -52,7 +63,7 @@
 
   <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
 
       {% if data['conviction-type'] == "Motoring endorsement" %}
 
@@ -75,6 +86,57 @@
       {% endif %}
 
       <br/>
+
+      <h2 class="govuk-heading-m">What this result means</h2>
+
+      <p>
+        Based on what you’ve told us, your conviction and any <a href="https://www.gov.uk/guidance/rehabilitation-periods">rehabilitation period</a> is now spent.
+      </p>
+
+      <div class="govuk-inset-text">
+        If you entered an approximate date of your conviction, the date it becomes spent will be incorrect.
+      </div>
+
+        <h3 class="govuk-heading-s">If a basic criminal record check is needed</h3>
+
+          <p>
+            You will not need to tell people about the conviction, or the offence that led to it, if they’re asking for a <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#basic-dbs-checks">basic criminal record check</a> from the Disclosure and Barring Service (DBS).
+          </p>
+
+        <h3 class="govuk-heading-s">If a standard or enhanced criminal record check is needed</h3>
+
+          <p>
+            You will need to tell people about the conviction if they’re asking for a <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#standard-dbs">standard or enhanced criminal record check</a> from the DBS.
+          </p>
+
+        <h3 class="govuk-heading-s">If you have more than one conviction</h3>
+
+          <p>
+            The date this conviction becomes spent might be incorrect if you have more than one conviction.
+          </p>
+
+          <p>
+            You should get professional or legal advice if you:
+          </p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>got another conviction during your rehabilitation period</li>
+            <li>are applying for certain sensitive jobs, such as a policeman or lawyer</li>
+          </ul>
+
+        <h3 class="govuk-heading-s">Using the information you've been given</h3>
+
+          <!-- <div class="govuk-inset-text">
+            If you entered an approximate date of your [caution / conviction], the date it becomes spent will be incorrect.
+          </div> -->
+
+          <p>
+            As you’ve not been asked for specific details about your caution or conviction,  this service can only give you general guidance about when it becomes spent.
+          <p>
+
+          <p>
+            If you’ll be using the information this service has given you to decide whether or not to disclose a caution or conviction on your criminal record, it’s recommended that you get specific professional or legal advice before doing so.
+          </p>
 
       <h2 class="govuk-heading-m">How this date has been worked out</h2>
 
