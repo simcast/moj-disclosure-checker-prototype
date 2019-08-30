@@ -90,29 +90,33 @@
       <h2 class="govuk-heading-m">What this result means</h2>
 
       <p>
-        Based on what you’ve told us, your conviction and any <a href="https://www.gov.uk/guidance/rehabilitation-periods">rehabilitation period</a> is now spent.
+        Based on what you’ve told us, this conviction and any <a href="https://www.gov.uk/guidance/rehabilitation-periods">rehabilitation period</a> is now spent.
       </p>
 
       <div class="govuk-inset-text">
-        If you entered an approximate date of your conviction, the date it becomes spent will be incorrect.
+        If you entered any approximate dates, the result you’ve been given will be incorrect.
       </div>
 
-        <h3 class="govuk-heading-s">If a basic criminal record check is needed</h3>
+        <h3 class="govuk-heading-s">If a basic criminal record check is requested</h3>
 
           <p>
-            You will not need to tell people about the conviction, or the offence that led to it, if they’re asking for a <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#basic-dbs-checks">basic criminal record check</a> from the Disclosure and Barring Service (DBS).
+            When a caution or conviction is spent you do not need to tell people about it, or the offence that led to it, if they’re requesting a <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#basic-dbs-checks">basic criminal record check</a>.
           </p>
 
-        <h3 class="govuk-heading-s">If a standard or enhanced criminal record check is needed</h3>
+        <h3 class="govuk-heading-s">If a standard or enhanced criminal record check is requested</h3>
 
           <p>
-            You will need to tell people about the conviction if they’re asking for a <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#standard-dbs">standard or enhanced criminal record check</a> from the DBS.
+            You will need to tell people about spent cautions or convictions if they’re requesting a <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#standard-dbs">standard or enhanced criminal record check</a>.
           </p>
 
-        <h3 class="govuk-heading-s">If you have more than one conviction</h3>
+          <div class="govuk-inset-text">
+            Some spent cautions and convictions are <a href="https://www.gov.uk/government/publications/dbs-filtering-guidance">’protected’ or ‘filtered’</a> and will not show up on a standard or enhanced criminal record check.
+          </div>
+
+        <h3 class="govuk-heading-s">If you have more than one caution or conviction</h3>
 
           <p>
-            The date this conviction becomes spent might be incorrect if you have more than one conviction.
+            The date your conviction becomes spent might be incorrect if you have other convictions.
           </p>
 
           <p>
@@ -120,94 +124,95 @@
           </p>
 
           <ul class="govuk-list govuk-list--bullet">
-            <li>got another conviction during your rehabilitation period</li>
+            <li>got another conviction during a rehabilitation period</li>
             <li>are applying for certain sensitive jobs, such as a policeman or lawyer</li>
           </ul>
 
-        <h3 class="govuk-heading-s">Using the information you've been given</h3>
+          <h2 class="govuk-heading-m">How this date has been worked out</h2>
+
+          <p>
+            The date your conviction becomes spent is based on:
+          </p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>the information you’ve provided</li>
+            <li>the current law on <a href="https://www.gov.uk/guidance/rehabilitation-periods" target="_blank">rehabilitation periods</a></li>
+          </ul>
+
+          <p>
+            This table shows the information you provided, which was used to work out the date your conviction becomes spent. If you entered any incorrect information, the date it becomes spent will be incorrect.
+          </p>
+
+          <table class="govuk-table">
+            <!-- <caption class="govuk-table__caption">Dates and amounts</caption> -->
+            <!-- <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Date</th>
+                <th class="govuk-table__header" scope="col">Amount</th>
+              </tr>
+            </thead> -->
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Criminal record type</th>
+                <td class="govuk-table__cell">{{ data['cautioned-or-convicted'] }}</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Type of conviction</th>
+                <td class="govuk-table__cell">{{ data['conviction-type'] }}</td>
+              </tr>
+
+              {% if data['conviction-name'] %}
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row">Name of conviction</th>
+                  <td class="govuk-table__cell">{{ data['conviction-name'] }}</td>
+                </tr>
+              {% endif %}
+
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Age at time of conviction</th>
+                <td class="govuk-table__cell">{{ data['age-at-conviction'] }}</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Date of conviction</th>
+                <td class="govuk-table__cell">
+                  {% if data['formatted-conviction-date'] %}
+                    {{ data['formatted-conviction-date'] }}
+                  {% else %}
+                    6 June 2018
+                  {% endif %}
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Length of conviction</th>
+                <td class="govuk-table__cell">
+                  {% if data['formatted-spent-date'] %}
+                    {{ data['formatted-spent-date'] }}
+                  {% else %}
+                    6 June 2019
+                  {% endif %}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            If you need to change any information, or if you have another caution or conviction you’d like to check, <a href="../../../v4">use the service again</a>.
+          </p>
+
+        <h2 class="govuk-heading-m">Using the information you've been given</h2>
 
           <!-- <div class="govuk-inset-text">
             If you entered an approximate date of your [caution / conviction], the date it becomes spent will be incorrect.
           </div> -->
 
           <p>
-            As you’ve not been asked for specific details about your caution or conviction,  this service can only give you general guidance about when it becomes spent.
+            As you’ve not been asked for specific details about your caution or conviction, this service can only give you general guidance about when it becomes spent.
           <p>
 
           <p>
-            If you’ll be using the information this service has given you to decide whether or not to disclose a caution or conviction on your criminal record, it’s recommended that you get specific professional or legal advice before doing so.
+            If you’ll be using the information this service has given you to decide whether or not to disclose a caution or conviction on your criminal record, it’s recommended that you first get specific professional or legal advice.
           </p>
 
-      <h2 class="govuk-heading-m">How this date has been worked out</h2>
-
-      <p>
-        The date your conviction becomes spent is based on:
-      </p>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>the information you’ve provided</li>
-        <li>the current law on <a href="https://www.gov.uk/guidance/rehabilitation-periods" target="_blank">rehabilitation periods</a></li>
-      </ul>
-
-      <p>
-        This table shows the information you provided, which was used to work out the date your conviction becomes spent. If you entered any incorrect information, the date it becomes spent will be incorrect.
-      </p>
-
-      <table class="govuk-table">
-        <!-- <caption class="govuk-table__caption">Dates and amounts</caption> -->
-        <!-- <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="col">Date</th>
-            <th class="govuk-table__header" scope="col">Amount</th>
-          </tr>
-        </thead> -->
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Criminal record type</th>
-            <td class="govuk-table__cell">{{ data['cautioned-or-convicted'] }}</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Type of conviction</th>
-            <td class="govuk-table__cell">{{ data['conviction-type'] }}</td>
-          </tr>
-
-          {% if data['conviction-name'] %}
-            <tr class="govuk-table__row">
-              <th class="govuk-table__header" scope="row">Name of conviction</th>
-              <td class="govuk-table__cell">{{ data['conviction-name'] }}</td>
-            </tr>
-          {% endif %}
-
-          <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Age at time of conviction</th>
-            <td class="govuk-table__cell">{{ data['age-at-conviction'] }}</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Date of conviction</th>
-            <td class="govuk-table__cell">
-              {% if data['formatted-conviction-date'] %}
-                {{ data['formatted-conviction-date'] }}
-              {% else %}
-                6 June 2018
-              {% endif %}
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="row">Length of conviction</th>
-            <td class="govuk-table__cell">
-              {% if data['formatted-spent-date'] %}
-                {{ data['formatted-spent-date'] }}
-              {% else %}
-                6 June 2019
-              {% endif %}
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p>
-        If you need to change any information, or if you have another caution or conviction you’d like to check, <a href="../../../v4">use the service again</a>.
-      </p>
 
       <!-- <p><a href="javascript:window.print()">Print this page</a></p> -->
 
