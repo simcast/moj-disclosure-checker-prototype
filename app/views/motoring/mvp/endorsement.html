@@ -1,0 +1,53 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="date" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-l">Motoring</span>
+            <h1 class="govuk-fieldset__heading">
+              Were you given an endorsement?
+            </h1>
+          </legend>
+
+          <p>An endorsement means that any penalty points you've been given are shown on your driving licence.</p>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="endorse-given" name="endorse-yes-no" type="radio" value="Endorsement given">
+              <label class="govuk-label govuk-radios__label" for="endorse-given">
+                Yes
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="endorse-not-given" name="endorse-yes-no" type="radio" value="Endorsement not given">
+              <label class="govuk-label govuk-radios__label" for="endorse-not-given">
+                No
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

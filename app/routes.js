@@ -3,6 +3,19 @@ const router = express.Router()
 
 // *********** VERSION 4 ***********
 
+// MOTORING OPTIONS
+
+router.post('/motoring/mvp/date', function (req, res) {
+
+  let endorseYesNo = req.session.data['endorse-yes-no']
+
+  if (endorseYesNo === 'Endorsement not given') {
+    res.redirect('/motoring/mvp/no-endorsement')
+  } else {
+    res.redirect('/motoring/mvp/date')
+  }
+})
+
 // CAUTION OR CONVICTION
 router.post('/v4/caution/age', function (req, res) {
 
