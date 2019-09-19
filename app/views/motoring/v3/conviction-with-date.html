@@ -1,0 +1,218 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Your conviction was spent on <br/>
+            <span id="spent-placeholder">
+              {% if data['formatted-spent-date'] %}
+                {{ data['formatted-spent-date'] }}
+              {% else %}
+                6 June 2018
+              {% endif %}
+            </span>
+          </h1>
+
+
+          <!-- <div class="govuk-panel-bullet-container">
+            <div class="govuk-panel__body-small govuk-panel-body-with-bullet">
+              After this date you will not need to tell anyone about this conviction unless:
+
+              <ul>
+                <li>you’re applying for a job that needs a full <a href="https://ex-offenders.glitch.me/guidance-v2.html#background-checks" target="_blank">criminal record check</a></li>
+                <li>an insurance company needs to check your driving record</li>
+              </ul>
+            </div>
+
+            </div> -->
+
+
+            <!-- <div class="govuk-panel__body">
+              You do not need to tell anyone about this conviction, or the offence that led to it, unless they're doing a <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#standard-dbs">standard</a> or <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#enhanced-dbs">enhanced</a> criminal record check.
+            </div> -->
+
+
+            <!-- <div class="govuk-panel__body">
+            If you entered an approximate date of your conviction, this date will be incorrect.
+            </div> -->
+
+            <div class="govuk-panel__body">
+              The following information will help you work out if you need to tell people about this conviction.
+            </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+
+
+        <br/>
+
+        <h2 class="govuk-heading-s">Your driving record</h2>
+
+        <p>
+          Although the conviction will expire from your criminal record after this date, the DVLA will keep this information on your driving record for either <a href="https://www.gov.uk/penalty-points-endorsements/how-long-endorsements-stay-on-your-driving-licence">4 or 11 years</a>.
+        </p>
+
+        <p>
+          Insurance companies might check your driving record as well as your criminal record.
+        </p>
+
+        <p>
+          You can <a href="https://www.gov.uk/view-driving-licence">view your driving record</a> to find out what information the DVLA holds about you.
+        </p>
+
+
+
+      <br/>
+
+      <h2 class="govuk-heading-m">What this result means</h2>
+
+      <p>
+        Based on what you’ve told us, this conviction and any <a href="https://www.gov.uk/guidance/rehabilitation-periods">rehabilitation period</a> is now spent.
+      </p>
+
+      <div class="govuk-inset-text">
+        If you entered any approximate dates, the result you’ve been given will be incorrect.
+      </div>
+
+        <h3 class="govuk-heading-s">If a basic criminal record check is requested</h3>
+
+          <p>
+            When a caution or conviction is spent you do not need to tell people about it, or the offence that led to it, if they’re requesting a <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#basic-dbs-checks">basic criminal record check</a>.
+          </p>
+
+        <h3 class="govuk-heading-s">If a standard or enhanced criminal record check is requested</h3>
+
+          <p>
+            You will need to tell people about spent cautions or convictions if they’re requesting a <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#standard-dbs">standard or enhanced criminal record check</a>.
+          </p>
+
+          <div class="govuk-inset-text">
+            Some spent cautions and convictions are <a href="https://www.gov.uk/government/publications/dbs-filtering-guidance">’protected’ or ‘filtered’</a> and will not show up on a standard or enhanced criminal record check.
+          </div>
+
+        <h3 class="govuk-heading-s">If you have more than one caution or conviction</h3>
+
+          <p>
+            The result you've been given might be incorrect if you have other convictions.
+          </p>
+
+          <p>
+            You should get professional or legal advice if you:
+          </p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>got another conviction during a rehabilitation period</li>
+            <li>are applying for certain sensitive jobs, such as a policeman or lawyer</li>
+          </ul>
+
+          <h2 class="govuk-heading-m">How this result has been worked out</h2>
+
+          <p>
+            The result you've been given is based on:
+          </p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>the information you’ve provided</li>
+            <li>the current law on <a href="https://www.gov.uk/guidance/rehabilitation-periods" target="_blank">rehabilitation periods</a></li>
+          </ul>
+
+          <p>
+            This table shows the information you've given, which has been used to work out when the conviction becomes spent. If you entered any incorrect information, the result you've been given will be incorrect.
+          </p>
+
+          <table class="govuk-table">
+            <!-- <caption class="govuk-table__caption">Dates and amounts</caption> -->
+            <!-- <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Date</th>
+                <th class="govuk-table__header" scope="col">Amount</th>
+              </tr>
+            </thead> -->
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Criminal record type</th>
+                <td class="govuk-table__cell">{{ data['cautioned-or-convicted'] }}</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Type of conviction</th>
+                <td class="govuk-table__cell">{{ data['conviction-type'] }}</td>
+              </tr>
+
+              {% if data['conviction-name'] %}
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row">Name of conviction</th>
+                  <td class="govuk-table__cell">{{ data['conviction-name'] }}</td>
+                </tr>
+              {% endif %}
+
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Age at time of conviction</th>
+                <td class="govuk-table__cell">{{ data['age-at-conviction'] }}</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Date of conviction</th>
+                <td class="govuk-table__cell">
+                  {% if data['formatted-conviction-date'] %}
+                    {{ data['formatted-conviction-date'] }}
+                  {% else %}
+                    6 June 2018
+                  {% endif %}
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Length of conviction</th>
+                <td class="govuk-table__cell">
+                  {% if data['formatted-spent-date'] %}
+                    {{ data['formatted-spent-date'] }}
+                  {% else %}
+                    6 June 2019
+                  {% endif %}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            If you need to change any information, or if you have another caution or conviction you’d like to check, <a href="../../../v4">use the service again</a>.
+          </p>
+
+        <h2 class="govuk-heading-m">Using the information you've been given</h2>
+
+          <!-- <div class="govuk-inset-text">
+            If you entered an approximate date of your [caution / conviction], the date it becomes spent will be incorrect.
+          </div> -->
+
+          <p>
+            As you’ve not been asked for specific details about your caution or conviction, this service can only give you general guidance about when it becomes spent.
+          <p>
+
+          <p>
+            If you’ll be using the information this service has given you to decide whether or not to disclose a caution or conviction on your criminal record, it’s recommended that you first get specific professional or legal advice.
+          </p>
+
+
+      <!-- <p><a href="javascript:window.print()">Print this page</a></p> -->
+
+    </div>
+
+</div>
+
+{% endblock %}
