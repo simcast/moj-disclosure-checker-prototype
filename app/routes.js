@@ -27,6 +27,28 @@ router.post('/motoring/v3/conviction-months-weeks', function (req, res) {
   }
 })
 
+router.post('/motoring/v3/endorsement', function (req, res) {
+
+  let convictionName = req.session.data['conviction-name']
+
+  if (convictionName === 'Disqualification') {
+    res.redirect('/motoring/v3/date')
+  } else {
+    res.redirect('/motoring/v3/endorsement')
+  }
+})
+
+router.post('/motoring/v3/conviction-length', function (req, res) {
+
+  let convictionMeasure = req.session.data['conviction-measure']
+
+  if (convictionMeasure === 'Penalty points') {
+    res.redirect('/motoring/v3/conviction-with-date')
+  } else {
+    res.redirect('/motoring/v3/conviction-months-weeks')
+  }
+})
+
 // CAUTION OR CONVICTION
 router.post('/v4/caution/age', function (req, res) {
 

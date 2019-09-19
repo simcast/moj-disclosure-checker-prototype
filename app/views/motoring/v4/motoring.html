@@ -1,0 +1,79 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="date" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              What was your motoring conviction?
+            </h1>
+          </legend>
+
+          <!-- <div class="govuk-inset-text">
+            An ‘endorsement’ means that a record of penalty points is shown on your driving licence. Endorsements are given by a court.
+          </div> -->
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="motoring-fine" name="conviction-name" type="radio" value="Fine">
+              <label class="govuk-label govuk-radios__label" for="motoring-fine">
+                A fine
+                <!-- <span class="govuk-hint">
+                </span> -->
+              </label>
+            </div>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="disqualification" name="conviction-name" type="radio" value="Disqualification">
+              <label class="govuk-label govuk-radios__label" for="disqualification">
+                Disqualification with a court endorsement
+                <!-- <span class="govuk-hint">
+                </span> -->
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="penalty-points" name="conviction-name" type="radio" value="Penalty points">
+              <label class="govuk-label govuk-radios__label" for="penalty-points">
+                Penalty points with a court endorsement
+                <!-- <span class="govuk-hint">
+                </span> -->
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What is a court endorsement?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          An ‘endorsement’ means that a record of penalty points is shown on your driving licence. Endorsements are given by a court.
+        </div>
+      </details>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}
