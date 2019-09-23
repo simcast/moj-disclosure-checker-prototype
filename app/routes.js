@@ -20,23 +20,23 @@ router.post('/motoring/v3/conviction-months-weeks', function (req, res) {
 
   let convictionName = req.session.data['conviction-name']
 
-  if (convictionName === 'Penalty points') {
+  if (convictionName === 'Penalty points' || convictionName === 'Fine' || convictionName === 'Fixed penalty notice') {
     res.redirect('/motoring/v3/conviction-with-date')
   } else {
     res.redirect('/motoring/v3/conviction-months-weeks')
   }
 })
 
-router.post('/motoring/v3/endorsement', function (req, res) {
-
-  let convictionName = req.session.data['conviction-name']
-
-  if (convictionName === 'Disqualification') {
-    res.redirect('/motoring/v3/date')
-  } else {
-    res.redirect('/motoring/v3/endorsement')
-  }
-})
+// router.post('/motoring/v3/endorsement', function (req, res) {
+//
+//   let convictionName = req.session.data['conviction-name']
+//
+//   if (convictionName === 'Disqualification') {
+//     res.redirect('/motoring/v3/date')
+//   } else {
+//     res.redirect('/motoring/v3/endorsement')
+//   }
+// })
 
 router.post('/motoring/v3/conviction-length', function (req, res) {
 
@@ -45,7 +45,7 @@ router.post('/motoring/v3/conviction-length', function (req, res) {
   if (convictionMeasure === 'Penalty points') {
     res.redirect('/motoring/v3/conviction-with-date')
   } else {
-    res.redirect('/motoring/v3/conviction-months-weeks')
+    res.redirect('/motoring/v3/conviction-length')
   }
 })
 
