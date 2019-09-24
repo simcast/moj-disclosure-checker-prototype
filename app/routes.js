@@ -16,6 +16,7 @@ router.post('/motoring/mvp/date', function (req, res) {
   }
 })
 
+// MOTORING v3
 router.post('/motoring/v3/conviction-months-weeks', function (req, res) {
 
   let convictionName = req.session.data['conviction-name']
@@ -26,17 +27,6 @@ router.post('/motoring/v3/conviction-months-weeks', function (req, res) {
     res.redirect('/motoring/v3/conviction-months-weeks')
   }
 })
-
-// router.post('/motoring/v3/endorsement', function (req, res) {
-//
-//   let convictionName = req.session.data['conviction-name']
-//
-//   if (convictionName === 'Disqualification') {
-//     res.redirect('/motoring/v3/date')
-//   } else {
-//     res.redirect('/motoring/v3/endorsement')
-//   }
-// })
 
 router.post('/motoring/v3/date', function (req, res) {
 
@@ -50,7 +40,6 @@ router.post('/motoring/v3/date', function (req, res) {
   }
 })
 
-
 router.post('/motoring/v3/conviction-length', function (req, res) {
 
   let convictionMeasure = req.session.data['conviction-measure']
@@ -59,6 +48,41 @@ router.post('/motoring/v3/conviction-length', function (req, res) {
     res.redirect('/motoring/v3/conviction-with-date')
   } else {
     res.redirect('/motoring/v3/conviction-length')
+  }
+})
+
+// MOTORING v4
+router.post('/motoring/v4/date-end', function (req, res) {
+
+  let convictionName = req.session.data['conviction-name']
+
+  if (convictionName === 'Penalty points' || convictionName === 'Fine' || convictionName === 'Fixed penalty notice') {
+    res.redirect('/motoring/v4/conviction-with-date')
+  } else {
+    res.redirect('/motoring/v4/date-end')
+  }
+})
+
+router.post('/motoring/v4/date', function (req, res) {
+
+  let endorseYesNo = req.session.data['endorse-yes-no']
+  let convictionName = req.session.data['conviction-name']
+
+  if (endorseYesNo === 'Endorsement not given' && convictionName === 'Fixed penalty notice'){
+    res.redirect('/motoring/v4/fpn-no-conviction')
+  } else {
+    res.redirect('/motoring/v4/date')
+  }
+})
+
+router.post('/motoring/v4/conviction-length', function (req, res) {
+
+  let convictionMeasure = req.session.data['conviction-measure']
+
+  if (convictionMeasure === 'Penalty points') {
+    res.redirect('/motoring/v4/conviction-with-date')
+  } else {
+    res.redirect('/motoring/v4/conviction-length')
   }
 })
 

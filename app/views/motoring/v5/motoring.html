@@ -1,0 +1,76 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="endorsement" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              What was your motoring conviction?
+            </h1>
+          </legend>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="disqualification" name="conviction-name" type="radio" value="Disqualification">
+              <label class="govuk-label govuk-radios__label" for="disqualification">
+                Disqualification
+                <span class="govuk-hint">
+                  You were banned from driving
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="motoring-fine" name="conviction-name" type="radio" value="Fine">
+              <label class="govuk-label govuk-radios__label" for="motoring-fine">
+                Fine
+                <span class="govuk-hint">
+                  A court gave you a fine that was not a fixed penalty notice (FPN)
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="fixed-penalty-notice" name="conviction-name" type="radio" value="Fixed penalty notice">
+              <label class="govuk-label govuk-radios__label" for="fixed-penalty-notice">
+                Fixed penalty notice (FPN)
+                <span class="govuk-hint">
+                  You were given a fine ‘on the spot’ or by post
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="penalty-points" name="conviction-name" type="radio" value="Penalty points">
+              <label class="govuk-label govuk-radios__label" for="penalty-points">
+                Penalty points
+                <span class="govuk-hint">
+                  You were given a number of penalty points for a driving offence
+                </span>
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

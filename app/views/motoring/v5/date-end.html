@@ -11,19 +11,25 @@
 
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="conviction-months-weeks" method="post" class="form">
+      <form action="conviction-with-date" method="post" class="form">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-            <span class="govuk-caption-l">{{ data['conviction-name'] }}</span>
-            <h1 class="govuk-fieldset__heading">
-              When were you given the order?
-            </h1>
+
+              <span class="govuk-caption-l">{{ data['conviction-name'] }}</span>
+              <h1 class="govuk-fieldset__heading">
+                When did your disqualification end?
+              </h1>
+
           </legend>
 
           <span id="changed-name-hint" class="govuk-hint">
-            This is the date you were convicted by a court. For example, 23 9 2018
+            {% if (data['conviction-name'] == 'Disqualification') or (data['conviction-name'] == 'Fixed penalty notice')%}
+              For example, 23 9 2018
+            {% else %}
+              This is the date you were convicted by a court. For example, 23 9 2018
+            {% endif %}
           </span>
 
           <div class="govuk-date-input" id="conviction-date">
