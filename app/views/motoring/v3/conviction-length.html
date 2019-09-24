@@ -18,13 +18,23 @@
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
               <span class="govuk-caption-l">Disqualification</span>
               <h1 class="govuk-fieldset__heading">
-                What was the length of the disqualification?
+                {% if data['conviction-name'] == 'Disqualification' %}
+                  How long were you disqualified for?
+                {% else %}
+                  What was the length of the {{ data['conviction-name'] | lower }}?
+                {% endif %}
               </h1>
             </legend>
 
-            <label class="govuk-label" for="conviction-length-number">
+            <p>
+              {% if data['conviction-name'] == 'Disqualification' %}
+                Enter the length of time your driving ban lasted. This may be less than the ban you were originally given if, for example, you went on a driver awareness course.
+              {% endif %}
+            </p>
+
+            <label class="govuk-label govuk-!-font-weight-bold" for="conviction-length-number">
               Number of
-              <span class="govuk-body">
+              <span class="govuk-body govuk-!-font-weight-bold">
                 {% if data['conviction-measure'] == "weeks" %}
                   weeks
                 {% elif data['conviction-measure'] == "months" %}

@@ -38,6 +38,19 @@ router.post('/motoring/v3/conviction-months-weeks', function (req, res) {
 //   }
 // })
 
+router.post('/motoring/v3/date', function (req, res) {
+
+  let endorseYesNo = req.session.data['endorse-yes-no']
+  let convictionName = req.session.data['conviction-name']
+
+  if (endorseYesNo === 'Endorsement not given' && convictionName === 'Fixed penalty notice'){
+    res.redirect('/motoring/v3/fpn-no-conviction')
+  } else {
+    res.redirect('/motoring/v3/date')
+  }
+})
+
+
 router.post('/motoring/v3/conviction-length', function (req, res) {
 
   let convictionMeasure = req.session.data['conviction-measure']
