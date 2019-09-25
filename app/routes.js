@@ -51,38 +51,38 @@ router.post('/motoring/v3/conviction-length', function (req, res) {
   }
 })
 
-// MOTORING v4
-router.post('/motoring/v4/date-end', function (req, res) {
+// MOTORING v5
+router.post('/motoring/v5/date-end', function (req, res) {
 
   let convictionName = req.session.data['conviction-name']
 
   if (convictionName === 'Penalty points' || convictionName === 'Fine' || convictionName === 'Fixed penalty notice') {
-    res.redirect('/motoring/v4/conviction-with-date')
+    res.redirect('/motoring/v5/conviction-with-date')
   } else {
-    res.redirect('/motoring/v4/date-end')
+    res.redirect('/motoring/v5/date-end')
   }
 })
 
-router.post('/motoring/v4/date', function (req, res) {
+router.post('/motoring/v5/date', function (req, res) {
 
   let endorseYesNo = req.session.data['endorse-yes-no']
   let convictionName = req.session.data['conviction-name']
 
   if (endorseYesNo === 'Endorsement not given' && convictionName === 'Fixed penalty notice'){
-    res.redirect('/motoring/v4/fpn-no-conviction')
+    res.redirect('/motoring/v5/fpn-no-conviction')
   } else {
-    res.redirect('/motoring/v4/date')
+    res.redirect('/motoring/v5/date')
   }
 })
 
-router.post('/motoring/v4/conviction-length', function (req, res) {
+router.post('/motoring/v5/conviction-length', function (req, res) {
 
   let convictionMeasure = req.session.data['conviction-measure']
 
   if (convictionMeasure === 'Penalty points') {
-    res.redirect('/motoring/v4/conviction-with-date')
+    res.redirect('/motoring/v5/conviction-with-date')
   } else {
-    res.redirect('/motoring/v4/conviction-length')
+    res.redirect('/motoring/v5/conviction-length')
   }
 })
 
