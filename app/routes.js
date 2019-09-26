@@ -52,6 +52,18 @@ router.post('/motoring/v3/conviction-length', function (req, res) {
 })
 
 // MOTORING v5
+
+router.post('/motoring/v5/lifetime-ban', function (req, res) {
+
+  let convictionName = req.session.data['conviction-name']
+
+  if (convictionName === 'Disqualification') {
+    res.redirect('/motoring/v5/lifetime-ban')
+  } else {
+    res.redirect('/motoring/v5/endorsement')
+  }
+})
+
 router.post('/motoring/v5/date-end', function (req, res) {
 
   let convictionName = req.session.data['conviction-name']
@@ -67,9 +79,12 @@ router.post('/motoring/v5/date', function (req, res) {
 
   let endorseYesNo = req.session.data['endorse-yes-no']
   let convictionName = req.session.data['conviction-name']
+  let lifeBanYesNo = req.session.data['life-ban-yes-no']
 
   if (endorseYesNo === 'Endorsement not given' && convictionName === 'Fixed penalty notice'){
     res.redirect('/motoring/v5/fpn-no-conviction')
+  } else if (convictionName === 'Disqualification' && lifeBanYesNo === 'Lifetime ban given') {
+    res.redirect('/motoring/v5/conviction-with-date')
   } else {
     res.redirect('/motoring/v5/date')
   }

@@ -1,0 +1,53 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="endorsement" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-l">{{ data['conviction-name'] }}</span>
+            <h1 class="govuk-fieldset__heading">
+              Were you given a lifetime driving ban?
+            </h1>
+          </legend>
+
+          <p>[placeholder hint text.]</p>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="life-ban-given" name="life-ban-yes-no" type="radio" value="Lifetime ban given">
+              <label class="govuk-label govuk-radios__label" for="life-ban-given">
+                Yes
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="life-ban-not-given" name="life-ban-yes-no" type="radio" value="Lifetime ban not given">
+              <label class="govuk-label govuk-radios__label" for="life-ban-not-given">
+                No
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}
