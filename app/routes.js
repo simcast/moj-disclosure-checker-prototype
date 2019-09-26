@@ -64,6 +64,18 @@ router.post('/motoring/v5/lifetime-ban', function (req, res) {
   }
 })
 
+router.post('/motoring/v5/endorsement', function (req, res) {
+
+  let convictionName = req.session.data['conviction-name']
+  let lifeBanYesNo = req.session.data['life-ban-yes-no']
+
+  if (convictionName === 'Disqualification' && lifeBanYesNo === 'Lifetime ban given') {
+    res.redirect('/motoring/v5/conviction-with-date')
+  } else {
+    res.redirect('/motoring/v5/endorsement')
+  }
+})
+
 router.post('/motoring/v5/date-end', function (req, res) {
 
   let convictionName = req.session.data['conviction-name']
