@@ -1,0 +1,88 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<script>
+//   function myFunction() {
+//   var x = document.getElementById("weeksInput");
+//   if (x.style.display === "none") {
+//     x.style.display = "block";
+//   } else {
+//     x.style.display = "none";
+//   }
+// }
+
+function showMonthsInput(){
+  document.getElementById('weeksInput').style.display = 'none';
+  document.getElementById('monthsInput').style.display = 'block';
+}
+function showWeeksInput(){
+  document.getElementById('weeksInput').style.display = 'block';
+  document.getElementById('monthsInput').style.display = 'none';
+}
+
+</script>
+
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="exit/conviction-with-date" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              Was the length of conviction given in weeks or months?
+            </h1>
+          </legend>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item next" onclick="showWeeksInput()">
+              <input class="govuk-radios__input next" id="conviction-in-weeks" name="conviction-weeks-months" type="radio" value="weeks">
+              <label class="govuk-label govuk-radios__label" for="conviction-in-weeks">
+                Weeks
+              </label>
+            </div>
+
+            <div class="govuk-inset-text" id="weeksInput" style="display:none;">
+              <label class="govuk-label govuk-!-font-weight-bold" for="conviction-weeks-number">
+                What was the length of the conviction?
+              </label>
+              <input class="govuk-input govuk-input--width-2 conviction-length-input" id="conviction-weeks-number" name="conviction-weeks-number" type="number" pattern="[0-9]*">
+              <span style="padding-left:5px;">weeks</span>
+            </div>
+
+            <div class="govuk-radios__item" onclick="showMonthsInput()">
+              <input class="govuk-radios__input" id="conviction-in-months" name="conviction-weeks-months" type="radio" value="months">
+              <label class="govuk-label govuk-radios__label" for="conviction-in-months">
+                Months
+              </label>
+            </div>
+
+            <div class="govuk-inset-text" id="monthsInput" style="display:none;">
+              <label class="govuk-label govuk-!-font-weight-bold" for="conviction-months-number">
+                What was the length of the conviction?
+              </label>
+              <input class="govuk-input govuk-input--width-2 conviction-length-input" id="conviction-months-number" name="conviction-months-number" type="number" pattern="[0-9]*">
+              <span style="padding-left:5px;">months</span>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

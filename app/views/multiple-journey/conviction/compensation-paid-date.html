@@ -1,0 +1,70 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="exit/conviction-with-date" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-l">Compensation to a victim</span>
+            <h1 class="govuk-fieldset__heading">
+              When did you pay the compensation in full?
+            </h1>
+          </legend>
+
+          <p>
+            If you paid the compensation in stages, enter the date you made the final payment.
+          </p>
+
+          <span id="changed-name-hint" class="govuk-hint">
+            For example, 23 9 2018
+          </span>
+
+          <div class="govuk-date-input" id="compensation-paid-date">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="compensation-paid-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="compensation-paid-day" name="compensation-paid-day" type="number" autocomplete="bday-day" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="compensation-paid-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="compensation-paid-month" name="compensation-paid-month" type="number" autocomplete="bday-month" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="compensation-paid-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="compensation-paid-year" name="compensation-paid-year" type="number" autocomplete="bday-year" pattern="[0-9]*">
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" type="submit">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

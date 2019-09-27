@@ -1,0 +1,45 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Check when a caution or conviction is spent
+      </h1>
+
+      <p>
+        Use this service to check when a caution or conviction becomes spent in England and Wales.
+      </p>
+
+      <div class="govuk-inset-text">
+        You can only check one caution or conviction at a time.
+      </div>
+
+      <p>
+        To use this service you’ll need to know:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the type of caution or conviction you were given</li>
+        <li>the date you were cautioned or convicted</li>
+      </ul>
+
+      <p>If you don’t have this information you can read <a href="https://www.gov.uk/guidance/telling-people-about-your-criminal-record#expire">guidance on when cautions and convictions become spent</a>.
+      </p>
+
+      <a href="multiple-journey/cautioned-or-convicted" role="button" draggable="false" class="govuk-button govuk-button--start">
+        Start now
+      </a>
+
+    </div>
+</div>
+
+{% endblock %}

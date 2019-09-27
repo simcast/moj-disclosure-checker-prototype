@@ -113,6 +113,267 @@ router.post('/motoring/v5/conviction-length', function (req, res) {
   }
 })
 
+// MOTORING v6
+
+router.post('/motoring/v6/specific-length', function (req, res) {
+
+  let convictionName = req.session.data['conviction-name']
+
+  if (convictionName === 'Disqualification') {
+    res.redirect('/motoring/v6/specific-length')
+  } else {
+    res.redirect('/motoring/v6/endorsement')
+  }
+})
+
+router.post('/motoring/v6/lifetime-ban', function (req, res) {
+
+  let specDisqual = req.session.data['specific-disqual-y-n']
+
+  if (specDisqual === 'Yes') {
+    res.redirect('/motoring/v6/endorsement')
+  } else {
+    res.redirect('/motoring/v6/lifetime-ban')
+  }
+})
+
+router.post('/motoring/v6/endorsement', function (req, res) {
+
+  let convictionName = req.session.data['conviction-name']
+  let lifeBanYesNo = req.session.data['life-ban-yes-no']
+
+  if (convictionName === 'Disqualification' && lifeBanYesNo === 'Lifetime ban given') {
+    res.redirect('/motoring/v6/conviction-with-date')
+  } else {
+    res.redirect('/motoring/v6/endorsement')
+  }
+})
+
+router.post('/motoring/v6/date-end', function (req, res) {
+
+  let convictionName = req.session.data['conviction-name']
+
+  if (convictionName === 'Penalty points' || convictionName === 'Fine' || convictionName === 'Fixed penalty notice') {
+    res.redirect('/motoring/v6/conviction-with-date')
+  } else {
+    res.redirect('/motoring/v6/date-end')
+  }
+})
+
+router.post('/motoring/v6/date', function (req, res) {
+
+  let endorseYesNo = req.session.data['endorse-yes-no']
+  let convictionName = req.session.data['conviction-name']
+  let lifeBanYesNo = req.session.data['life-ban-yes-no']
+
+  if (endorseYesNo === 'Endorsement not given' && convictionName === 'Fixed penalty notice'){
+    res.redirect('/motoring/v6/fpn-no-conviction')
+  } else if (convictionName === 'Disqualification' && lifeBanYesNo === 'Lifetime ban given') {
+    res.redirect('/motoring/v6/conviction-with-date')
+  } else {
+    res.redirect('/motoring/v6/date')
+  }
+})
+
+router.post('/motoring/v6/conviction-length', function (req, res) {
+
+  let convictionMeasure = req.session.data['conviction-measure']
+
+  if (convictionMeasure === 'Penalty points') {
+    res.redirect('/motoring/v6/conviction-with-date')
+  } else {
+    res.redirect('/motoring/v6/conviction-length')
+  }
+})
+
+// MULTIPLE CONVICTIONS EXAMPLE ****************************//
+
+// CAUTION OR CONVICTION
+router.post('/multiple-journey/caution/age', function (req, res) {
+
+  let cautionedOrConvicted = req.session.data['cautioned-or-convicted']
+
+  if (cautionedOrConvicted === 'Conviction') {
+    res.redirect('/multiple-journey/conviction/age')
+  } else {
+    res.redirect('/multiple-journey/caution/age')
+  }
+})
+
+// CAUTION ROUTES
+
+router.post('/multiple-journey/caution/youth-type', function (req, res) {
+
+  let ageAtCaution = req.session.data['age-at-caution']
+
+  if (ageAtCaution === '18 or over') {
+    res.redirect('/multiple-journey/caution/type')
+  } else {
+    res.redirect('/multiple-journey/caution/youth-type')
+  }
+})
+
+router.post('/multiple-journey/caution/conditions-end', function (req, res) {
+
+  let youthSimpleOrConditionalCaution = req.session.data['youth-simple-or-conditional-caution']
+  let simpleOrConditionalCaution = req.session.data['simple-or-conditional-caution']
+
+  if (simpleOrConditionalCaution === 'Youth caution' || simpleOrConditionalCaution === 'Simple') {
+    res.redirect('/multiple-journey/caution/exit/caution-with-date')
+  } else {
+    res.redirect('/multiple-journey/caution/conditions-end')
+  }
+})
+
+router.post('/multiple-journey/caution/conditions-end', function (req, res) {
+
+  let conditionsMet = req.session.data['conditions-met']
+
+  if (conditionsMet === 'No') {
+    res.redirect('/multiple-journey/caution/exit/conditional-broken')
+  } else {
+    res.redirect('/multiple-journey/caution/conditions-end')
+  }
+
+})
+
+router.post('/multiple-journey/caution/exit/caution-with-date', function (req, res) {
+
+  cautionCalc (req, res);
+
+  res.redirect('/multiple-journey/caution/exit/caution-with-date')
+
+})
+
+// CONVICTION ROUTES
+
+//Over 18 exit
+
+router.post('/multiple-journey/conviction/type', function (req, res) {
+
+  let ageAtConviction = req.session.data['age-at-conviction']
+
+  if (ageAtConviction === '18 or over') {
+    res.redirect('/multiple-journey/conviction/over-18/type')
+  } else {
+    res.redirect('/multiple-journey/conviction/type')
+  }
+})
+
+
+//Conviction type
+
+//youth
+
+router.post('/multiple-journey/conviction/community', function (req, res) {
+
+  let convictionType = req.session.data['conviction-type']
+
+  if (convictionType === 'Custodial sentence') {
+    res.redirect('/multiple-journey/conviction/custodial')
+  } else if (convictionType === 'Discharge') {
+    res.redirect('/multiple-journey/conviction/discharge')
+  } else if (convictionType === 'Financial penalty') {
+    res.redirect('/multiple-journey/conviction/financial-penalty')
+  } else if (convictionType === 'Motoring endorsement') {
+    res.redirect('/multiple-journey/conviction/date')
+  } else if (convictionType === 'Hospital and guardianship orders') {
+    res.redirect('/multiple-journey/conviction/hospital-guardianship-order')
+  } else {
+    res.redirect('/multiple-journey/conviction/community')
+  }
+})
+
+//adult
+
+router.post('/multiple-journey/conviction/over-18/community', function (req, res) {
+
+  let convictionType = req.session.data['conviction-type']
+
+  if (convictionType === 'Custodial sentence') {
+    res.redirect('/multiple-journey/conviction/over-18/custodial')
+  } else if (convictionType === 'Discharge') {
+    res.redirect('/multiple-journey/conviction/over-18/discharge')
+  } else if (convictionType === 'Prison sentence') {
+    res.redirect('/multiple-journey/conviction/over-18/custodial')
+  } else if (convictionType === 'Financial penalty') {
+    res.redirect('/multiple-journey/conviction/over-18/financial-penalty')
+  } else if (convictionType === 'Motoring endorsement') {
+    res.redirect('/multiple-journey/conviction/over-18/date')
+  } else if (convictionType === 'Hospital and guardianship orders') {
+    res.redirect('/multiple-journey/conviction/over-18/hospital-guardianship-order')
+  } else if (convictionType === 'Prevention and reparation orders') {
+    res.redirect('/multiple-journey/conviction/over-18/prevention-reparation-order')
+  } else if (convictionType === 'Military convictions') {
+    res.redirect('/multiple-journey/conviction/over-18/military')
+  } else {
+    res.redirect('/multiple-journey/conviction/over-18/community')
+  }
+})
+
+//Motoring convictions
+
+router.post('/multiple-journey/conviction/conviction-months-weeks', function (req, res) {
+
+  let convictionType = req.session.data['conviction-type']
+
+  if (convictionType === 'Motoring endorsement') {
+    res.redirect('/multiple-journey/conviction/exit/conviction-with-date')
+  } else {
+    res.redirect('/multiple-journey/conviction/conviction-months-weeks')
+  }
+})
+
+//Financial penalties
+
+router.post('/multiple-journey/conviction/date', function (req, res) {
+
+  let convictionName = req.session.data['conviction-name']
+
+  if (convictionName === 'Compensation to a victim') {
+    res.redirect('/multiple-journey/conviction/compensation-paid')
+  } else {
+    res.redirect('/multiple-journey/conviction/date')
+  }
+})
+
+router.post('/multiple-journey/conviction/compensation-paid-date', function (req, res) {
+
+  let compensationPaid = req.session.data['compensation-paid']
+
+  if (compensationPaid === 'No') {
+    res.redirect('/multiple-journey/conviction/exit/compensation-unpaid')
+  } else {
+    res.redirect('/multiple-journey/conviction/compensation-paid-date')
+  }
+})
+
+//Custodial sentences
+
+router.post('/multiple-journey/conviction/conviction-length', function (req, res) {
+
+  let convictionName = req.session.data['conviction-name']
+
+  if (convictionName === 'Detention') {
+    res.redirect('/multiple-journey/conviction/conviction-length-custodial-detention')
+  } else if (convictionName === 'Detention and training order (DTO)') {
+    res.redirect('/multiple-journey/conviction/conviction-length-custodial-dto')
+  } else {
+    res.redirect('/multiple-journey/conviction/conviction-length')
+  }
+})
+
+router.post('/multiple-journey/conviction/conviction-months-weeks', function (req, res) {
+
+  let isConvictionDateKnown = req.session.data['is-conviction-date-known']
+
+  if (isConvictionDateKnown === 'no') {
+    res.redirect('/multiple-journey/conviction/exit/conviction-unknown-date')
+  } else {
+    res.redirect('/multiple-journey/conviction/conviction-months-weeks')
+  }
+})
+
 // CAUTION OR CONVICTION
 router.post('/v4/caution/age', function (req, res) {
 

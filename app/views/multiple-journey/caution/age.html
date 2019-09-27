@@ -11,29 +11,32 @@
 
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="endorsement" method="post" class="form">
+      <form action="youth-type" method="post" class="form">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-            <span class="govuk-caption-l">{{ data['conviction-name'] }}</span>
             <h1 class="govuk-fieldset__heading">
-              Were you disqualified for life?
+              How old were you when you got cautioned?
             </h1>
           </legend>
 
+          <span id="changed-name-hint" class="govuk-hint">
+            This is your age when you were given the caution, not when you committed the offence
+          </span>
+
           <div class="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="life-ban-given" name="life-ban-yes-no" type="radio" value="Lifetime ban given">
-              <label class="govuk-label govuk-radios__label" for="life-ban-given">
-                Yes
+              <input class="govuk-radios__input" id="under-18" name="age-at-caution" type="radio" value="Under 18">
+              <label class="govuk-label govuk-radios__label" for="under-18">
+                Under 18
               </label>
             </div>
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="life-ban-not-given" name="life-ban-yes-no" type="radio" value="Lifetime ban not given">
-              <label class="govuk-label govuk-radios__label" for="life-ban-not-given">
-                No
+              <input class="govuk-radios__input" id="over-18" name="age-at-caution" type="radio" value="18 or over">
+              <label class="govuk-label govuk-radios__label" for="over-18">
+                18 or over
               </label>
             </div>
 

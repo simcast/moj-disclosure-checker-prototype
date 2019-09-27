@@ -11,28 +11,31 @@
 
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="endorsement" method="post" class="form">
+      <form action="date" method="post" class="form">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-            <span class="govuk-caption-l">{{ data['conviction-name'] }}</span>
             <h1 class="govuk-fieldset__heading">
-              Were you disqualified for life?
+              Do you know the date you were convicted?
             </h1>
           </legend>
 
-          <div class="govuk-radios">
+          <span id="changed-name-hint" class="govuk-hint">
+            This is the date the conviction was given in court, not the date you committed the offence or got arrested
+          </span>
+
+          <div class="govuk-radios--inline">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="life-ban-given" name="life-ban-yes-no" type="radio" value="Lifetime ban given">
-              <label class="govuk-label govuk-radios__label" for="life-ban-given">
+              <input class="govuk-radios__input" id="conviction-date-yes" name="is-conviction-date-known" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="conviction-date-yes">
                 Yes
               </label>
             </div>
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="life-ban-not-given" name="life-ban-yes-no" type="radio" value="Lifetime ban not given">
-              <label class="govuk-label govuk-radios__label" for="life-ban-not-given">
+              <input class="govuk-radios__input" id="conviction-date-no" name="is-conviction-date-known" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="conviction-date-no">
                 No
               </label>
             </div>

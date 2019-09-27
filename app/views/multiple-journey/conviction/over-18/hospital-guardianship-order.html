@@ -11,29 +11,27 @@
 
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="endorsement" method="post" class="form">
+      <form action="../date" method="post" class="form">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-            <span class="govuk-caption-l">{{ data['conviction-name'] }}</span>
             <h1 class="govuk-fieldset__heading">
-              Were you disqualified for life?
+              What type of order were you given?
             </h1>
           </legend>
-
           <div class="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="life-ban-given" name="life-ban-yes-no" type="radio" value="Lifetime ban given">
-              <label class="govuk-label govuk-radios__label" for="life-ban-given">
-                Yes
+              <input class="govuk-radios__input" id="hospital-order" name="conviction-name" type="radio" value="Hospital order">
+              <label class="govuk-label govuk-radios__label" for="hospital-order">
+                Hospital order
               </label>
             </div>
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="life-ban-not-given" name="life-ban-yes-no" type="radio" value="Lifetime ban not given">
-              <label class="govuk-label govuk-radios__label" for="life-ban-not-given">
-                No
+              <input class="govuk-radios__input" id="guardianship-order" name="conviction-name" type="radio" value="Guardianship order">
+              <label class="govuk-label govuk-radios__label" for="guardianship-order">
+                Guardianship order
               </label>
             </div>
 

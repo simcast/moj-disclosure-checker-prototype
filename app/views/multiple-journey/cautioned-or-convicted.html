@@ -1,0 +1,55 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="./caution/age" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              Were you cautioned or convicted?
+            </h1>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="cautioned" name="cautioned-or-convicted" type="radio" value="Caution">
+              <label class="govuk-label govuk-radios__label" for="cautioned">
+                Cautioned
+                <span class="govuk-hint">
+                  You were given an official warning by the police
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="convicted" name="cautioned-or-convicted" type="radio" value="Conviction">
+              <label class="govuk-label govuk-radios__label" for="convicted">
+                Convicted
+                <span class="govuk-hint">
+                  You were found guilty of a crime in court
+                </span>
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

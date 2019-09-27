@@ -1,0 +1,79 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="conviction-months-weeks" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-l">{{ data['conviction-name'] }}</span>
+            <h1 class="govuk-fieldset__heading">
+              When were you given the order?
+            </h1>
+          </legend>
+
+          <span id="changed-name-hint" class="govuk-hint">
+            This is the date you were convicted by a court. For example, 23 9 2018
+          </span>
+
+          <div class="govuk-date-input" id="conviction-date">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="conviction-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="conviction-day" name="conviction-day" type="number" autocomplete="bday-day" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="conviction-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="conviction-month" name="conviction-month" type="number" autocomplete="bday-month" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="conviction-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="conviction-year" name="conviction-year" type="number" autocomplete="bday-year" pattern="[0-9]*">
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            I do not know this date
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>
+          If you enter an approximate date, you will not be given the exact date your caution or conviction is spent.
+          </p>
+        </div>
+      </details>
+
+      <button class="govuk-button" type="submit">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

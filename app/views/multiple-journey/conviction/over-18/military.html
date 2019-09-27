@@ -1,0 +1,75 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="date" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              What was your military conviction?
+            </h1>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="dismissal" name="conviction-name" type="radio" value="Dismissal">
+              <label class="govuk-label govuk-radios__label" for="dismissal">
+                Dismissal
+                <span class="govuk-hint">
+                  [placeholder hint text]
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="overseas-community-order" name="conviction-name" type="radio" value="Overseas community order">
+              <label class="govuk-label govuk-radios__label" for="overseas-community-order">
+                Overseas community order
+                <span class="govuk-hint">
+                  [placeholder hint text]
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="service-community-order" name="conviction-name" type="radio" value="Service community order">
+              <label class="govuk-label govuk-radios__label" for="service-community-order">
+                Service community order
+                <span class="govuk-hint">
+                  [placeholder hint text]
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="service-detention" name="conviction-name" type="radio" value="Service detention">
+              <label class="govuk-label govuk-radios__label" for="service-detention">
+                Service detention
+                <span class="govuk-hint">
+                  [placeholder hint text]
+                </span>
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}
