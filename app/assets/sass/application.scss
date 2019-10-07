@@ -47,6 +47,11 @@ $govuk-global-styles: true;
   margin-bottom: 0;
 }
 
+.conviction-group {
+  border: 2px solid $govuk-border-colour;
+  padding: 20px;
+  margin-bottom: 30px;
+}
 
 
 // #weeksInput {
