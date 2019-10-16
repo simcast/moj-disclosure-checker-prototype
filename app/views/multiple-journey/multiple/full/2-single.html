@@ -11,17 +11,25 @@
 
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="../multiple/add-another" method="post" class="form">
+      <form action="2-single-result" method="post" class="form">
 
             <h1 class="govuk-heading-xl">
-              Check your answers
+              What you've told us
             </h1>
 
-          <!-- <span id="changed-name-hint" class="govuk-hint">
-            [Placeholder. Description of what this page is?]
-          </span> -->
+            <p>
+              Here’s what you’ve told us so far. You can check the information you’ve entered is correct before choosing to:
+            </p>
 
-        <h2 class="govuk-heading-l govuk-!-margin-bottom-0">Conviction 1</h2>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>add a sentence to an existing conviction – for example, if you were given a community order and a fine for a single offence)</li>
+              <li>enter a separate caution or conviction – for example, if you were convicted for an unrelated offence</li>
+              <li>continue to the results page, if you have no more cautions, convictions or sentences to check</li>
+            </ul>
+
+        <h2 class="govuk-heading-m">Your cautions or convictions</h2>
+
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-1">1. Conviction</h3>
 
         <div class="govuk-inset-text govuk-!-margin-top-2">
         <dl class="govuk-summary-list govuk-!-margin-bottom-5">
@@ -43,7 +51,7 @@
               Age at time of conviction
             </dt>
             <dd class="govuk-summary-list__value">
-              Under 18
+              Over 18
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -64,23 +72,22 @@
           </div>
         </dl>
 
-        <p class="govuk-!-margin-bottom-4">
-          <a href="placeholder-to-2-combined-1-single">Add another sentence to this conviction</a>
-        </p>
+        <button class="govuk-button govuk-button--secondary" formaction="placeholder-to-2-combined-1-single">
+          Add another sentence to this conviction
+        </button>
+
       </div>
 
-
-
-      <h2 class="govuk-heading-l govuk-!-margin-bottom-0">Conviction 2</h2>
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">2. Caution</h3>
 
       <div class="govuk-inset-text govuk-!-margin-top-2">
         <dl class="govuk-summary-list govuk-!-margin-bottom-5">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Type of sentence
+              Type of caution
             </dt>
             <dd class="govuk-summary-list__value">
-              Prison sentence or hospital order
+              Conditional caution
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -88,7 +95,7 @@
               Age at time of conviction
             </dt>
             <dd class="govuk-summary-list__value">
-              Under 18
+              Over 18
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -96,30 +103,35 @@
               Start date
             </dt>
             <dd class="govuk-summary-list__value">
-              6 June 2018
+              6 September 2018
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Length of sentence
+              Date conditions ended
             </dt>
             <dd class="govuk-summary-list__value">
-              12 months
+              6 October 2018
             </dd>
           </div>
         </dl>
 
-      <p class="govuk-!-margin-bottom-4">
-        <a href="">Add another sentence to this conviction</a>
-      </p>
+        <!-- <a class="govuk-button govuk-button--secondary" href="#">
+          Add another sentence to this conviction
+        </a> -->
 
       </div>
 
-        <p>
-          <a href="">Add a caution or conviction in separate proceedings</a>
-        </p>
+      <h2 class="govuk-heading-m">Add a separate caution or conviction</h2>
 
-        <button class="govuk-button">Continue to result</button>
+      <a class="govuk-button govuk-button--secondary" href="#">
+        Enter a new caution or conviction
+      </a>
+
+      <br/>
+      <br/>
+
+      <button class="govuk-button">Go to results page</button>
 
 
       </form>
