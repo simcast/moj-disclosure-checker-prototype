@@ -11,20 +11,31 @@
 
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="./caution/age" method="post" class="form">
+      <form action="type" method="post" class="form">
+
+        <!-- <div class="moj-identity-bar">
+          <div class="moj-identity-bar__container">
+            <div class="moj-identity-bar__details">
+              <span class="moj-identity-bar__title"><b>Caution or conviction 1</b></span>
+            </div>
+          </div>
+        </div> -->
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading">
-              Were you cautioned or convicted?
+              {% if data['single-or-multiple'] == "Multiple" %}
+              <span class="govuk-caption-l">Caution or conviction 1</span>
+              {% endif %}
+              Was this a caution or a conviction?
             </h1>
           </legend>
           <div class="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="cautioned" name="cautioned-or-convicted" type="radio" value="Caution">
               <label class="govuk-label govuk-radios__label" for="cautioned">
-                Cautioned
+                Caution
                 <span class="govuk-hint">
                   You were given an official warning by the police
                 </span>
@@ -34,7 +45,7 @@
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="convicted" name="cautioned-or-convicted" type="radio" value="Conviction">
               <label class="govuk-label govuk-radios__label" for="convicted">
-                Convicted
+                Conviction
                 <span class="govuk-hint">
                   You were found guilty of a crime in court
                 </span>
@@ -43,21 +54,7 @@
 
           </div>
         </fieldset>
-
       </div>
-
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Speeding and minor traffic offences
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p>
-          [Describing, for example, that fixed penalty notices and penalty charge notices are not convictions and you do not need to disclose them if you pay them]
-          </p>
-        </div>
-      </details>
 
       <button class="govuk-button">Continue</button>
 

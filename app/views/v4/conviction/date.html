@@ -23,7 +23,7 @@
           </legend>
 
           <span id="changed-name-hint" class="govuk-hint">
-            This is the date you were convicted by a court. For example, 23 9 2018
+            If you do not know the exact date, you can enter an approximate one. For example, 23 9 2018.
           </span>
 
           <div class="govuk-date-input" id="conviction-date">
@@ -56,7 +56,7 @@
         </fieldset>
       </div>
 
-      <details class="govuk-details">
+      <!-- <details class="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             I do not know this date
@@ -67,7 +67,22 @@
           If you enter an approximate date, you will not be given the exact date your caution or conviction is spent.
           </p>
         </div>
-      </details>
+      </details> -->
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+      <div class="govuk-checkboxes--small">
+       <div class="govuk-checkboxes__item">
+         <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+         <label class="govuk-label govuk-checkboxes__label" for="waste">
+           This is not the exact date
+
+         </label>
+       </div>
+       </div>
+</fieldset>
+</div>
+
 
       <button class="govuk-button" type="submit">Continue</button>
 
