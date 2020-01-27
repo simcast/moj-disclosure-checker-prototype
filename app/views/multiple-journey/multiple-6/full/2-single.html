@@ -1,0 +1,142 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="2-single-result" method="post" class="form">
+
+            <h1 class="govuk-heading-xl">
+              What you've told us
+            </h1>
+
+            <p>
+              Here’s what you’ve told us so far. You can check the information you’ve entered is correct before choosing to:
+            </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>add a sentence to an existing conviction – for example, if you were given a community order and a fine for a single offence)</li>
+              <li>enter a separate caution or conviction – for example, if you were convicted for an unrelated offence</li>
+              <li>continue to the results page, if you have no more cautions, convictions or sentences to check</li>
+            </ul>
+
+        <h2 class="govuk-heading-m">Your cautions or convictions</h2>
+
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-1">1. Conviction</h3>
+
+        <div class="govuk-inset-text govuk-!-margin-top-2">
+        <dl class="govuk-summary-list govuk-!-margin-bottom-5">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Type of sentence
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Prison sentence or hospital order
+            </dd>
+            <!-- <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a>
+            </dd> -->
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Age at time of conviction
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Over 18
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Start date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              6 June 2018
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Length of sentence
+            </dt>
+            <dd class="govuk-summary-list__value">
+              12 months
+            </dd>
+          </div>
+        </dl>
+
+        <button class="govuk-button govuk-button--secondary" formaction="placeholder-to-2-combined-1-single">
+          Add another sentence to this conviction
+        </button>
+
+      </div>
+
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">2. Caution</h3>
+
+      <div class="govuk-inset-text govuk-!-margin-top-2">
+        <dl class="govuk-summary-list govuk-!-margin-bottom-5">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Type of caution
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Conditional caution
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Age at time of conviction
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Over 18
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Start date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              6 September 2018
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date conditions ended
+            </dt>
+            <dd class="govuk-summary-list__value">
+              6 October 2018
+            </dd>
+          </div>
+        </dl>
+
+        <!-- <a class="govuk-button govuk-button--secondary" href="#">
+          Add another sentence to this conviction
+        </a> -->
+
+      </div>
+
+      <h2 class="govuk-heading-m">Add a separate caution or conviction</h2>
+
+      <a class="govuk-button govuk-button--secondary" href="#">
+        Enter a new caution or conviction
+      </a>
+
+      <br/>
+      <br/>
+
+      <button class="govuk-button">Go to results page</button>
+
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

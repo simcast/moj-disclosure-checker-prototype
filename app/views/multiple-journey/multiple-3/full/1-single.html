@@ -1,0 +1,102 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="1-single-result" method="post" class="form">
+
+            <h1 class="govuk-heading-xl">
+              Add cautions or convictions to be checked
+            </h1>
+
+            <h2 class="govuk-heading-l">Your cautions</h2>
+
+            <span class="govuk-hint">You have not added any cautions</span>
+            <div class="govuk-form-group">
+              <a class="govuk-button govuk-button--secondary govuk-!-margin-bottom-1" href="#">
+                Add a caution
+              </a>
+            </div>
+
+        <h2 class="govuk-heading-l">Your convictions</h2>
+
+        <div class="conviction-group">
+        <h3 class="govuk-heading-m govuk-!-margin-bottom-1">Conviction 1</h3>
+
+        <!-- <div class="govuk-inset-text govuk-!-margin-top-0"> -->
+        <!-- <div class="cya-item govuk-!-margin-top-0"> -->
+
+          <dl class="govuk-summary-list govuk-!-margin-bottom-5">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Sentence 1
+              </dt>
+              <dd class="govuk-summary-list__value govuk-!-font-weight-bold">
+                Prison sentence
+              </dd>
+              <!-- <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> date of birth</span>
+                </a>
+              </dd> -->
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Age at time of conviction
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Over 18
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Start date
+              </dt>
+              <dd class="govuk-summary-list__value">
+                6 June 2018
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Length of sentence
+              </dt>
+              <dd class="govuk-summary-list__value">
+                12 months
+              </dd>
+            </div>
+          </dl>
+
+
+
+          <!-- <a class="govuk-button govuk-button--secondary govuk-!-margin-top-2 govuk-!-margin-bottom-2 href="#"> -->
+          <!-- <p>
+            <a class="govuk-!-margin-top-2 govuk-!-margin-bottom-2" href="#">
+            Add a sentence to this conviction
+            </a>
+          </p> -->
+
+        </div>
+
+          <a class="govuk-button govuk-button--secondary govuk-!-bottom-top-2" href="placeholder-to-2-single">
+            Add a conviction
+          </a>
+
+          <br/>
+
+        <button class="govuk-button">Go to results page</button>
+
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

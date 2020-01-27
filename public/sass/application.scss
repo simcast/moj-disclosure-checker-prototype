@@ -15,6 +15,10 @@ $govuk-global-styles: true;
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+.cya-item {
+  border: 2px solid govuk-colour("grey-2");
+  padding: 10px;
+}
 .conviction-length-input {
   margin-top: 10px;
 }
@@ -54,6 +58,37 @@ $govuk-global-styles: true;
   margin-bottom: 30px;
 }
 
+// Custom caption
+
+.custom-caption {
+  font-weight: bold;
+  color: govuk-colour("black");
+  margin-bottom: 10px;
+}
+
+// Multiples "breadcrumb"
+.multiple-breadcrumb {
+  border: 5px solid govuk-colour("grey-1");
+}
+
+.breadcrumb-i {
+  display: block;
+  font-weight: normal;
+  color: govuk-colour("grey-1");
+}
+
+// .indicator:before {
+//   content: "";
+//   width: 0;
+//   height: 0;
+//   border-top: 10px solid transparent;
+//   border-bottom: 10px solid transparent;
+//   border-left: 10px solid govuk-colour("grey-1");
+// }
+
+.indicator {
+  color: black;
+}
 
 // #weeksInput {
 //   display: none;

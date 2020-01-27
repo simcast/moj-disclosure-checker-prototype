@@ -1,0 +1,56 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="placeholder-to-2-combined" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              <span class="govuk-caption-l">Conviction 1, sentence 1: Prison sentence</span>
+              Were you given any other sentences as part of this conviction?
+            </h1>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="multi-sentences-yes" name="multi-sentences" type="radio" value="Multiple sentences">
+              <label class="govuk-label govuk-radios__label" for="multi-sentences-yes">
+                Yes
+                <!-- <span class="govuk-hint">
+                  You were given an official warning by the police
+                </span> -->
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="multi-sentences-no" name="multi-sentences" type="radio" value="Single sentence">
+              <label class="govuk-label govuk-radios__label" for="multi-sentences-no">
+                No
+                <!-- <span class="govuk-hint">
+                  You were found guilty of a crime in court
+                </span> -->
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="type" method="post" class="form">
+
+        <!-- <div class="moj-identity-bar">
+          <div class="moj-identity-bar__container">
+            <div class="moj-identity-bar__details">
+              <span class="moj-identity-bar__title"><b>Caution or conviction 1</b></span>
+            </div>
+          </div>
+        </div> -->
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              Adding more than one caution or conviction
+            </h1>
+          </legend>
+        </fieldset>
+      </div>
+
+      <p>
+        Explanation of how multiple convictions works.
+      </p>
+
+      <a class="govuk-button govuk-button--secondary" href="#">
+        Add a new caution
+      </a>
+
+      <br/>
+
+      <a class="govuk-button govuk-button--secondary" href="type">
+        Add a new conviction
+      </a>
+
+    </div>
+</div>
+
+{% endblock %}

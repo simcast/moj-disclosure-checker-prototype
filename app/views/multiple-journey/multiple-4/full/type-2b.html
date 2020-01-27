@@ -1,0 +1,144 @@
+
+{% extends "layout-alpha.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- <div class="moj-identity-bar">
+        <div class="moj-identity-bar__container">
+          <div class="moj-identity-bar__details">
+            <span class="moj-identity-bar__title"><b>Conviction 1</b></span>
+          </div>
+        </div>
+      </div> -->
+
+      <form action="custodial" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+
+            <div class="multiple-breadcrumb govuk-!-font-size-19 govuk-!-padding-2 govuk-!-margin-bottom-6">
+              <span class="breadcrumb-header">Conviction 1
+              <span class="breadcrumb-i">Sentence 1: Prison sentence</span>
+              <span class="breadcrumb-i">Sentence 2: Community order</span>
+              <span class="breadcrumb-i">Sentence 3: Compensation order</span>
+              <span class="breadcrumb-i indicator">Sentence 4:</span>
+            </div>
+
+            <h1 class="govuk-fieldset__heading">
+              What type of sentence were you given?
+            </h1>
+          </legend>
+
+          <div class="govuk-radios">
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="community-or-youth-rehab-order" name="conviction-type" type="radio" value="Community or youth rehabilitation order">
+              <label class="govuk-label govuk-radios__label" for="community-or-youth-rehab-order">
+                Community or youth rehabilitation order (YRO)
+                <span class="govuk-hint">
+                  For example, curfew or unpaid work. You might have been asked to wear a tag as part of your order
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="custodial-sentence" name="conviction-type" type="radio" value="Custodial sentence">
+              <label class="govuk-label govuk-radios__label" for="custodial-sentence">
+                Custodial sentence or hospital order
+                <span class="govuk-hint">
+                  For example, a detention and training order (DTO) or a hospital order given under the Mental Health Act
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="discharge" name="conviction-type" type="radio" value="Discharge">
+              <label class="govuk-label govuk-radios__label" for="discharge">
+                Discharge
+                <span class="govuk-hint">
+                  For example, a conditional discharge order or bind over
+                </span>
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="financial-penalty" name="conviction-type" type="radio" value="Financial penalty">
+              <label class="govuk-label govuk-radios__label" for="financial-penalty">
+                Financial penalty
+                <span class="govuk-hint">
+                  For example, paying a fine or compensation
+                </span>
+              </label>
+            </div>
+
+            <!-- <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hospital-order" name="conviction-type" type="radio" value="Hospital order">
+              <label class="govuk-label govuk-radios__label" for="hospital-order">
+                Hospital order
+                <span class="govuk-hint">
+                  For example, mental health treatment
+                </span>
+              </label>
+            </div> -->
+
+            <!-- <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="military" name="conviction-type" type="radio" value="Military">
+              <label class="govuk-label govuk-radios__label" for="military">
+                Military
+                <span class="govuk-hint">
+                  For example, removal from Her Majesty's services
+                </span>
+              </label>
+            </div> -->
+
+            <!-- <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="motoring" name="conviction-type" type="radio" value="Motoring endorsement">
+              <label class="govuk-label govuk-radios__label" for="motoring">
+                Motoring endorsement
+                <span class="govuk-hint">
+                  For example you were given penalty points or a disqualification at court
+                </span>
+              </label>
+            </div> -->
+
+            <!-- <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hospital-and-guardianship-orders" name="conviction-type" type="radio" value="Hospital and guardianship orders">
+              <label class="govuk-label govuk-radios__label" for="hospital-and-guardianship-orders">
+                Hospital or guardianship order
+                <span class="govuk-hint">
+                  For example, if there were mental health concerns
+                </span>
+              </label>
+            </div> -->
+
+            <!-- <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rehabilitation-or-prevention" name="conviction-type" type="radio" value="Rehabilitation or prevention">
+              <label class="govuk-label govuk-radios__label" for="rehabilitation-or-prevention">
+                Rehabilitation or prevention
+                <span class="govuk-hint">
+                  For example, an attendance centre order or supervision order
+                </span>
+              </label>
+            </div> -->
+
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}
