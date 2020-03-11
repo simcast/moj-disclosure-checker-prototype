@@ -3,6 +3,20 @@ const router = express.Router()
 
 // *********** VERSION 4 ***********
 
+
+// Multiples
+
+router.post('/multiple-journey/multiple-3/full/1-single', function (req, res) {
+
+  let multiSentences = req.session.data['multi-sentences']
+
+  if (multiSentences === 'Multiple sentences') {
+    res.redirect('/multiple-journey/multiple-3/full/type-2')
+  } else {
+    res.redirect('/multiple-journey/multiple-3/full/1-single')
+  }
+})
+
 // MOTORING OPTIONS
 
 router.post('/motoring/mvp/date', function (req, res) {
