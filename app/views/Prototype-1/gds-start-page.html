@@ -4,6 +4,26 @@
   Start page example
 {% endblock %}
 
+{% block BeforeContent %}
+<div class="gem-c-contextual-breadcrumbs">
+  <div class="gem-c-breadcrumbs govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile" data-module="track-click">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a data-track-category="homeLinkClicked" data-track-action="homeBreadcrumb" data-track-label="" data-track-options="{}" class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a data-track-category="breadcrumbClicked" data-track-action="2" data-track-label="/browse/working" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Working, jobs and pensions&quot;}" class="govuk-breadcrumbs__link" href="/browse/working">Working, jobs and pensions</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+            <a data-track-category="breadcrumbClicked" data-track-action="3" data-track-label="/browse/working/finding-job" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Finding a job&quot;}" class="govuk-breadcrumbs__link" href="/browse/working/finding-job">Finding a job</a>
+      </li>
+      </ol>
+  </div>
+</div>
+
+
+{% endblock %}
+
 {% block header %}
   <!-- Blank header with no service name for the start page -->
   {{ govukHeader() }}
@@ -12,396 +32,195 @@
 
 
 {% block content %}
-    
-    <div id="wrapper" class="direction-ltr">
-
-        
-<div class="gem-c-contextual-breadcrumbs">
-    
-
-
-<div class="gem-c-breadcrumbs govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile" data-module="track-click">
-  <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-          <a data-track-category="homeLinkClicked" data-track-action="homeBreadcrumb" data-track-label="" data-track-options="{}" class="govuk-breadcrumbs__link" href="/">Home</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          <a data-track-category="breadcrumbClicked" data-track-action="2" data-track-label="/browse/working" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Working, jobs and pensions&quot;}" class="govuk-breadcrumbs__link" href="/browse/working">Working, jobs and pensions</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          <a data-track-category="breadcrumbClicked" data-track-action="3" data-track-label="/browse/working/finding-job" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Finding a job&quot;}" class="govuk-breadcrumbs__link" href="/browse/working/finding-job">Finding a job</a>
-        </li>
-  </ol>
-</div>
-
-
-  
-</div>
-
-
-    <main role="main" id="content" class="guide" lang="en">
-      
-
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <div class="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
-  <h1 class="gem-c-title__text ">
-    Telling an employer, university or college about your criminal record
-  </h1>
-</div>
+      <h1 class="gem-c-title__text ">
+        Telling an employer, university or college about your criminal record
+      </h1>
+    </div>
 
-      <a class="gem-c-skip-link govuk-skip-link" href="#guide-contents">Skip to contents of guide</a>
+    <a class="gem-c-skip-link govuk-skip-link" href="#guide-contents">Skip to contents of guide</a>
 
-      <aside class="part-navigation-container" role="complementary">
-          <nav class="gem-c-contents-list " aria-label="Pages in this guide" role="navigation" data-module="track-click">
-    <h2 class="gem-c-contents-list__title">
-      Contents
-</h2>
-    <ol class="gem-c-contents-list__list">
-        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-          <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 1" data-track-label="/tell-employer-or-college-about-criminal-record" data-track-options="{&quot;dimension29&quot;:&quot;When you need to tell an employer, university or college&quot;}" href="/tell-employer-or-college-about-criminal-record">When you need to tell an employer, university or college</a>
+    <aside class="part-navigation-container" role="complementary">
+      <nav class="gem-c-contents-list " aria-label="Pages in this guide" role="navigation" data-module="track-click">
+        <h2 class="gem-c-contents-list__title">
+          Contents
+        </h2>
+        <ol class="gem-c-contents-list__list">
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 1" data-track-label="/tell-employer-or-college-about-criminal-record" data-track-options="{&quot;dimension29&quot;:&quot;When you need to tell an employer, university or college&quot;}" href="/tell-employer-or-college-about-criminal-record">When you need to tell an employer, university or college</a>
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 2" data-track-label="/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give" data-track-options="{&quot;dimension29&quot;:&quot;What information you need to give&quot;}" href="/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give">What information you need to give</a>
 
-        </li>
-        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-          <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 2" data-track-label="/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give" data-track-options="{&quot;dimension29&quot;:&quot;What information you need to give&quot;}" href="/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give">What information you need to give</a>
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
+              Cautions
 
-        </li>
-        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
-          Cautions
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 4" data-track-label="/tell-employer-or-college-about-criminal-record/fines-and-compensation" data-track-options="{&quot;dimension29&quot;:&quot;Fines and compensation&quot;}" href="/tell-employer-or-college-about-criminal-record/fines-and-compensation">Fines and compensation</a>
 
-        </li>
-        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-          <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 4" data-track-label="/tell-employer-or-college-about-criminal-record/fines-and-compensation" data-track-options="{&quot;dimension29&quot;:&quot;Fines and compensation&quot;}" href="/tell-employer-or-college-about-criminal-record/fines-and-compensation">Fines and compensation</a>
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 5" data-track-label="/tell-employer-or-college-about-criminal-record/driving-convictions" data-track-options="{&quot;dimension29&quot;:&quot;Driving convictions&quot;}" href="/tell-employer-or-college-about-criminal-record/driving-convictions">Driving convictions</a>
 
-        </li>
-        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-          <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 5" data-track-label="/tell-employer-or-college-about-criminal-record/driving-convictions" data-track-options="{&quot;dimension29&quot;:&quot;Driving convictions&quot;}" href="/tell-employer-or-college-about-criminal-record/driving-convictions">Driving convictions</a>
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 6" data-track-label="/tell-employer-or-college-about-criminal-record/prison-sentences" data-track-options="{&quot;dimension29&quot;:&quot;Prison sentences&quot;}" href="/tell-employer-or-college-about-criminal-record/prison-sentences">Prison sentences</a>
 
-        </li>
-        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-          <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 6" data-track-label="/tell-employer-or-college-about-criminal-record/prison-sentences" data-track-options="{&quot;dimension29&quot;:&quot;Prison sentences&quot;}" href="/tell-employer-or-college-about-criminal-record/prison-sentences">Prison sentences</a>
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 7" data-track-label="/tell-employer-or-college-about-criminal-record/community-service" data-track-options="{&quot;dimension29&quot;:&quot;Community service&quot;}" href="/tell-employer-or-college-about-criminal-record/community-service">Community service</a>
 
-        </li>
-        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-          <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 7" data-track-label="/tell-employer-or-college-about-criminal-record/community-service" data-track-options="{&quot;dimension29&quot;:&quot;Community service&quot;}" href="/tell-employer-or-college-about-criminal-record/community-service">Community service</a>
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 8" data-track-label="/tell-employer-or-college-about-criminal-record/discharges" data-track-options="{&quot;dimension29&quot;:&quot;Discharges&quot;}" href="/tell-employer-or-college-about-criminal-record/discharges">Discharges</a>
 
-        </li>
-        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-          <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 8" data-track-label="/tell-employer-or-college-about-criminal-record/discharges" data-track-options="{&quot;dimension29&quot;:&quot;Discharges&quot;}" href="/tell-employer-or-college-about-criminal-record/discharges">Discharges</a>
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 9" data-track-label="/tell-employer-or-college-about-criminal-record/military-convictions" data-track-options="{&quot;dimension29&quot;:&quot;Military convictions&quot;}" href="/tell-employer-or-college-about-criminal-record/military-convictions">Military convictions</a>
 
-        </li>
-        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
-          <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 9" data-track-label="/tell-employer-or-college-about-criminal-record/military-convictions" data-track-options="{&quot;dimension29&quot;:&quot;Military convictions&quot;}" href="/tell-employer-or-college-about-criminal-record/military-convictions">Military convictions</a>
-
-        </li>
-    </ol>
-</nav>
-      </aside>
+            </li>
+        </ol>
+      </nav>
+    </aside>
   </div>
 
   <div class="govuk-grid-column-two-thirds" id="guide-contents">
-        <h1 class="part-title">
-          Cautions
-        </h1>
+    <h1 class="part-title">
+      Cautions
+    </h1>
+    <div class="gem-c-govspeak govuk-govspeak direction-ltr disable-youtube" data-module="govspeak">
 
-      
-<div class="gem-c-govspeak govuk-govspeak direction-ltr disable-youtube" data-module="govspeak">
+      <p>A caution is an <a href="/caution-warning-penalty">official warning from the police</a>.</p>
+
+      <p>It could be a:</p>
+
+      <ul>
+        <li>simple caution if you’re 18 or over</li>
+        <li>youth caution if you’re under 18</li>
+        <li>conditional caution</li>
+      </ul>
+
+      <p>Whether a caution is <a href="/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give">‘spent’ affects what information you need to give</a> a potential employer, university or college.</p>
+
+      <h2 id="when-simple-and-youth-cautions-become-spent">When simple and youth cautions become spent</h2>
+
+      <p>They become spent straight away.</p>
+
+      <h2 id="when-a-conditional-caution-becomes-spent">When a conditional caution becomes spent</h2>
+
+      <p>It becomes spent either:</p>
+
+      <ul>
+        <li>on the date the conditions end</li>
+        <li>3 months after you got it, if the conditions have no end date</li>
+      </ul>
+    </div>
+
+    <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+      <ul class="gem-c-pagination__list" data-module="track-click">
+          <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+            <a href="/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give" class="gem-c-pagination__link" rel="prev" data-track-category="contentsClicked" data-track-action="previous" data-track-label="/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give" data-track-dimension="previous" data-track-dimension-index="29">
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Previous
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                <span class="gem-c-pagination__link-label">What information you need to give</span>
+            </a>
+          </li>
+          <li class="gem-c-pagination__item gem-c-pagination__item--next">
+            <a href="/tell-employer-or-college-about-criminal-record/fines-and-compensation" class="gem-c-pagination__link" rel="next" data-track-category="contentsClicked" data-track-action="next" data-track-label="/tell-employer-or-college-about-criminal-record/fines-and-compensation" data-track-dimension="next" data-track-dimension-index="29">
+              <span class="gem-c-pagination__link-title">
+                <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                  <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
+                <span class="gem-c-pagination__link-text">
+                  Next
+                </span>
+              </span>
+                <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                <span class="gem-c-pagination__link-label">Fines and compensation</span>
+            </a>
+          </li>
+      </ul>
+    </nav>
     
-        <p>A caution is an <a href="/caution-warning-penalty">official warning from the police</a>.</p>
-
-<p>It could be a:</p>
-
-<ul>
-  <li>simple caution if you’re 18 or over</li>
-  <li>youth caution if you’re under 18</li>
-  <li>conditional caution</li>
-</ul>
-
-<p>Whether a caution is <a href="/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give">‘spent’ affects what information you need to give</a> a potential employer, university or college.</p>
-
-<h2 id="when-simple-and-youth-cautions-become-spent">When simple and youth cautions become spent</h2>
-
-<p>They become spent straight away.</p>
-
-<h2 id="when-a-conditional-caution-becomes-spent">When a conditional caution becomes spent</h2>
-
-<p>It becomes spent either:</p>
-
-<ul>
-  <li>on the date the conditions end</li>
-  <li>3 months after you got it, if the conditions have no end date</li>
-</ul>
-
-
-</div>
-
-        <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
-  <ul class="gem-c-pagination__list" data-module="track-click">
-      <li class="gem-c-pagination__item gem-c-pagination__item--previous">
-        <a href="/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give" class="gem-c-pagination__link" rel="prev" data-track-category="contentsClicked" data-track-action="previous" data-track-label="/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give" data-track-dimension="previous" data-track-dimension-index="29">
-          <span class="gem-c-pagination__link-title">
-            <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
-              <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
-            </svg>
-            <span class="gem-c-pagination__link-text">
-              Previous
-            </span>
-          </span>
-            <span class="gem-c-pagination__link-divider visually-hidden">:</span>
-            <span class="gem-c-pagination__link-label">What information you need to give</span>
-        </a>
-      </li>
-      <li class="gem-c-pagination__item gem-c-pagination__item--next">
-        <a href="/tell-employer-or-college-about-criminal-record/fines-and-compensation" class="gem-c-pagination__link" rel="next" data-track-category="contentsClicked" data-track-action="next" data-track-label="/tell-employer-or-college-about-criminal-record/fines-and-compensation" data-track-dimension="next" data-track-dimension-index="29">
-          <span class="gem-c-pagination__link-title">
-            <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
-              <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-            </svg>
-            <span class="gem-c-pagination__link-text">
-              Next
-            </span>
-          </span>
-            <span class="gem-c-pagination__link-divider visually-hidden">:</span>
-            <span class="gem-c-pagination__link-label">Fines and compensation</span>
-        </a>
-      </li>
-  </ul>
-</nav>
-
-        
-<div class="gem-c-print-link gem-c-print-link--show-without-js govuk-!-margin-top-3 govuk-!-margin-bottom-3">
-    <a class="govuk-link gem-c-print-link__link govuk-link--no-visited-state" rel="alternate" data-module="button" role="button" href="/tell-employer-or-college-about-criminal-record/print">Print entire guide</a>
-</div>
-  </div>
-
-  
-<div class="govuk-grid-column-one-third">
-  
-<div class="gem-c-contextual-sidebar">
-
-    
-  <div class="gem-c-related-navigation">
-
-      <h2 id="related-nav-related_items-4b3a7388" class="gem-c-related-navigation__main-heading" data-track-count="sidebarRelatedItemSection">
-        Related content
-      </h2>
-
-
-
-
-      <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-related_items-4b3a7388" data-module="gem-toggle">
-
-
-  <ul class="gem-c-related-navigation__link-list" data-module="track-click">
-
-
-        <li class="gem-c-related-navigation__link"><a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--sidebar  gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked" data-track-action="1.1 Related content" data-track-label="/employers-checks-job-applicants" data-track-options="{&quot;dimension28&quot;:&quot;2&quot;,&quot;dimension29&quot;:&quot;Checks employers can make on job applicants&quot;}" href="/employers-checks-job-applicants">Checks employers can make on job applicants</a></li>
-        <li class="gem-c-related-navigation__link"><a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--sidebar  gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked" data-track-action="1.2 Related content" data-track-label="/government/publications/unlock-opportunity-employer-information-pack-and-case-studies/employing-prisoners-and-ex-offenders" data-track-options="{&quot;dimension28&quot;:&quot;2&quot;,&quot;dimension29&quot;:&quot;Employing prisoners and ex-offenders&quot;}" href="/government/publications/unlock-opportunity-employer-information-pack-and-case-studies/employing-prisoners-and-ex-offenders">Employing prisoners and ex-offenders</a></li>
-
-  </ul>
-</nav>
-
-  </div>
-
-
-
-    
-
-<a class="govuk-link gem-c-contextual-sidebar__brexit-cta" data-module="track-click" data-track-category="relatedLinkClicked" data-track-action="1.0 Transition" data-track-label="/transition" data-track-dimension="Check what you need to do" data-track-dimension-index="29" aria-label="Brexit campaign slogan, Check, Change, Go. Check what you need to do" lang="en" href="/transition">
-  <h2 class="gem-c-contextual-sidebar__brexit-heading">Brexit</h2>
-  <ul class="govuk-list gem-c-contextual-sidebar__take-action-traffic-lights">
-    <li>
-      <img class="gem-c-contextual-sidebar__take-action-traffic-lists-icon" alt="" src="/assets/government-frontend/govuk_publishing_components/take-action-red-5117cea61725753ad21e17234e1d12f5605c1ab8df1eab37bd7d557d200a5006.svg">
-      <span class="gem-c-contextual-sidebar__take-action-traffic-lists-text">
-        Check
-      </span>
-    </li>
-    <li>
-      <img class="gem-c-contextual-sidebar__take-action-traffic-lists-icon" alt="" src="/assets/government-frontend/govuk_publishing_components/take-action-amber-ed37d78dd940d181c13d2689c7ca16a10891d89e5d278eef21e0e0001fb5a477.svg">
-      <span class="gem-c-contextual-sidebar__take-action-traffic-lists-text">
-        Change
-      </span>
-    </li>
-    <li>
-      <img class="gem-c-contextual-sidebar__take-action-traffic-lists-icon" alt="" src="/assets/government-frontend/govuk_publishing_components/take-action-green-201c5dfb37cd72eb3603b1afe36c913fecfda46ecb6221f1ed8c59708bc103e0.svg">
-      <span class="gem-c-contextual-sidebar__take-action-traffic-lists-text">
-        Go
-      </span>
-    </li>
-  </ul>
-  <p class="gem-c-contextual-sidebar__brexit-text">Check what you need to do</p>
-</a>
-</div>
-
-</div>
-
-</div>
-
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        
-  <div class="gem-c-contextual-footer">
-    
-  <div class="gem-c-related-navigation">
-
-
-
-
-
-      <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-topics-910bbf95" data-module="gem-toggle">
-
-    <h2 id="related-nav-topics-910bbf95" class="gem-c-related-navigation__sub-heading gem-c-related-navigation__sub-heading--footer" data-track-count="footerRelatedItemSection">Explore the topic</h2>
-
-  <ul class="gem-c-related-navigation__link-list" data-module="track-click">
-
-
-        <li class="gem-c-related-navigation__link"><a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--footer" data-track-category="relatedLinkClicked" data-track-action="1.1 Explore the topic" data-track-label="/browse/education/universities-higher-education" data-track-options="{&quot;dimension28&quot;:&quot;2&quot;,&quot;dimension29&quot;:&quot;Universities and higher education&quot;}" href="/browse/education/universities-higher-education">Universities and higher education</a></li>
-        <li class="gem-c-related-navigation__link"><a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--footer" data-track-category="relatedLinkClicked" data-track-action="1.2 Explore the topic" data-track-label="/browse/working/finding-job" data-track-options="{&quot;dimension28&quot;:&quot;2&quot;,&quot;dimension29&quot;:&quot;Finding a job&quot;}" href="/browse/working/finding-job">Finding a job</a></li>
-
-  </ul>
-</nav>
-
-  </div>
-
-  </div>
-
-
+    <div class="gem-c-print-link gem-c-print-link--show-without-js govuk-!-margin-top-3 govuk-!-margin-bottom-3">
+        <a class="govuk-link gem-c-print-link__link govuk-link--no-visited-state" rel="alternate" data-module="button" role="button" href="/tell-employer-or-college-about-criminal-record/print">Print entire guide</a>
     </div>
   </div>
-
-
-    </main>
-    
-<div class="gem-c-feedback" data-module="feedback">
+  <div class="govuk-grid-column-one-third">
   
-<div class="gem-c-feedback__prompt gem-c-feedback__js-show js-prompt" tabindex="-1">
-  <div class="gem-c-feedback__prompt-questions js-prompt-questions">
-    <h2 class="gem-c-feedback__prompt-question">Is this page useful?</h2>
-    <!-- Maybe button exists only to try and capture clicks by bots -->
-    <button data-track-category="yesNoFeedbackForm" data-track-action="ffMaybeClick" aria-expanded="false" style="display: none" hidden="hidden" aria-hidden="true">
-      Maybe
-    </button>
-    
-    <ul class="gem-c-feedback__option-list">
-      <li class="gem-c-feedback__option-list-item">
-        <button class="govuk-button gem-c-feedback__prompt-link js-page-is-useful" data-track-category="yesNoFeedbackForm" data-track-action="ffYesClick">
-          Yes <span class="govuk-visually-hidden">this page is useful</span>
-        </button>
+  <div class="gem-c-contextual-sidebar">
+
+
+    <div class="gem-c-related-navigation">
+
+        <h2 id="related-nav-related_items-4b3a7388" class="gem-c-related-navigation__main-heading" data-track-count="sidebarRelatedItemSection">
+          Related content
+        </h2>
+
+
+
+
+        <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-related_items-4b3a7388" data-module="gem-toggle">
+
+
+    <ul class="gem-c-related-navigation__link-list" data-module="track-click">
+
+
+          <li class="gem-c-related-navigation__link"><a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--sidebar  gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked" data-track-action="1.1 Related content" data-track-label="/employers-checks-job-applicants" data-track-options="{&quot;dimension28&quot;:&quot;2&quot;,&quot;dimension29&quot;:&quot;Checks employers can make on job applicants&quot;}" href="/employers-checks-job-applicants">Checks employers can make on job applicants</a></li>
+          <li class="gem-c-related-navigation__link"><a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--sidebar  gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked" data-track-action="1.2 Related content" data-track-label="/government/publications/unlock-opportunity-employer-information-pack-and-case-studies/employing-prisoners-and-ex-offenders" data-track-options="{&quot;dimension28&quot;:&quot;2&quot;,&quot;dimension29&quot;:&quot;Employing prisoners and ex-offenders&quot;}" href="/government/publications/unlock-opportunity-employer-information-pack-and-case-studies/employing-prisoners-and-ex-offenders">Employing prisoners and ex-offenders</a></li>
+
+    </ul>
+  </nav>
+
+    </div>
+
+
+
+
+
+  <a class="govuk-link gem-c-contextual-sidebar__brexit-cta" data-module="track-click" data-track-category="relatedLinkClicked" data-track-action="1.0 Transition" data-track-label="/transition" data-track-dimension="Check what you need to do" data-track-dimension-index="29" aria-label="Brexit campaign slogan, Check, Change, Go. Check what you need to do" lang="en" href="/transition">
+    <h2 class="gem-c-contextual-sidebar__brexit-heading">Brexit</h2>
+    <ul class="govuk-list gem-c-contextual-sidebar__take-action-traffic-lights">
+      <li>
+        <img class="gem-c-contextual-sidebar__take-action-traffic-lists-icon" alt="" src="/assets/government-frontend/govuk_publishing_components/take-action-red-5117cea61725753ad21e17234e1d12f5605c1ab8df1eab37bd7d557d200a5006.svg">
+        <span class="gem-c-contextual-sidebar__take-action-traffic-lists-text">
+          Check
+        </span>
       </li>
-      <li class="gem-c-feedback__option-list-item">
-        <button class="govuk-button gem-c-feedback__prompt-link js-toggle-form js-page-is-not-useful" data-track-category="yesNoFeedbackForm" data-track-action="ffNoClick" aria-controls="page-is-not-useful" aria-expanded="false">
-          No <span class="govuk-visually-hidden">this page is not useful</span>
-        </button>
+      <li>
+        <img class="gem-c-contextual-sidebar__take-action-traffic-lists-icon" alt="" src="/assets/government-frontend/govuk_publishing_components/take-action-amber-ed37d78dd940d181c13d2689c7ca16a10891d89e5d278eef21e0e0001fb5a477.svg">
+        <span class="gem-c-contextual-sidebar__take-action-traffic-lists-text">
+          Change
+        </span>
+      </li>
+      <li>
+        <img class="gem-c-contextual-sidebar__take-action-traffic-lists-icon" alt="" src="/assets/government-frontend/govuk_publishing_components/take-action-green-201c5dfb37cd72eb3603b1afe36c913fecfda46ecb6221f1ed8c59708bc103e0.svg">
+        <span class="gem-c-contextual-sidebar__take-action-traffic-lists-text">
+          Go
+        </span>
       </li>
     </ul>
+    <p class="gem-c-contextual-sidebar__brexit-text">Check what you need to do</p>
+  </a>
   </div>
-  <div class="gem-c-feedback__prompt-questions gem-c-feedback__prompt-success js-prompt-success js-hidden" role="alert">
-    Thank you for your feedback
-  </div>
-  <div class="gem-c-feedback__prompt-questions gem-c-feedback__prompt-questions--something-is-wrong js-prompt-questions">
-    <button class="govuk-button gem-c-feedback__prompt-link js-toggle-form js-something-is-wrong" data-track-category="Onsite Feedback" data-track-action="GOV-UK Open Form" aria-controls="something-is-wrong" aria-expanded="false">
-      There is something wrong with this page
-    </button>
-  </div>
-</div>
-
-  <form action="/contact/govuk/problem_reports" id="something-is-wrong" class="gem-c-feedback__form js-feedback-form js-hidden" data-track-category="Onsite Feedback" data-track-action="GOV.UK Send Form" method="post" aria-hidden="true">
-  <button class="govuk-button govuk-button--secondary gem-c-feedback__close gem-c-feedback__js-show js-close-form" data-track-category="Onsite Feedback" data-track-action="GOV.UK Close Form" aria-controls="something-is-wrong" aria-expanded="true">
-    Close
-  </button>
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <div class="gem-c-feedback__error-summary gem-c-feedback__js-show js-hidden js-errors" tabindex="-1"></div>
-
-      <input type="hidden" name="url" value="https://www.gov.uk/tell-employer-or-college-about-criminal-record/cautions">
-
-      <h3 class="gem-c-feedback__form-heading">Help us improve GOV.UK</h3>
-      <p id="feedback_explanation" class="gem-c-feedback__form-paragraph">Don’t include personal or financial information like your National Insurance number or credit card details.</p>
-
-      
-<div class="govuk-form-group">
-
-            
-  <label for="input-068375ac" class="gem-c-label govuk-label">What were you doing?</label>
-
-
-
-
-
-
-
-    <input name="what_doing" class="gem-c-input govuk-input" id="input-068375ac" type="text" aria-describedby="feedback_explanation">
-</div>
-
-      
-<div class="govuk-form-group">
-
-            
-  <label for="input-dbd663d8" class="gem-c-label govuk-label">What went wrong?</label>
-
-
-
-
-
-
-
-    <input name="what_wrong" class="gem-c-input govuk-input" id="input-dbd663d8" type="text">
-</div>
-
-      
-
-
-  <button class="gem-c-button govuk-button" type="submit">Send</button>
-
-
-    </div>
-  </div>
-<input type="hidden" name="javascript_enabled" value="true"><input type="hidden" name="referrer" value="https://www.gov.uk/tell-employer-or-college-about-criminal-record"></form>
-
-  <form action="/contact/govuk/email-survey-signup" id="page-is-not-useful" class="gem-c-feedback__form gem-c-feedback__form--email gem-c-feedback__js-show js-feedback-form js-hidden" data-track-category="yesNoFeedbackForm" data-track-action="Send Form" method="post" aria-hidden="true">
-  <button class="govuk-button govuk-button--secondary gem-c-feedback__close js-close-form" data-track-category="yesNoFeedbackForm" data-track-action="ffFormClose" aria-controls="page-is-not-useful" aria-expanded="true">
-    Close
-  </button>
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds" id="survey-wrapper">
-      <div class="gem-c-feedback__error-summary js-hidden js-errors" tabindex="-1"></div>
-
-      <input name="email_survey_signup[survey_id]" type="hidden" value="footer_satisfaction_survey">
-      <input name="email_survey_signup[survey_source]" type="hidden" value="/tell-employer-or-college-about-criminal-record/cautions">
-
-      <h3 class="gem-c-feedback__form-heading">Help us improve GOV.UK</h3>
-      <p id="survey_explanation" class="gem-c-feedback__form-paragraph">To help us improve GOV.UK, we’d like to know more about your visit today. We’ll send you a link to a feedback form. It will take only 2 minutes to fill in. Don’t worry we won’t send you spam or share your email address with anyone.</p>
-
-      
-<div class="govuk-form-group">
-
-            
-  <label for="input-009a9323" class="gem-c-label govuk-label">Email address</label>
-
-
-
-
-
-
-
-    <input name="email_survey_signup[email_address]" class="gem-c-input govuk-input" id="input-009a9323" type="email" autocomplete="email" aria-describedby="survey_explanation">
-</div>
-
-       
-
-
-  <button class="gem-c-button govuk-button" type="submit">Send me the survey</button>
-
-
-    </div>
-  </div>
-</form>
 
 </div>
 
-  </div>
+</div>
+
+</div>
+
+</div>
 {% endblock %}
