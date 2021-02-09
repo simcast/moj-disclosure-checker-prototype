@@ -36,6 +36,12 @@
 {% block content %}
 <style>
   /* content nav */
+  @media (min-width: 40.0625em) {
+    .gem-c-contents-list__title {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+  }
   .gem-c-contents-list__list, .gem-c-contents-list__nested-list {
     color: #0b0c0c;
     font-family: "nta",arial,sans-serif;
@@ -65,11 +71,18 @@
     width: 20px;
     overflow: hidden;
   }
-  .guide .part-navigation-container {
+  .part-navigation-container {
     margin-top: 30px;
     margin-bottom: 30px;
     padding-bottom: 15px;
     border-bottom: 1px solid #b1b4b6;
+  }
+  @media (min-width: 40.0625em) {
+    .guide .part-title {
+        font-size: 27px;
+        line-height: 1.1111111111;
+        margin:20px 0;
+    }
   }
   /*pagination*/
   .gem-c-pagination {
