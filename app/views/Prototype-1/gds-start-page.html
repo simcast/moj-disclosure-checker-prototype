@@ -35,6 +35,29 @@
 
 {% block content %}
 <style>
+  /* content nav */
+  .gem-c-contents-list__list, .gem-c-contents-list__nested-list {
+    color: #0b0c0c;
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  .gem-c-contents-list__list-item {
+    padding-top: 10px;
+    line-height: 1.3;
+    list-style-type: none;
+  }
+  .gem-c-contents-list__list-item--dashed {
+    position: relative;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   .gem-c-contents-list__list-item--dashed:before {
     content: "—";
     position: absolute;
