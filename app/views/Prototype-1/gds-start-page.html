@@ -5,6 +5,69 @@
 {% endblock %}
 
 {% block BeforeContent %}
+<style>
+  .gem-c-contents-list__list-item--dashed:before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    overflow: hidden;
+  }
+  .guide .part-navigation-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #b1b4b6;
+  }
+  /*pagination*/
+  .gem-c-pagination {
+    display: block;
+    margin: 50px 0;
+  }
+  .gem-c-pagination__list {
+    margin: 0;
+    padding: 0;
+  }
+  .gem-c-pagination__item {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.25;
+    list-style: none;
+  }
+  .gem-c-pagination__link {
+    display: block;
+    text-decoration: none;
+    padding-bottom: 20px;
+  }
+  .gem-c-pagination__link-title {
+    display: block;
+    border-top: 1px solid #b1b4b6;
+    padding-top: 15px;
+  }
+  gem-c-pagination__link-divider {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    border: 0 !important;
+    white-space: nowrap !important;
+  }
+  .gem-c-pagination__link-label {
+    display: inline-block;
+    margin-top: .1em;
+    text-decoration: underline;
+    margin-left: 25px;
+  }
+</style>
+
 <div class="gem-c-contextual-breadcrumbs">
   <div class="gem-c-breadcrumbs govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile" data-module="track-click">
     <ol class="govuk-breadcrumbs__list">
