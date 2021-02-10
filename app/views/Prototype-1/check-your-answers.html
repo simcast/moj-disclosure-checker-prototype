@@ -82,6 +82,65 @@
         ]
       }) }}
 
+       <h2 class="govuk-heading-m">Conviction 2</h2>
+
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-9',
+        rows: [
+          {
+            key: {
+              text: "Type of conviction"
+            },
+            value: {
+              text: "Conditional charge"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "type of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Age at time of conviction"
+            },
+            value: {
+              text: "18 or over"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "age at time of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Start date"
+            },
+            value: {
+              html: "21 June 2020"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "start date"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}     
+      
       <h2 class="govuk-heading-m">Now send your application</h2>
 
       <p class="govuk-body">By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
