@@ -10,12 +10,6 @@
   {{ govukHeader() }}
 {% endblock %}
 
-
-{% block content %}
-{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
@@ -198,5 +192,4 @@
 
     </div>
   </div>
-{% endblock %}
 {% endblock %}
