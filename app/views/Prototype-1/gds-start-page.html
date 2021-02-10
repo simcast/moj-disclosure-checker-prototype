@@ -665,7 +665,51 @@
         line-height: 1.2
     }
 }
+.gem-c-related-navigation__link {
+    list-style-type: none;
+    margin-top: 15px;
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.45
+}
 
+@media print {
+    .gem-c-related-navigation__link {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-related-navigation__link {
+        font-size:16px;
+        line-height: 1.45
+    }
+}
+
+@media print {
+    .gem-c-related-navigation__link {
+        font-size: 14pt;
+        line-height: 1.45
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-related-navigation__link {
+        line-height:1.28
+    }
+}
+
+.gem-c-related-navigation__link:focus,.gem-c-related-navigation__link:active:focus,.gem-c-related-navigation__link:link:focus,.gem-c-related-navigation__link:visited:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+    text-decoration: none;
+    color: #0b0c0c !important
+}
 </style>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
