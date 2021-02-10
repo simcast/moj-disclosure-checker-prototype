@@ -23,7 +23,7 @@
 
       <h1 class="govuk-heading-l">Check your answers</h1>
 
-      <h2 class="govuk-heading-m">Convictions</h2>
+      <h2 class="govuk-heading-m">Conviction 1</h2>
 
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-9',
@@ -64,43 +64,26 @@
           },
           {
             key: {
-              text: "Address"
+              text: "Start date"
             },
             value: {
-              html: "72 Guild Street<br>London<br>SE23 6FH"
+              html: "21 June 2020"
             },
             actions: {
               items: [
                 {
                   href: "#",
                   text: "Change",
-                  visuallyHiddenText: "address"
+                  visuallyHiddenText: "start date"
                 }
               ]
             }
           },
-          {
-            key: {
-              text: "Contact details"
-            },
-            value: {
-              html: '<p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p>'
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "contact details"
-                }
-              ]
-            }
-          }
         ]
       }) }}
 
 
-      <h2 class="govuk-heading-m">Application details</h2>
+      <h2 class="govuk-heading-m">Conviction 2</h2>
 
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-9',
