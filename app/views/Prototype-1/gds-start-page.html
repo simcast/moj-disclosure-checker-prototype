@@ -35,6 +35,107 @@
 
 {% block content %}
 <style>
+.help-page .add-title-margin {
+    margin-top: 15px
+}
+
+@media (min-width: 40.0625em) {
+    .help-page .add-title-margin {
+        margin-top:50px
+    }
+}
+
+.help-page .last-updated {
+    padding-bottom: 15px
+}
+
+.guide .part-navigation-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #b1b4b6
+}
+
+@media (min-width: 40.0625em) {
+    .guide .part-navigation-container {
+        margin-top:0;
+        margin-bottom: 0;
+        padding-bottom: 15px
+    }
+}
+
+.guide .part-navigation {
+    margin-left: 0
+}
+
+@media (max-width: 40.0525em) {
+    .guide .part-navigation {
+        margin-left:5px
+    }
+}
+
+.guide .part-title {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.1111111111;
+    margin-bottom: 15px;
+    margin-top: 15px
+}
+
+@media print {
+    .guide .part-title {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .guide .part-title {
+        font-size:27px;
+        line-height: 1.1111111111
+    }
+}
+
+@media print {
+    .guide .part-title {
+        font-size: 18pt;
+        line-height: 1.15
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .guide .part-title {
+        margin-bottom:20px;
+        margin-top: 20px
+    }
+}
+
+.guide .add-title-margin {
+    margin-top: 15px
+}
+
+@media (min-width: 40.0625em) {
+    .guide .add-title-margin {
+        margin-top:50px
+    }
+}
+
+.guide .part-navigation li {
+    list-style: decimal;
+    margin-left: 1.5em;
+    padding-left: .3em
+}
+
+.guide .govuk-govspeak h2 {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.1111111111
+}
   /* content nav */
   .gem-c-contents-list__list-item--numbered .gem-c-contents-list__link {
     display: table
@@ -323,32 +424,85 @@
   /*pagination*/
   .gem-c-pagination {
     display: block;
-    margin: 50px 0;
-  }
-  .gem-c-pagination__list {
+    margin: 50px 0
+}
+
+.gem-c-pagination__list {
     margin: 0;
-    padding: 0;
-  }
-  .gem-c-pagination__item {
+    padding: 0
+}
+
+.gem-c-pagination__item {
     font-family: "nta",arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.25;
-    list-style: none;
-  }
-  .gem-c-pagination__link {
+    list-style: none
+}
+
+@media print {
+    .gem-c-pagination__item {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-pagination__item {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+@media print {
+    .gem-c-pagination__item {
+        font-size: 14pt;
+        line-height: 1.25
+    }
+}
+
+.gem-c-pagination__item:first-child {
+    margin-bottom: 20px
+}
+
+.gem-c-pagination__link {
     display: block;
     text-decoration: none;
-    padding-bottom: 20px;
-  }
-  .gem-c-pagination__link-title {
+    padding-bottom: 20px
+}
+
+.gem-c-pagination__link:hover,.gem-c-pagination__link:active,.gem-c-pagination__link:visited {
+    color: #1d70b8
+}
+
+.gem-c-pagination__link:hover,.gem-c-pagination__link:active {
+    background-color: #f3f2f1
+}
+
+.gem-c-pagination__link:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+    text-decoration: none
+}
+
+.gem-c-pagination__link:focus .gem-c-pagination__link-title {
+    border-top-color: transparent
+}
+
+.gem-c-pagination__link:focus .gem-c-pagination__link-icon {
+    fill: #0b0c0c
+}
+
+.gem-c-pagination__link-title {
     display: block;
     border-top: 1px solid #b1b4b6;
-    padding-top: 15px;
-  }
-  gem-c-pagination__link-divider {
+    padding-top: 15px
+}
+
+.gem-c-pagination__link-divider {
     position: absolute !important;
     width: 1px !important;
     height: 1px !important;
@@ -359,51 +513,85 @@
     -webkit-clip-path: inset(50%) !important;
     clip-path: inset(50%) !important;
     border: 0 !important;
-    white-space: nowrap !important;
-  }
-  .gem-c-pagination__link-label {
-    display: inline-block;
-    margin-top: .1em;
-    text-decoration: underline;
-    margin-left: 25px;
-  }
-  /* Side nav*/
-  .gem-c-related-navigation {
-    color: #0b0c0c;
-    border-top: 2px solid #1d70b8;
-  }
-  .gem-c-related-navigation__main-heading {
+    white-space: nowrap !important
+}
+
+.gem-c-pagination__link-text {
     font-family: "nta",arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.25;
-    margin-top: 15px;
-    margin-bottom: 10px;
-  }
-  @media (min-width: 40.0625em) {
-    .gem-c-related-navigation__main-heading {
-        font-size: 19px;
-        line-height: 1.3157894737;
+    margin-left: 10px
+}
+
+@media print {
+    .gem-c-pagination__link-text {
+        font-family: sans-serif
     }
-  }
-  .gem-c-related-navigation__link-list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    margin-bottom: 1.25em;
-  }
-  .gem-c-related-navigation__link {
-    list-style-type: none;
-    margin-top: 15px;
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-pagination__link-text {
+        font-size:19px;
+        line-height: 1.3157894737
+    }
+}
+
+@media print {
+    .gem-c-pagination__link-text {
+        font-size: 14pt;
+        line-height: 1.15
+    }
+}
+
+.gem-c-pagination__link-icon {
     font-family: "nta",arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.45;
-  }
+    font-size: 18px;
+    line-height: 1.25;
+    display: inline-block;
+    margin-bottom: 1px;
+    height: .482em;
+    width: .63em;
+    fill: #505a5f
+}
+
+@media print {
+    .gem-c-pagination__link-icon {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-pagination__link-icon {
+        font-size:24px;
+        line-height: 1.25
+    }
+}
+
+@media print {
+    .gem-c-pagination__link-icon {
+        font-size: 18pt;
+        line-height: 1.25
+    }
+}
+
+.gem-c-pagination__link-label {
+    display: inline-block;
+    margin-top: .1em;
+    text-decoration: underline;
+    margin-left: 25px
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-pagination__link-label {
+        margin-left:30px
+    }
+}
 </style>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
