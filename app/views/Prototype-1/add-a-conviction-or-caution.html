@@ -25,29 +25,30 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <form class="form" action="/Prototype-1/results-page" method="post"></form>
-      {{ govukRadios({
-        classes: "govuk-radios--inline",
-        idPrefix: "add-sentence",
-        name: "add-sentence",
-        fieldset: {
-          legend: {
-            text: "Do you have another caution or conviction that you want to check?",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--l",
-            name: "add-conviction-or-caution",
-          }
-        },
-        items: [
-          {
-            value: "yes",
-            text: "Yes",
-          },
-          {
-            value: "no",
-            text: "No"
-          }
-        ]
-      }) }}
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Do you have another caution on conviction you'd like to check?
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="add-another" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
       <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
     </form>
   </div>
