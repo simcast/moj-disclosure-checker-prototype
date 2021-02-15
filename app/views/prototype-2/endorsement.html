@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check when to disclose cautions or convictions
+{% endblock %}
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag ">beta</strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service, <a href="/about/contact" class="govuk-link govuk-link--no-visited-state">your feedback</a> will help us improve.
+      </span>
+    </p>
+  </div>
+    {{ govukBackLink({
+    text: "Back",
+    href: "/prototype-2/start-page"
+  }) }}
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="edit_steps_conviction_motoring_endorsement_form" id="new_steps_conviction_motoring_endorsement_form" action="/steps/conviction/motoring_endorsement" accept-charset="UTF-8" method="post">
+      <input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="authenticity_token" value="nuic0WBb99zlAoBtzESYjFWIAoVz4XNNPu2FmphDy60Jz2+UtxDpK0fUs2SYoHHrsq1UokukTxXY/ezt2qPoMg==">
+      <div class="govuk-form-group"><fieldset class="govuk-fieldset" aria-describedby="steps-conviction-motoring-endorsement-form-motoring-endorsement-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <h1 class="govuk-fieldset__heading">
+            <span class="govuk-caption-xl">Disqualification</span>
+            Did you get an endorsement?
+          </h1>
+        </legend>
+        <span class="govuk-hint" id="steps-conviction-motoring-endorsement-form-motoring-endorsement-hint">An endorsement means that your conviction is recorded on your driving licence. Endorsements are usually given by courts.</span>
+        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input id="steps-conviction-motoring-endorsement-form-motoring-endorsement-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_conviction_motoring_endorsement_form[motoring_endorsement]">
+            <label for="steps-conviction-motoring-endorsement-form-motoring-endorsement-yes-field" class="govuk-label govuk-radios__label">Yes</label>
+          </div>
+          <div class="govuk-radios__item">
+            <input id="steps-conviction-motoring-endorsement-form-motoring-endorsement-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_conviction_motoring_endorsement_form[motoring_endorsement]">
+            <label for="steps-conviction-motoring-endorsement-form-motoring-endorsement-no-field" class="govuk-label govuk-radios__label">No</label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+      <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
+    </form>
+  </div>
+</div>
+{% endblock %}
