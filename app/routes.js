@@ -4,6 +4,8 @@ const router = express.Router()
 
 // *********** Prototype 1 ***********
 
+//Add another sentence
+
 router.post('/Prototype-1/add-a-conviction-or-caution-answer', function (req, res) {
 
   // Make a variable and give it the value from 'changed-name'
@@ -16,6 +18,25 @@ router.post('/Prototype-1/add-a-conviction-or-caution-answer', function (req, re
   }
   else {
     // Send user to another page
+    res.redirect('/Prototype-1/start-page')
+  }
+
+})
+
+//Add another caution
+
+router.post('/Prototype-1/add-a-caution-or-conviction-answer", function (req, res) {
+
+  // Make a variable and give it the value from 'add-caution'
+  var anotherCaution = req.session.data['add-caution']
+
+  // Check whether the variable matches a condition
+  if (anotherCaution== "No"){
+    // Send user to next page
+    res.redirect('/Prototype-1/results-page')
+  }
+  else {
+    // Send user to ineligible page
     res.redirect('/Prototype-1/start-page')
   }
 
