@@ -1,1 +1,875 @@
+{% extends "layout.html" %}
 
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block BeforeContent %}
+
+
+<div class="gem-c-contextual-breadcrumbs">
+  <div class="gem-c-breadcrumbs govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile" data-module="track-click">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a data-track-category="homeLinkClicked" data-track-action="homeBreadcrumb" data-track-label="" data-track-options="{}" class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a data-track-category="breadcrumbClicked" data-track-action="2" data-track-label="/browse/working" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Working, jobs and pensions&quot;}" class="govuk-breadcrumbs__link" href="/browse/working">Working, jobs and pensions</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+            <a data-track-category="breadcrumbClicked" data-track-action="3" data-track-label="/browse/working/finding-job" data-track-options="{&quot;dimension28&quot;:&quot;3&quot;,&quot;dimension29&quot;:&quot;Finding a job&quot;}" class="govuk-breadcrumbs__link" href="/browse/working/finding-job">Finding a job</a>
+      </li>
+      </ol>
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+
+{% block content %}
+<style>
+.help-page .add-title-margin {
+    margin-top: 15px
+}
+
+@media (min-width: 40.0625em) {
+    .help-page .add-title-margin {
+        margin-top:50px
+    }
+}
+
+.help-page .last-updated {
+    padding-bottom: 15px
+}
+
+.part-navigation-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #b1b4b6
+}
+
+@media (min-width: 40.0625em) {
+    .guide .part-navigation-container {
+        margin-top:0;
+        margin-bottom: 0;
+        padding-bottom: 15px
+    }
+}
+
+.guide .part-navigation {
+    margin-left: 0
+}
+
+@media (max-width: 40.0525em) {
+    .guide .part-navigation {
+        margin-left:5px
+    }
+}
+
+.guide .part-title {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.1111111111;
+    margin-bottom: 15px;
+    margin-top: 15px
+}
+
+@media print {
+    .guide .part-title {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .guide .part-title {
+        font-size:27px;
+        line-height: 1.1111111111
+    }
+}
+
+@media print {
+    .guide .part-title {
+        font-size: 18pt;
+        line-height: 1.15
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .guide .part-title {
+        margin-bottom:20px;
+        margin-top: 20px
+    }
+}
+
+.guide .add-title-margin {
+    margin-top: 15px
+}
+
+@media (min-width: 40.0625em) {
+    .guide .add-title-margin {
+        margin-top:50px
+    }
+}
+
+.guide .part-navigation li {
+    list-style: decimal;
+    margin-left: 1.5em;
+    padding-left: .3em
+}
+
+.guide .govuk-govspeak h2 {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.1111111111
+}
+  /* content nav */
+  .gem-c-contents-list__list-item--numbered .gem-c-contents-list__link {
+    display: table
+}
+
+.gem-c-contents-list__number,.gem-c-contents-list__numbered-text {
+    display: table-cell
+}
+
+.gem-c-contents-list__number {
+    min-width: 1.5em
+}
+
+.gem-c-contents-list__numbered-text {
+    padding-left: .3em
+}
+
+.direction-rtl .gem-c-contents-list__numbered-text {
+    padding-left: 0;
+    padding-right: .3em
+}
+
+.gem-c-contents-list {
+    position: relative;
+    margin: 0 0 20px 0;
+    z-index: 1;
+    background: #fff;
+    box-shadow: 0 20px 15px -10px #fff
+}
+
+.gem-c-contents-list__title {
+    color: #0b0c0c;
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0
+}
+
+@media print {
+    .gem-c-contents-list__title {
+        color: #000
+    }
+}
+
+@media print {
+    .gem-c-contents-list__title {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-contents-list__title {
+        font-size:16px;
+        line-height: 1.5
+    }
+}
+
+@media print {
+    .gem-c-contents-list__title {
+        font-size: 14pt;
+        line-height: 1.5
+    }
+}
+
+.gem-c-contents-list__list,.gem-c-contents-list__nested-list {
+    color: #0b0c0c;
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+@media print {
+    .gem-c-contents-list__list,.gem-c-contents-list__nested-list {
+        color: #000
+    }
+}
+
+@media print {
+    .gem-c-contents-list__list,.gem-c-contents-list__nested-list {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-contents-list__list,.gem-c-contents-list__nested-list {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+@media print {
+    .gem-c-contents-list__list,.gem-c-contents-list__nested-list {
+        font-size: 14pt;
+        line-height: 1.2
+    }
+}
+
+.gem-c-contents-list--no-underline .gem-c-contents-list__link {
+    text-decoration: none
+}
+
+.gem-c-contents-list--no-underline .gem-c-contents-list__link:hover,.gem-c-contents-list--no-underline .gem-c-contents-list__link:active {
+    text-decoration: underline
+}
+
+.gem-c-contents-list--no-underline .gem-c-contents-list__link:focus,.gem-c-contents-list--no-underline .gem-c-contents-list__link:active:focus,.gem-c-contents-list--no-underline .gem-c-contents-list__link:link:focus,.gem-c-contents-list--no-underline .gem-c-contents-list__link:visited:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+    text-decoration: none;
+    color: #0b0c0c !important
+}
+
+.gem-c-contents-list__list-item--parent>.gem-c-contents-list__link {
+    font-weight: bold
+}
+
+.gem-c-contents-list__link:focus,.gem-c-contents-list__link:active:focus,.gem-c-contents-list__link:link:focus,.gem-c-contents-list__link:visited:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+    text-decoration: none;
+    color: #0b0c0c !important
+}
+
+.gem-c-contents-list__list-item {
+    padding-top: 10px;
+    line-height: 1.3;
+    list-style-type: none
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-contents-list__list-item {
+        padding-top:7.5px
+    }
+}
+
+.gem-c-contents-list__list-item--dashed {
+    position: relative;
+    padding-left: 25px;
+    padding-right: 25px
+}
+
+.gem-c-contents-list__list-item--dashed:before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    overflow: hidden
+}
+
+.direction-rtl .gem-c-contents-list__list-item--dashed:before {
+    left: auto;
+    right: 0
+}
+
+.lte-ie8 .gem-c-contents-list__list-item--dashed .gem-c-contents-list__link {
+    display: inline-block;
+    vertical-align: top
+}
+
+.gem-c-contextual-sidebar__brexit-related-links {
+    border-top: 2px solid #1d70b8
+}
+
+.gem-c-contextual-sidebar__brexit-heading {
+    margin-top: 15px;
+    margin-bottom: 10px
+}
+
+.gem-c-contextual-sidebar__brexit-cta {
+    margin-bottom: 30px;
+    background-color: #f3f2f1;
+    border-top: 2px solid #ff003b;
+    display: block;
+    padding: 0 15px 15px;
+    text-decoration: none
+}
+
+.gem-c-contextual-sidebar__brexit-cta .gem-c-contextual-sidebar__brexit-heading {
+    color: #0b0c0c
+}
+
+.gem-c-contextual-sidebar__brexit-cta .gem-c-contextual-sidebar__brexit-text {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-decoration: underline
+}
+
+@media print {
+    .gem-c-contextual-sidebar__brexit-cta .gem-c-contextual-sidebar__brexit-text {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-contextual-sidebar__brexit-cta .gem-c-contextual-sidebar__brexit-text {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+@media print {
+    .gem-c-contextual-sidebar__brexit-cta .gem-c-contextual-sidebar__brexit-text {
+        font-size: 14pt;
+        line-height: 1.2
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-contextual-sidebar__brexit-cta .gem-c-contextual-sidebar__brexit-text {
+        margin-bottom:10px
+    }
+}
+
+.gem-c-contextual-sidebar__brexit-cta:focus .gem-c-contextual-sidebar__brexit-text {
+    text-decoration: none
+}
+
+.gem-c-contextual-sidebar__take-action-traffic-lights {
+    text-align: left;
+    margin-bottom: 10px
+}
+
+.gem-c-contextual-sidebar__take-action-traffic-lights>li {
+    white-space: nowrap;
+    display: inline;
+    margin-right: 7px;
+    margin-bottom: 5px
+}
+
+.gem-c-contextual-sidebar__take-action-traffic-lists-icon {
+    vertical-align: middle;
+    margin-top: -2px;
+    width: 22px;
+    margin-right: 2px
+}
+
+.gem-c-contextual-sidebar__take-action-traffic-lists-text {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 2;
+    vertical-align: middle
+}
+
+@media print {
+    .gem-c-contextual-sidebar__take-action-traffic-lists-text {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-contextual-sidebar__take-action-traffic-lists-text {
+        font-size:19px;
+        line-height: 2
+    }
+}
+
+@media print {
+    .gem-c-contextual-sidebar__take-action-traffic-lists-text {
+        font-size: 14pt;
+        line-height: 2
+    }
+}
+
+  /*pagination*/
+  .gem-c-pagination {
+    display: block;
+    margin: 50px 0
+}
+
+.gem-c-pagination__list {
+    margin: 0;
+    padding: 0
+}
+
+.gem-c-pagination__item {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.25;
+    list-style: none
+}
+
+@media print {
+    .gem-c-pagination__item {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-pagination__item {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+@media print {
+    .gem-c-pagination__item {
+        font-size: 14pt;
+        line-height: 1.25
+    }
+}
+
+.gem-c-pagination__item:first-child {
+    margin-bottom: 20px
+}
+
+.gem-c-pagination__link {
+    display: block;
+    text-decoration: none;
+    padding-bottom: 20px
+}
+
+.gem-c-pagination__link:hover,.gem-c-pagination__link:active,.gem-c-pagination__link:visited {
+    color: #1d70b8
+}
+
+.gem-c-pagination__link:hover,.gem-c-pagination__link:active {
+    background-color: #f3f2f1
+}
+
+.gem-c-pagination__link:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+    text-decoration: none
+}
+
+.gem-c-pagination__link:focus .gem-c-pagination__link-title {
+    border-top-color: transparent
+}
+
+.gem-c-pagination__link:focus .gem-c-pagination__link-icon {
+    fill: #0b0c0c
+}
+
+.gem-c-pagination__link-title {
+    display: block;
+    border-top: 1px solid #b1b4b6;
+    padding-top: 15px
+}
+
+.gem-c-pagination__link-divider {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    border: 0 !important;
+    white-space: nowrap !important
+}
+
+.gem-c-pagination__link-text {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-left: 10px
+}
+
+@media print {
+    .gem-c-pagination__link-text {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-pagination__link-text {
+        font-size:19px;
+        line-height: 1.3157894737
+    }
+}
+
+@media print {
+    .gem-c-pagination__link-text {
+        font-size: 14pt;
+        line-height: 1.15
+    }
+}
+
+.gem-c-pagination__link-icon {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.25;
+    display: inline-block;
+    margin-bottom: 1px;
+    height: .482em;
+    width: .63em;
+    fill: #505a5f
+}
+
+@media print {
+    .gem-c-pagination__link-icon {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-pagination__link-icon {
+        font-size:24px;
+        line-height: 1.25
+    }
+}
+
+@media print {
+    .gem-c-pagination__link-icon {
+        font-size: 18pt;
+        line-height: 1.25
+    }
+}
+
+.gem-c-pagination__link-label {
+    display: inline-block;
+    margin-top: .1em;
+    text-decoration: underline;
+    margin-left: 25px
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-pagination__link-label {
+        margin-left:30px
+    }
+}
+  .gem-c-related-navigation {
+    color: #0b0c0c;
+    border-top: 2px solid #1d70b8
+}
+
+@media print {
+    .gem-c-related-navigation {
+        color: #000
+    }
+}
+  .gem-c-related-navigation__link-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-bottom: 1.25em;
+}
+
+.gem-c-related-navigation__main-heading {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-top: 15px;
+    margin-bottom: 10px
+}
+
+@media print {
+    .gem-c-related-navigation__main-heading {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-related-navigation__main-heading {
+        font-size:19px;
+        line-height: 1.3157894737
+    }
+}
+
+@media print {
+    .gem-c-related-navigation__main-heading {
+        font-size: 14pt;
+        line-height: 1.15
+    }
+}
+
+.gem-c-related-navigation__sub-heading {
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    border-top: 1px solid #b1b4b6;
+    margin: 0;
+    padding-top: 15px
+}
+
+@media print {
+    .gem-c-related-navigation__sub-heading {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-related-navigation__sub-heading {
+        font-size:16px;
+        line-height: 1.25
+    }
+}
+
+@media print {
+    .gem-c-related-navigation__sub-heading {
+        font-size: 14pt;
+        line-height: 1.2
+    }
+}
+.gem-c-related-navigation__link {
+    list-style-type: none;
+    margin-top: 15px;
+    font-family: "nta",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.45
+}
+
+@media print {
+    .gem-c-related-navigation__link {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-related-navigation__link {
+        font-size:16px;
+        line-height: 1.45
+    }
+}
+
+@media print {
+    .gem-c-related-navigation__link {
+        font-size: 14pt;
+        line-height: 1.45
+    }
+}
+
+@media (min-width: 40.0625em) {
+    .gem-c-related-navigation__link {
+        line-height:1.28
+    }
+}
+
+.gem-c-related-navigation__link:focus,.gem-c-related-navigation__link:active:focus,.gem-c-related-navigation__link:link:focus,.gem-c-related-navigation__link:visited:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+    text-decoration: none;
+    color: #0b0c0c !important
+}
+</style>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
+      <h1 class="gem-c-title__text govuk-heading-xl">
+        Telling an employer, university or college about your criminal record
+      </h1>
+    </div>
+
+    <a class="gem-c-skip-link govuk-skip-link" href="#guide-contents">Skip to contents of guide</a>
+
+    <aside class="part-navigation-container" role="complementary">
+      <nav class="gem-c-contents-list " aria-label="Pages in this guide" role="navigation" data-module="track-click">
+        <h2 class="gem-c-contents-list__title govuk-heading-s">
+          Contents
+        </h2>
+        <ol class="gem-c-contents-list__list govuk-list--number">
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 1" data-track-label="/tell-employer-or-college-about-criminal-record" data-track-options="{&quot;dimension29&quot;:&quot;When you need to tell an employer, university or college&quot;}" href="/tell-employer-or-college-about-criminal-record">When you need to tell an employer, university or college</a>
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 2" data-track-label="/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give" data-track-options="{&quot;dimension29&quot;:&quot;What information you need to give&quot;}" href="/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give">What information you need to give</a>
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed gem-c-contents-list__list-item--active" aria-current="true">
+              Check if you need to tell someone about your conviction or caution
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 2" data-track-label="/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give" data-track-options="{&quot;dimension29&quot;:&quot;What information you need to give&quot;}" href="/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give">Cautions</a>
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 4" data-track-label="/tell-employer-or-college-about-criminal-record/fines-and-compensation" data-track-options="{&quot;dimension29&quot;:&quot;Fines and compensation&quot;}" href="/tell-employer-or-college-about-criminal-record/fines-and-compensation">Fines and compensation</a>
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 5" data-track-label="/tell-employer-or-college-about-criminal-record/driving-convictions" data-track-options="{&quot;dimension29&quot;:&quot;Driving convictions&quot;}" href="/tell-employer-or-college-about-criminal-record/driving-convictions">Driving convictions</a>
+
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 6" data-track-label="/tell-employer-or-college-about-criminal-record/prison-sentences" data-track-options="{&quot;dimension29&quot;:&quot;Prison sentences&quot;}" href="/tell-employer-or-college-about-criminal-record/prison-sentences">Prison sentences</a>
+
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 7" data-track-label="/tell-employer-or-college-about-criminal-record/community-service" data-track-options="{&quot;dimension29&quot;:&quot;Community service&quot;}" href="/tell-employer-or-college-about-criminal-record/community-service">Community service</a>
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 8" data-track-label="/tell-employer-or-college-about-criminal-record/discharges" data-track-options="{&quot;dimension29&quot;:&quot;Discharges&quot;}" href="/tell-employer-or-college-about-criminal-record/discharges">Discharges</a>
+            </li>
+            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+              <a class="gem-c-contents-list__link govuk-link " data-track-category="contentsClicked" data-track-action="content_item 9" data-track-label="/tell-employer-or-college-about-criminal-record/military-convictions" data-track-options="{&quot;dimension29&quot;:&quot;Military convictions&quot;}" href="/tell-employer-or-college-about-criminal-record/military-convictions">Military convictions</a>
+            </li>
+        </ol>
+      </nav>
+    </aside>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds" id="guide-contents">
+
+    <div class="gem-c-govspeak govuk-govspeak direction-ltr disable-youtube" data-module="govspeak">
+    <h2 class="govuk-heading-m" style="margin-top:-15px;">
+      Check if you need to tell someone about your conviction or caution
+    </h2>
+      
+    <p class="govuk-body">Use this tool to check whether:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        a conviction or caution you got in England or Wales is ‘spent’ (not on your basic criminal record)
+      </li>
+      <li>
+        you need to tell a potential employer, university or college about it
+      </li>
+    </ul>
+    <div class="govuk-inset-text">
+      You cannot use this tool to check a conviction with more than one sentence.
+    </div>
+    <h3 class="govuk-heading-m">
+      Before you check
+    </h3>
+      <p class="govuk-body">You'll need:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        the type of conviction or caution you got
+      </li>
+      <li>
+        the date you got it
+      </li>
+      <li>
+        the date any conditions ended, or how long your sentence was
+      </li>
+    </ul>
+    <p>You can also <a class="govuk-link" href="x">read about what a spent conviction or caution is</a>.</p>
+    <p>You will not need to give personal details such as your name. The information you give will not be saved and cannot identify you.</p>
+    <h3 class="govuk-heading-m">
+      Check your conviction or caution
+    </h3>
+      <a href="Prototype-1/add-another-sentence" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+        Check now
+      </a>
+      <nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
+        <ul class="gem-c-pagination__list" data-module="track-click">
+            <li class="gem-c-pagination__item gem-c-pagination__item--previous">
+              <a href="/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give" class="gem-c-pagination__link" rel="prev" data-track-category="contentsClicked" data-track-action="previous" data-track-label="/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give" data-track-dimension="previous" data-track-dimension-index="29">
+                <span class="gem-c-pagination__link-title">
+                  <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                    <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                  </svg>
+                  <span class="gem-c-pagination__link-text">
+                    Previous
+                  </span>
+                </span>
+                  <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                  <span class="gem-c-pagination__link-label">What information you need to give</span>
+              </a>
+            </li>
+            <li class="gem-c-pagination__item gem-c-pagination__item--next">
+              <a href="/tell-employer-or-college-about-criminal-record/fines-and-compensation" class="gem-c-pagination__link" rel="next" data-track-category="contentsClicked" data-track-action="next" data-track-label="/tell-employer-or-college-about-criminal-record/fines-and-compensation" data-track-dimension="next" data-track-dimension-index="29">
+                <span class="gem-c-pagination__link-title">
+                  <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                    <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                  </svg>
+                  <span class="gem-c-pagination__link-text">
+                    Next
+                  </span>
+                </span>
+                  <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                  <span class="gem-c-pagination__link-label">Fines and compensation</span>
+              </a>
+            </li>
+        </ul>
+      </nav>
+    
+    <div class="gem-c-print-link gem-c-print-link--show-without-js govuk-!-margin-top-3 govuk-!-margin-bottom-3">
+        <a class="govuk-link gem-c-print-link__link govuk-link--no-visited-state" rel="alternate" data-module="button" role="button" href="/tell-employer-or-college-about-criminal-record/print">Print entire guide</a>
+    </div>
+  </div>
+</div>
+  
+  <div class="govuk-grid-column-one-third">
+    <div class="gem-c-contextual-sidebar" style="margin-top:-30px;">
+      <div class="gem-c-related-navigation">
+          <h2 id="related-nav-related_items-4b3a7388" class="gem-c-related-navigation__main-heading" data-track-count="sidebarRelatedItemSection">
+            Related content
+          </h2>
+          <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-related_items-4b3a7388" data-module="gem-toggle">
+            <ul class="gem-c-related-navigation__link-list" data-module="track-click">
+              <li class="gem-c-related-navigation__link"><a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--sidebar  gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked" data-track-action="1.1 Related content" data-track-label="/employers-checks-job-applicants" data-track-options="{&quot;dimension28&quot;:&quot;2&quot;,&quot;dimension29&quot;:&quot;Checks employers can make on job applicants&quot;}" href="/employers-checks-job-applicants">Checks employers can make on job applicants</a></li>
+              <li class="gem-c-related-navigation__link"><a class="gem-c-related-navigation__section-link gem-c-related-navigation__section-link--sidebar  gem-c-related-navigation__section-link--other" data-track-category="relatedLinkClicked" data-track-action="1.2 Related content" data-track-label="/government/publications/unlock-opportunity-employer-information-pack-and-case-studies/employing-prisoners-and-ex-offenders" data-track-options="{&quot;dimension28&quot;:&quot;2&quot;,&quot;dimension29&quot;:&quot;Employing prisoners and ex-offenders&quot;}" href="/government/publications/unlock-opportunity-employer-information-pack-and-case-studies/employing-prisoners-and-ex-offenders">Employing prisoners and ex-offenders</a></li>
+            </ul>
+          </nav>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+</div>
+{% endblock %}
