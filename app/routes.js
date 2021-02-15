@@ -3,7 +3,7 @@ const router = express.Router()
 
 // *********** Prototype 2 ***********
 
-// Caution or convicted
+// Were you cautioned or convicted?
 
 router.post('/how-old-were-you-answer', function (req, res) {
 
@@ -24,7 +24,7 @@ router.post('/conviction-type-answer', function (req, res) {
 
   var convictionType = req.session.data['conviction-type']
 
-  if (cautionedConvicted== "Motoring"){
+  if (convictionType== "Motoring"){
     res.redirect('/ban')
   }
   else {
