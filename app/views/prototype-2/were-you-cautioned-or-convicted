@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check when to disclose cautions or convictions
+{% endblock %}
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag ">beta</strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service, <a href="/about/contact" class="govuk-link govuk-link--no-visited-state">your feedback</a> will help us improve.
+      </span>
+    </p>
+  </div>
+  <a class="govuk-back-link" href="/prototype/start">Back</a>
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <form class="edit_steps_check_kind_form" id="new_steps_check_kind_form" action="/steps/check/kind" accept-charset="UTF-8" method="post">
+        <input name="utf8" type="hidden" value="✓">
+        <input type="hidden" name="_method" value="put">
+        <input type="hidden" name="authenticity_token" value="acynGOK55CsfnZaJWD9gWMQs2L4dNiJn3Js1lkXym9T+61RdNfL63L1LpYAM24k/IwmOmSVzHj86i1zhBxK4Sw==">
+          <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">Were you cautioned or convicted?</h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input id="steps-check-kind-form-kind-caution-field" aria-describedby="steps-check-kind-form-kind-caution-hint" class="govuk-radios__input" type="radio" value="caution" name="steps_check_kind_form[kind]">
+                <label for="steps-check-kind-form-kind-caution-field" class="govuk-label govuk-radios__label">Cautioned</label>
+                <span class="govuk-hint govuk-radios__hint" id="steps-check-kind-form-kind-caution-hint">You were given an official warning by the police</span>
+              </div>
+              <div class="govuk-radios__item">
+                <input id="steps-check-kind-form-kind-conviction-field" aria-describedby="steps-check-kind-form-kind-conviction-hint" class="govuk-radios__input" type="radio" value="conviction" name="steps_check_kind_form[kind]">
+                <label for="steps-check-kind-form-kind-conviction-field" class="govuk-label govuk-radios__label">Convicted</label>
+                <span class="govuk-hint govuk-radios__hint" id="steps-check-kind-form-kind-conviction-hint">You were found guilty of a crime in court</span>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
+      </form>
+  </div>
+</div>
