@@ -4,6 +4,22 @@ const router = express.Router()
 
 // *********** Prototype 1 ***********
 
+router.post('/Prototype-1/add-a-conviction-or-caution-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'changed-name'
+  var anotherSentence = req.session.data['changed-name']
+
+  // Check whether the variable matches a condition
+  if (anotherSentence == "No"){
+    // Send user to next page
+    res.redirect('/Prototype-1/add-a-conviction-or-caution')
+  }
+  else {
+    // Send user to another page
+    res.redirect('/Prototype-1/start-page')
+  }
+
+})
 
 // *********** VERSION 4 ***********
 
