@@ -3,6 +3,20 @@ const router = express.Router()
 
 // *********** Prototype 2 ***********
 
+// Caution or convicted
+
+router.post('/prototype-2/how-old-were-you-answer", function (req, res) {
+
+  var cautionedConvicted = req.session.data['caution-conviction']
+
+  if (cautionedConvicted== "Convicted"){
+    res.redirect('/prototype-2/how-old-were-you')
+  }
+  else {
+    res.redirect('/prototype-1/start-page')
+  }
+
+})
 
 // *********** Prototype 1 ***********
 
