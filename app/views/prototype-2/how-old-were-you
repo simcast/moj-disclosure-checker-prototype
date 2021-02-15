@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check when to disclose cautions or convictions
+{% endblock %}
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag ">beta</strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service, <a href="/about/contact" class="govuk-link govuk-link--no-visited-state">your feedback</a> will help us improve.
+      </span>
+    </p>
+  </div>
+    {{ govukBackLink({
+    text: "Back",
+    href: "/prototype-2/were-you-cautioned-or-convicted"
+  }) }}
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="edit_steps_check_under_age_form" id="new_steps_check_under_age_form" action="/steps/check/under_age" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="authenticity_token" value="/+F4MeHaINctqfShNP/Fsrv84KX7TaIkpEs6gjqEsqdoxot0NpE+II9/x6hgGyzVXNm2gsMInnxCW1P1eGSROA==">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="steps-check-under-age-form-under-age-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">How old were you when you got convicted?</h1>
+            </legend>
+            <span class="govuk-hint" id="steps-check-under-age-form-under-age-hint">Select your age when you got convicted, not when you committed the offence</span>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input id="steps-check-under-age-form-under-age-yes-field" class="govuk-radios__input" type="radio" value="yes" name="steps_check_under_age_form[under_age]">
+                <label for="steps-check-under-age-form-under-age-yes-field" class="govuk-label govuk-radios__label">Under 18</label>
+              </div>
+              <div class="govuk-radios__item">
+                <input id="steps-check-under-age-form-under-age-no-field" class="govuk-radios__input" type="radio" value="no" name="steps_check_under_age_form[under_age]">
+                <label for="steps-check-under-age-form-under-age-no-field" class="govuk-label govuk-radios__label">18 or over</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
+    </form>  
+  </div>
+</div>
+{% endblock %}
