@@ -5,7 +5,7 @@ const router = express.Router()
 
 // Caution or convicted
 
-router.post('/prototype-2/how-old-were-you-answer', function (req, res) {
+router.post('/how-old-were-you-answer', function (req, res) {
 
   var cautionedConvicted = req.session.data['caution-conviction']
 
@@ -13,7 +13,7 @@ router.post('/prototype-2/how-old-were-you-answer', function (req, res) {
     res.redirect('/prototype-2/how-old-were-you')
   }
   else {
-    res.redirect('/prototype-1/start-page')
+    res.redirect('/prototype-2/start-page')
   }
 
 })
