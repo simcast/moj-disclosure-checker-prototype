@@ -27,16 +27,59 @@
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form class="edit_steps_conviction_known_date_form" id="new_steps_conviction_known_date_form" action="/steps/conviction/known_date" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="authenticity_token" value="a6yi6tXhBN5oJyvGMFObMdi1MDkWRc2csDzOzNvFeSn8i1GvAqoaKcrxGM9kt3JWP5BmHi4A8cRWLKe7mSVatg==">
-      <div class="govuk-form-group app-util--compact-form-group"><fieldset class="govuk-fieldset" aria-describedby="steps-conviction-known-date-form-known-date-hint steps-conviction-known-date-form-known-date-supplemental"><legend class="govuk-fieldset__legend govuk-fieldset__legend--xl"><h1 class="govuk-fieldset__heading"><span class="govuk-caption-xl">Disqualification</span>When did the ban start?</h1></legend><div id="steps-conviction-known-date-form-known-date-supplemental"><p class="govuk-body-m"></p></div><span class="govuk-hint" id="steps-conviction-known-date-form-known-date-hint">If you do not know the exact date, you can enter an approximate one. However, if you use an approximate date, your results will be approximate.
-    <p>For example, 23 9 2018</p>
-    </span><div class="govuk-date-input"><div class="govuk-date-input__item"><div class="govuk-form-group"><label class="govuk-label govuk-date-input__label" for="steps_conviction_known_date_form_known_date_3i">Day</label><input id="steps_conviction_known_date_form_known_date_3i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="steps_conviction_known_date_form[known_date(3i)]" type="text" pattern="[0-9]*" inputmode="numeric"></div></div><div class="govuk-date-input__item"><div class="govuk-form-group"><label class="govuk-label govuk-date-input__label" for="steps_conviction_known_date_form_known_date_2i">Month</label><input id="steps_conviction_known_date_form_known_date_2i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="steps_conviction_known_date_form[known_date(2i)]" type="text" pattern="[0-9]*" inputmode="numeric"></div></div><div class="govuk-date-input__item"><div class="govuk-form-group"><label class="govuk-label govuk-date-input__label" for="steps_conviction_known_date_form_known_date_1i">Year</label><input id="steps_conviction_known_date_form_known_date_1i" class="govuk-input govuk-date-input__input govuk-input--width-4" name="steps_conviction_known_date_form[known_date(1i)]" type="text" pattern="[0-9]*" inputmode="numeric"></div></div></div></fieldset></div>
+    <form class="edit_steps_conviction_known_date_form" id="new_steps_conviction_known_date_form" action="/prototype-2/ban-length" accept-charset="UTF-8" method="post">
+      <input name="utf8" type="hidden" value="✓">
+      <input type="hidden" name="_method" value="put">
+      <input type="hidden" name="authenticity_token" value="a6yi6tXhBN5oJyvGMFObMdi1MDkWRc2csDzOzNvFeSn8i1GvAqoaKcrxGM9kt3JWP5BmHi4A8cRWLKe7mSVatg==">
+      <div class="govuk-form-group app-util--compact-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="steps-conviction-known-date-form-known-date-hint steps-conviction-known-date-form-known-date-supplemental">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              <span class="govuk-caption-xl">Disqualification</span>
+              When did the ban start?
+           </h1>
+          </legend>
+          <div id="steps-conviction-known-date-form-known-date-supplemental">
+            <p class="govuk-body-m"></p>
+          </div>
+          <span class="govuk-hint" id="steps-conviction-known-date-form-known-date-hint">If you do not know the exact date, you can enter an approximate one. However, if you use an approximate date, your results will be approximate.
+            <p>For example, 23 9 2018</p>
+          </span>
+          <div class="govuk-date-input">
+            <div class="govuk-date-input__item"><div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="steps_conviction_known_date_form_known_date_3i">Day</label>
+              <input id="steps_conviction_known_date_form_known_date_3i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="steps_conviction_known_date_form[known_date(3i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="steps_conviction_known_date_form_known_date_2i">Month</label>
+              <input id="steps_conviction_known_date_form_known_date_2i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="steps_conviction_known_date_form[known_date(2i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="steps_conviction_known_date_form_known_date_1i">Year</label>
+              <input id="steps_conviction_known_date_form_known_date_1i" class="govuk-input govuk-date-input__input govuk-input--width-4" name="steps_conviction_known_date_form[known_date(1i)]" type="text" pattern="[0-9]*" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
 
-          <div class="govuk-form-group"><fieldset class="govuk-fieldset"><legend class="govuk-fieldset__legend govuk-fieldset__legend--s govuk-visually-hidden">Approximate date</legend><div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item"><input id="steps-conviction-known-date-form-approximate-known-date-true-field" class="govuk-checkboxes__input" type="checkbox" value="true" name="steps_conviction_known_date_form[approximate_known_date]"><label for="steps-conviction-known-date-form-approximate-known-date-true-field" class="govuk-label govuk-checkboxes__label">This is not the exact date</label></div>
-    </div></fieldset></div>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s govuk-visually-hidden">Approximate date</legend>
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input id="steps-conviction-known-date-form-approximate-known-date-true-field" class="govuk-checkboxes__input" type="checkbox" value="true" name="steps_conviction_known_date_form[approximate_known_date]">
+              <label for="steps-conviction-known-date-form-approximate-known-date-true-field" class="govuk-label govuk-checkboxes__label">This is not the exact date</label>
+            </div>
+          </div>
+      </fieldset>
+    </div>
 
-          <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
+    <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
     </form>
   </div>
 </div>
