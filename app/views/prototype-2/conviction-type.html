@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check when to disclose cautions or convictions
+{% endblock %}
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag ">beta</strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service, <a href="/about/contact" class="govuk-link govuk-link--no-visited-state">your feedback</a> will help us improve.
+      </span>
+    </p>
+  </div>
+    {{ govukBackLink({
+    text: "Back",
+    href: "/prototype-2/start-page"
+  }) }}
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="edit_steps_conviction_conviction_type_form" id="new_steps_conviction_conviction_type_form" action="/steps/conviction/conviction_type" accept-charset="UTF-8" method="post">
+      <input name="utf8" type="hidden" value="✓">
+      <input type="hidden" name="_method" value="put">
+      <input type="hidden" name="authenticity_token" value="sQWJilPwAtMFE6+gnC3vSWRGsZ+yfYkeTFPo46ru3oUmInrPhLscJKfFnKnIyQYug2PnuIo4tUaqQ4GU6A79Gg==">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">What type of conviction did you get?</h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input id="steps-conviction-conviction-type-form-conviction-type-adult-community-reparation-field" aria-describedby="steps-conviction-conviction-type-form-conviction-type-adult-community-reparation-hint" class="govuk-radios__input" type="radio" value="adult_community_reparation" name="steps_conviction_conviction_type_form[conviction_type]">
+              <label for="steps-conviction-conviction-type-form-conviction-type-adult-community-reparation-field" class="govuk-label govuk-radios__label">Community, prevention or reparation order</label>
+              <span class="govuk-hint govuk-radios__hint" id="steps-conviction-conviction-type-form-conviction-type-adult-community-reparation-hint">For example, a sexual prevention order or a restraining order. You might have been asked to wear a tag as part of your order</span>
+            </div>
+            <div class="govuk-radios__item">
+              <input id="steps-conviction-conviction-type-form-conviction-type-adult-custodial-sentence-field" aria-describedby="steps-conviction-conviction-type-form-conviction-type-adult-custodial-sentence-hint" class="govuk-radios__input" type="radio" value="adult_custodial_sentence" name="steps_conviction_conviction_type_form[conviction_type]">
+              <label for="steps-conviction-conviction-type-form-conviction-type-adult-custodial-sentence-field" class="govuk-label govuk-radios__label">Custody or hospital order</label>
+              <span class="govuk-hint govuk-radios__hint" id="steps-conviction-conviction-type-form-conviction-type-adult-custodial-sentence-hint">For example, a prison sentence, suspended sentence or hospital order given under the Mental Health Act</span>
+            </div>
+            <div class="govuk-radios__item">
+              <input id="steps-conviction-conviction-type-form-conviction-type-adult-discharge-field" aria-describedby="steps-conviction-conviction-type-form-conviction-type-adult-discharge-hint" class="govuk-radios__input" type="radio" value="adult_discharge" name="steps_conviction_conviction_type_form[conviction_type]">
+              <label for="steps-conviction-conviction-type-form-conviction-type-adult-discharge-field" class="govuk-label govuk-radios__label">Discharge</label>
+              <span class="govuk-hint govuk-radios__hint" id="steps-conviction-conviction-type-form-conviction-type-adult-discharge-hint">For example, a conditional discharge order or bind over</span>
+            </div>
+            <div class="govuk-radios__item">
+              <input id="steps-conviction-conviction-type-form-conviction-type-adult-motoring-field" aria-describedby="steps-conviction-conviction-type-form-conviction-type-adult-motoring-hint" class="govuk-radios__input" type="radio" value="adult_motoring" name="steps_conviction_conviction_type_form[conviction_type]">
+              <label for="steps-conviction-conviction-type-form-conviction-type-adult-motoring-field" class="govuk-label govuk-radios__label">Motoring (including motoring fines)</label>
+              <span class="govuk-hint govuk-radios__hint" id="steps-conviction-conviction-type-form-conviction-type-adult-motoring-hint">For example, penalty points, fines or a driving ban</span></div>
+            <div class="govuk-radios__item">
+              <input id="steps-conviction-conviction-type-form-conviction-type-adult-military-field" aria-describedby="steps-conviction-conviction-type-form-conviction-type-adult-military-hint" class="govuk-radios__input" type="radio" value="adult_military" name="steps_conviction_conviction_type_form[conviction_type]">
+              <label for="steps-conviction-conviction-type-form-conviction-type-adult-military-field" class="govuk-label govuk-radios__label">Military</label>
+              <span class="govuk-hint govuk-radios__hint" id="steps-conviction-conviction-type-form-conviction-type-adult-military-hint">For example, a dismissal or service detention</span>
+            </div>
+            <div class="govuk-radios__item">
+              <input id="steps-conviction-conviction-type-form-conviction-type-adult-financial-field" aria-describedby="steps-conviction-conviction-type-form-conviction-type-adult-financial-hint" class="govuk-radios__input" type="radio" value="adult_financial" name="steps_conviction_conviction_type_form[conviction_type]">
+              <label for="steps-conviction-conviction-type-form-conviction-type-adult-financial-field" class="govuk-label govuk-radios__label">Financial penalty (not including motoring fines)</label>
+              <span class="govuk-hint govuk-radios__hint" id="steps-conviction-conviction-type-form-conviction-type-adult-financial-hint">For example, paying a fine or compensation</span>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
+    </form>
+  </div>
+</div>
+{% endblock %}
