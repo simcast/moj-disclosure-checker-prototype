@@ -25,33 +25,36 @@
 {% endblock %}
 
 {% block content %}
-  <form class="form" action="/Prototype-1/approx-dates/approximate-date" method="post">
-      {{ govukRadios({
-        classes: "govuk-radios--inline", 
-        idPrefix: "approx-date",
-        name: "approx-date",
-        fieldset: {
-          legend: {
-            text: "Do you know the exact date you were convicted?",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--l"
-          }
-        },
-        hint: {
-          text: "This is the day you were found guilty of the offence."
-        },
-        items: [
-          {
-            value: "yes",
-            text: "Yes"
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/Prototype-1/approx-dates/approximate-date" method="post">
+        {{ govukRadios({
+          classes: "govuk-radios--inline", 
+          idPrefix: "approx-date",
+          name: "approx-date",
+          fieldset: {
+            legend: {
+              text: "Do you know the exact date you were convicted?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
           },
-          {
-            value: "no",
-            text: "No"
-          }
-        ]
-      }) }}
-  <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
-</form>
-
+          hint: {
+            text: "This is the day you were found guilty of the offence."
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+      <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
+    </form>
+  </div>
+</div>
 {% endblock %}
