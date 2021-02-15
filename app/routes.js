@@ -5,7 +5,7 @@ const router = express.Router()
 
 // Were you cautioned or convicted?
 
-router.post('/prototype-2/how-old-were-you-answer', function (req, res) {
+router.post('prototype-2/how-old-were-you-answer', function (req, res) {
 
   var cautionedConvicted = req.session.data['caution-conviction']
 
