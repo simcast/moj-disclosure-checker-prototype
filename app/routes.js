@@ -18,6 +18,21 @@ router.post('/how-old-were-you-answer', function (req, res) {
 
 })
 
+// Conviction type
+
+router.post('/conviction-type-answer', function (req, res) {
+
+  var convictionType = req.session.data['conviction-type']
+
+  if (cautionedConvicted== "Motoring (including motoring fines)"){
+    res.redirect('/ban')
+  }
+  else {
+    res.redirect('/prototype-2/start-page')
+  }
+
+})
+
 // *********** Prototype 1 ***********
 
 //Add another sentence
