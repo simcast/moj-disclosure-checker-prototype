@@ -9,7 +9,7 @@ router.post('prototype-2/how-old-were-you-answer', function (req, res) {
 
   var cautionedConvicted = req.session.data['caution-conviction']
 
-  if (cautionedConvicted== "Convicted"){
+  if (cautionedConvicted == "Convicted"){
     res.redirect('/prototype-2/how-old-were-you')
   }
   else {
@@ -24,7 +24,7 @@ router.post('/conviction-type-answer', function (req, res) {
 
   var convictionType = req.session.data['conviction-type']
 
-  if (convictionType== "Motoring (including motoring fines)"){
+  if (convictionType == "Motoring (including motoring fines)"){
     res.redirect('/ban')
   }
   else {
