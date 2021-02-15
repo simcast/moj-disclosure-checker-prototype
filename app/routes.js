@@ -24,7 +24,7 @@ router.post('/conviction-type-answer', function (req, res) {
 
   var convictionType = req.session.data['conviction-type']
 
-  if (cautionedConvicted== "Motoring (including motoring fines)"){
+  if (cautionedConvicted== "Motoring"){
     res.redirect('/ban')
   }
   else {
