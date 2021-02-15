@@ -12,7 +12,10 @@
       </span>
     </p>
   </div>
-  <a class="govuk-back-link" href="/prototype/start">Back</a>
+    {{ govukBackLink({
+    text: "Back",
+    href: "/prototype-2/start-page"
+  }) }}
 {% endblock %}
 
 {% block header %}
