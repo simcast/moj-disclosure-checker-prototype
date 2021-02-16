@@ -30,7 +30,7 @@ router.post('/conviction-type-answer', function (req, res) {
   } else if (typeConviction === 'Prison sentence') {
     res.redirect('/prototype-2/start-page')
   } else if (typeConviction === 'Financial penalty') {
-    res.redirect('/prototype-2/start-page')
+    res.redirect('/prototype-2/fine-type')
   } else if (typeConviction === 'Motoring endorsement') {
     res.redirect('/prototype-2/motoring-conviction')
   } else if (typeConviction === 'Hospital and guardianship orders') {
