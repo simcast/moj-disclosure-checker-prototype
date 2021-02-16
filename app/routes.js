@@ -9,7 +9,7 @@ router.post('prototype-2/how-old-were-you-answer', function (req, res) {
 
   var cautionedConvicted = req.session.data['caution-conviction']
 
-  if (cautionedConvicted == "Convicted"){
+  if (cautionedConvicted === "Convicted"){
     res.redirect('/prototype-2/how-old-were-you')
   }
   else {
