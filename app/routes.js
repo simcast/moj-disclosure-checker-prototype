@@ -60,6 +60,19 @@ router.post('/motoring-conviction-answer', function (req, res) {
   }
 })
 
+// Add another sentence to a conviction
+
+router.post('/add-another-sentence-answer', function (req, res) {
+
+  let additionalSentence = req.session.data['additional-sentence']
+
+  if (additionalSentence === 'Yes') {
+    res.redirect('/prototype-2/conviction-type')
+  }  else {
+    res.redirect('/prototype-2/add-another-caution-or-conviction')
+  }
+})
+
 // *********** Prototype 1 ***********
 
 //Add another sentence
