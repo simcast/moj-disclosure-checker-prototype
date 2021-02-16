@@ -18,30 +18,6 @@ router.post('prototype-2/how-old-were-you-answer', function (req, res) {
 
 // Conviction type
 
-router.post('/conviction-type-answer', function (req, res) {
-
-  let typeConviction = req.session.data['conviction-type']
-
-  if (convictionType === 'Custodial sentence') {
-    res.redirect('/prototype-2/start-page)
-  } else if (convictionType === 'Discharge') {
-    res.redirect('/prototype-2/start-page')
-  } else if (convictionType === 'Prison sentence') {
-    res.redirect('/prototype-2/start-page')
-  } else if (convictionType === 'Financial penalty') {
-    res.redirect('/prototype-2/start-page')
-  } else if (convictionType === 'Motoring endorsement') {
-    res.redirect('/prototype-2/motoring-conviction')
-  } else if (convictionType === 'Hospital and guardianship orders') {
-    res.redirect('/prototype-2/start-page')
-  } else if (convictionType === 'Prevention and reparation orders') {
-    res.redirect('/prototype-2/start-page')
-  } else if (convictionType === 'Military convictions') {
-    res.redirect('/prototype-2/start-page')
-  } else {
-    res.redirect('/prototype-2/start-page')
-  }
-})
 
 // *********** Prototype 1 ***********
 
