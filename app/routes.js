@@ -7,15 +7,13 @@ const router = express.Router()
 
 router.post('prototype-2/how-old-were-you-answer', function (req, res) {
 
-  var cautionedConvicted = req.session.data['caution-conviction']
+  const over18 = req.session.data['caution-conviction']
 
-  if (cautionedConvicted === "Convicted"){
+  if (over18 === 'false') {
+    res.redirect('/prototype-2/start-page')
+  } else {
     res.redirect('/prototype-2/how-old-were-you')
   }
-  else {
-    res.redirect('/prototype-2/start-page')
-  }
-
 })
 
 // Conviction type
