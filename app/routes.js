@@ -94,7 +94,18 @@ router.post('/Prototype-1/add-a-conviction-or-caution-answer', function (req, re
 
 })
 
-//Add another caution
+//Add another caution or conviction
+
+router.post('/add-another-caution-or-conviction-answer', function (req, res) {
+
+  let additionalCaution = req.session.data['add-caution']
+
+  if (additionalCaution === 'Yes') {
+    res.redirect('/prototype-2/were-you-cautioned-or-convicted')
+  }  else {
+    res.redirect('/prototype-2/results-page')
+  }
+})
 
 
 
