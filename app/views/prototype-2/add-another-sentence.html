@@ -12,7 +12,7 @@
       </span>
     </p>
   </div>
-  <a class="govuk-back-link" href="/prototype/start">Back</a>
+  <a class="govuk-back-link" href="/prototype-2/ban-length-continued">Back</a>
 {% endblock %}
 
 {% block header %}
@@ -24,7 +24,7 @@
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form class="form" action="/Prototype-1/add-a-conviction-or-caution-answer" method="post">
+    <form class="form" action="/add-another-sentence-answer" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -37,13 +37,13 @@
           </div>
           <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="Yes" {{ checked("changed-name", "Yes") }}>
+              <input class="govuk-radios__input" id="changed-name" name="additional-sentence" type="radio" value="Yes" {{ checked("changed-name", "Yes") }}>
               <label class="govuk-label govuk-radios__label" for="changed-name">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="No" {{ checked("changed-name", "No") }}>
+              <input class="govuk-radios__input" id="changed-name-2" name="additional-sentence" type="radio" value="No" {{ checked("changed-name", "No") }}>
               <label class="govuk-label govuk-radios__label" for="changed-name-2">
                 No
               </label>
