@@ -23,7 +23,7 @@ router.post('/conviction-type-answer', function (req, res) {
 
   let typeConviction = req.session.data['conviction-type']
 
-  if (convictionType === 'Custodial sentence') {
+  if (typeConviction === 'Custodial sentence') {
     res.redirect('/prototype-2/start-page')
   } else if (convictionType === 'Discharge') {
     res.redirect('/prototype-2/start-page')
