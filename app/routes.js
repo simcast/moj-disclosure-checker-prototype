@@ -18,7 +18,6 @@ router.post('/how-old-were-you-answer', function (req, res) {
 
 // Conviction type
 
-
 router.post('/conviction-type-answer', function (req, res) {
 
   let typeConviction = req.session.data['conviction-type']
@@ -40,6 +39,23 @@ router.post('/conviction-type-answer', function (req, res) {
   } else if (typeConviction === 'Military convictions') {
     res.redirect('/prototype-2/start-page')
   } else {
+    res.redirect('/prototype-2/start-page')
+  }
+})
+
+// Motoring conviction
+
+router.post('/motoring-conviction-answer', function (req, res) {
+
+  let motoringConviction = req.session.data['motoring-conviction']
+
+  if (motoringConviction === 'adult_disqualification') {
+    res.redirect('/prototype-2/endorsement')
+  }  else if (motoringConviction === 'adult_motoring_fine') {
+    res.redirect('/prototype-2/start-page')
+  }  else if (motoringConviction === 'adult_penalty_points') {
+    res.redirect('/prototype-2/start-page')
+  }  else {
     res.redirect('/prototype-2/start-page')
   }
 })
