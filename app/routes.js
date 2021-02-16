@@ -5,14 +5,14 @@ const router = express.Router()
 
 // Were you cautioned or convicted?
 
-router.post('prototype-2/how-old-were-you-answer', function (req, res) {
+router.post('/how-old-were-you-answer', function (req, res) {
 
-  const over18 = req.session.data['caution-conviction']
+  let cautionConviction = req.session.data['caution-conviction']
 
-  if (over18 === 'false') {
+  if (cautionConviction === 'Convicted') {
+    res.redirect('/prototype-2/when-were-you-convicted')
+  }  else {
     res.redirect('/prototype-2/start-page')
-  } else {
-    res.redirect('/prototype-2/how-old-were-you')
   }
 })
 
