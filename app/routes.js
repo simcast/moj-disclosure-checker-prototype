@@ -25,19 +25,19 @@ router.post('/conviction-type-answer', function (req, res) {
 
   if (typeConviction === 'Custodial sentence') {
     res.redirect('/prototype-2/start-page')
-  } else if (convictionType === 'Discharge') {
+  } else if (typeConviction === 'Discharge') {
     res.redirect('/prototype-2/start-page')
-  } else if (convictionType === 'Prison sentence') {
+  } else if (typeConviction === 'Prison sentence') {
     res.redirect('/prototype-2/start-page')
-  } else if (convictionType === 'Financial penalty') {
+  } else if (typeConviction === 'Financial penalty') {
     res.redirect('/prototype-2/start-page')
-  } else if (convictionType === 'Motoring endorsement') {
+  } else if (typeConviction === 'Motoring endorsement') {
     res.redirect('/prototype-2/motoring-conviction')
-  } else if (convictionType === 'Hospital and guardianship orders') {
+  } else if (typeConviction === 'Hospital and guardianship orders') {
     res.redirect('/prototype-2/start-page')
-  } else if (convictionType === 'Prevention and reparation orders') {
+  } else if (typeConviction === 'Prevention and reparation orders') {
     res.redirect('/prototype-2/start-page')
-  } else if (convictionType === 'Military convictions') {
+  } else if (typeConviction === 'Military convictions') {
     res.redirect('/prototype-2/start-page')
   } else {
     res.redirect('/prototype-2/start-page')
