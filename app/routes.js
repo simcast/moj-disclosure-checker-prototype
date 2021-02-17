@@ -88,6 +88,19 @@ router.post('/exact-date-answer', function (req, res) {
   }
 })
 
+//Approximate dates V2 
+
+router.post('/exact-date-v2-answer', function (req, res) {
+
+  let exactDateAnswer = req.session.data['approx-date']
+
+  if (exactDateAnswer === 'No') {
+    res.redirect('/Prototype-1/approx-dates/approximate-date-v2')
+  }  else {
+    res.redirect('/Prototype-1/approx-dates/when-were-you-convicted-v2')
+  }
+})
+
 //Add another sentence
 
 router.post('/Prototype-1/add-a-conviction-or-caution-answer', function (req, res) {
