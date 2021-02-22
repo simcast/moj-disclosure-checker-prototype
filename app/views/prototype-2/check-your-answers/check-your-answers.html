@@ -36,6 +36,23 @@
         rows: [
           {
             key: {
+              text: "Type of conviction"
+            },
+            value: {
+              text: "Prison sentence"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " date of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
               text: "Date of conviction"
             },
             value: {
@@ -90,10 +107,29 @@
 
 
       <h2 class="govuk-heading-l govuk-!-margin-bottom-4">Conviction 2</h2>
+      
       <h3 class="govuk-heading-m govuk-!-margin-bottom-1">Sentence 1</h3>
+      
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-5',
         rows: [
+          {
+            key: {
+              text: "Type of conviction"
+            },
+            value: {
+              text: "Prison sentence"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " type of conviction"
+                }
+              ]
+            }
+          },
           {
             key: {
               text: "Date of conviction"
@@ -116,7 +152,7 @@
               text: "Spent date"
             },
             value: {
-              text: "6 June 2020 (approximate date)"
+              text: "6 June 2024 (approximate date)"
             },
             actions: {
               items: [
@@ -147,16 +183,35 @@
           }
         ]
       }) }}
+      
       <h3 class="govuk-heading-m govuk-!-margin-bottom-2">Sentence 2</h3>
+      
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-9',
         rows: [
           {
             key: {
+              text: "Type of conviction"
+            },
+            value: {
+              text: "Fine"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " date of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
               text: "Date of conviction"
             },
             value: {
-              text: "6 June 2010 (approximate date)"
+              text: "2 January 2021 (approximate date)"
             },
             actions: {
               items: [
@@ -173,7 +228,7 @@
               text: "Spent date"
             },
             value: {
-              text: "6 June 2020 (approximate date)"
+              text: "2 January 2022 (approximate date)"
             },
             actions: {
               items: [
