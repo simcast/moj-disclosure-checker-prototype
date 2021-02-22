@@ -29,24 +29,24 @@
 
       <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
 
-      <h2 class="govuk-heading-m">Personal details</h2>
+      <h2 class="govuk-heading-m">Conviction 1</h2>
 
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-9',
         rows: [
           {
             key: {
-              text: "Name"
+              text: "Date of conviction"
             },
             value: {
-              text: "Sarah Philips"
+              text: "6 June 2020 (approximate date)"
             },
             actions: {
               items: [
                 {
                   href: "#",
                   text: "Change",
-                  visuallyHiddenText: "name"
+                  visuallyHiddenText: " date of conviction"
                 }
               ]
             }
@@ -106,7 +106,7 @@
       }) }}
 
 
-      <h2 class="govuk-heading-m">Application details</h2>
+      <h2 class="govuk-heading-m">Conviction 2</h2>
 
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-9',
@@ -182,9 +182,7 @@
         ]
       }) }}
 
-      <h2 class="govuk-heading-m">Now send your application</h2>
-
-      <p class="govuk-body">By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      <h2 class="govuk-heading-m">Continue to your results</h2>
 
       <form action="/form-handler" method="post" novalidate>
 
