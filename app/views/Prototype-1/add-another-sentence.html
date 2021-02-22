@@ -25,7 +25,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <form class="form" action="/Prototype-1/add-a-conviction-or-caution-answer" method="post">
-      <div class="govuk-form-group">
+      <div class="govuk-form-group govuk-form-group--error">
         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
@@ -35,6 +35,9 @@
           <div id="changed-name-hint" class="govuk-hint">
             For example, you may have been sentenced for multiple offences in the same court proceedings.
           </div>
+          <span id="nationality-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Select if you are British, Irish or a citizen of a different country
+          </span>
           <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="Yes" {{ checked("changed-name", "Yes") }}>
