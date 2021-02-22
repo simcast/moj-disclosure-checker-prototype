@@ -4,14 +4,14 @@
   Check when to disclose cautions or convictions
 {% endblock %}
 {% block beforeContent %}
-  <div class="govuk-phase-banner">
-    <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag ">beta</strong>
-      <span class="govuk-phase-banner__text">
-        This is a new service, <a href="/about/contact" class="govuk-link govuk-link--no-visited-state">your feedback</a> will help us improve.
-      </span>
-    </p>
-  </div>
+    <div class="govuk-phase-banner">
+      <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag ">beta</strong>
+        <span class="govuk-phase-banner__text">
+          This is a new service, <a href="/about/contact" class="govuk-link govuk-link--no-visited-state">your feedback</a> will help us improve.
+        </span>
+      </p>
+    </div>
     {{ govukBackLink({
     text: "Back",
     href: "/prototype-2/ban-length"
@@ -28,13 +28,6 @@
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
-
-{% block beforeContent %}
-  {{ govukBackLink({
-    text: "Back",
-    href: "#"
-  }) }}
-{% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
