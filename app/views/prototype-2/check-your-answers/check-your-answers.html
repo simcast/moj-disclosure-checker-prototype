@@ -84,95 +84,126 @@
                 }
               ]
             }
-          },
-          {
-            key: {
-              text: "Contact details"
-            },
-            value: {
-              html: '<p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p>'
-            }
           }
         ]
       }) }}
 
 
       <h2 class="govuk-heading-m">Conviction 2</h2>
-
+      <h3 class="govuk-heading-s">Sentence 1</h3>
       {{ govukSummaryList({
         classes: 'govuk-!-margin-bottom-9',
         rows: [
           {
             key: {
-              text: "Previous application number"
+              text: "Date of conviction"
             },
             value: {
-              text: "502135326"
+              text: "6 June 2010 (approximate date)"
             },
             actions: {
               items: [
                 {
                   href: "#",
                   text: "Change",
-                  visuallyHiddenText: "previous application number"
+                  visuallyHiddenText: " date of conviction"
                 }
               ]
             }
           },
           {
             key: {
-              text: "Licence type"
+              text: "Spent date"
             },
             value: {
-              text: "For personal use"
+              text: "6 June 2020 (approximate date)"
             },
             actions: {
               items: [
                 {
                   href: "#",
                   text: "Change",
-                  visuallyHiddenText: "licence type"
+                  visuallyHiddenText: "spent date"
                 }
               ]
             }
           },
           {
             key: {
-              text: "Home address"
+              text: "Length of sentence"
             },
             value: {
-              html: "72 Guild Street<br>London<br>SE23 6FH"
+              html: "12 months"
             },
             actions: {
               items: [
                 {
                   href: "#",
                   text: "Change",
-                  visuallyHiddenText: "home address"
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: "Licence period"
-            },
-            value: {
-              text: "Valid for 6 months"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "licence period"
+                  visuallyHiddenText: "length of sentence"
                 }
               ]
             }
           }
         ]
       }) }}
-
+      <h3 class="govuk-heading-s">Sentence 2</h3>
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-9',
+        rows: [
+          {
+            key: {
+              text: "Date of conviction"
+            },
+            value: {
+              text: "6 June 2010 (approximate date)"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " date of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Spent date"
+            },
+            value: {
+              text: "6 June 2020 (approximate date)"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "spent date"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Length of sentence"
+            },
+            value: {
+              html: "12 months"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "length of sentence"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
       <h2 class="govuk-heading-m">Continue to your results</h2>
 
       <form action="/form-handler" method="post" novalidate>
