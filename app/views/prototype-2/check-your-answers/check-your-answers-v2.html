@@ -1,1 +1,276 @@
+{% extends "layout.html" %}
 
+{% block pageTitle %}
+  Check when to disclose cautions or convictions
+{% endblock %}
+{% block beforeContent %}
+    <div class="govuk-phase-banner">
+      <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag ">beta</strong>
+        <span class="govuk-phase-banner__text">
+          This is a new service, <a href="/about/contact" class="govuk-link govuk-link--no-visited-state">your feedback</a> will help us improve.
+        </span>
+      </p>
+    </div>
+    {{ govukBackLink({
+    text: "Back",
+    href: "/prototype-2/ban-length"
+  }) }}
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers</h1>
+
+      <h2 class="govuk-heading-l govuk-!-margin-bottom-3">Conviction 1</h2>
+
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-4',
+        rows: [
+          {
+            key: {
+              text: "Type of conviction"
+            },
+            value: {
+              text: "Prison sentence"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " date of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Date of conviction"
+            },
+            value: {
+              text: "6 June 2010 (approximate date)"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " date of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Spent date"
+            },
+            value: {
+              text: "6 June 2020 (approximate date)"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "spent date"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Length of sentence"
+            },
+            value: {
+              html: "12 months"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "length of sentence"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-l govuk-!-margin-bottom-4">Conviction 2</h2>
+      
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-1">Sentence 1</h3>
+      
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-4',
+        rows: [
+          {
+            key: {
+              text: "Type of conviction"
+            },
+            value: {
+              text: "Prison sentence"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " type of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Date of conviction"
+            },
+            value: {
+              text: "6 June 2010 (approximate date)"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " date of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Spent date"
+            },
+            value: {
+              text: "6 June 2024 (approximate date)"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "spent date"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Length of sentence"
+            },
+            value: {
+              html: "12 months"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "length of sentence"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+      
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-2">Sentence 2</h3>
+      
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-4',
+        rows: [
+          {
+            key: {
+              text: "Type of conviction"
+            },
+            value: {
+              text: "Fine"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " date of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Date of conviction"
+            },
+            value: {
+              text: "2 January 2021 (approximate date)"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " date of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Spent date"
+            },
+            value: {
+              text: "2 January 2022 (approximate date)"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "spent date"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Length of sentence"
+            },
+            value: {
+              html: "12 months"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "length of sentence"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+      
+      <h2 class="govuk-heading-l">Continue to your results</h2>
+
+      <form action="/prototype-2/check-your-answers/results-page" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
