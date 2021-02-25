@@ -1,1 +1,41 @@
+{% extends "layout.html" %}
 
+{% block pageTitle %}
+  Check when to disclose cautions or convictions
+{% endblock %}
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag ">beta</strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service, <a href="/about/contact" class="govuk-link govuk-link--no-visited-state">your feedback</a> will help us improve.
+      </span>
+    </p>
+  </div>
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-column-full">
+    <span class="govuk-caption-xl app-inverted-text">Before you continue</span>
+    <h1 class="govuk-heading-xl app-inverted-text">What you’ll need to complete your application</h1>
+
+    <p class="govuk-body app-inverted-text">You will need the following:</p>
+
+    <ul class="govuk-list govuk-list--bullet app-inverted-text app-inverted-narrow-width">
+      <li>item one</li>
+      <li>item two</li>
+      <li>item three/li>
+    </ul>
+
+    <div class="govuk-inset-text app-inset-text--inverted app-inverted-narrow-width">
+      Inset text warning
+    </div>
+
+    <a class="govuk-button app-button--l app-button--inverted govuk-!-margin-top-3 govuk-!-margin-bottom-1" role="button" draggable="false" data-module="govuk-button" href="prototype-2/were-you-cautioned-or-convicted">Continue</a>
+  </div>
+{% end block%}
