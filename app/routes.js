@@ -24,6 +24,8 @@ router.post('/conviction-type-answer', function (req, res) {
 
   if (typeConviction === 'Custodial sentence') {
     res.redirect('/prototype-2/start-page')
+  } else if (typeConviction === 'Community or youth rehabilitation order') {
+    res.redirect('/prototype-2/community-order/community-order-type')
   } else if (typeConviction === 'Discharge') {
     res.redirect('/prototype-2/start-page')
   } else if (typeConviction === 'Prison sentence') {
