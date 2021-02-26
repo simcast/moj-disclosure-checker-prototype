@@ -1,0 +1,65 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Community order
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag ">beta</strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service, <a href="/about/contact" class="govuk-link govuk-link--no-visited-state">your feedback</a> will help us improve.
+      </span>
+    </p>
+  </div>
+    {{ govukBackLink({
+    text: "Back",
+    href: "/prototype-2/conviction-type"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/" method="post" class="form">
+        
+        {{ govukRadios({
+          idPrefix: "military-conviction",
+          name: "military-conviction",
+          fieldset: {
+            legend: {
+              text: "What was your military conviction?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "dismissal",
+              text: "Dismissal"
+            },
+            {
+              value: "overseas-community-order",
+              text: "Overseas community order"
+            },
+            {
+              value: "service-community-order",
+              text: "Service community order"
+            },
+            {
+              value: "service-detention",
+              text: "Service detention
+            }
+          ]
+        }) }}
+        <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
+      </form>
+    </div>
+  </div>
+{% endblock %}
