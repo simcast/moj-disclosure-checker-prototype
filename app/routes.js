@@ -87,6 +87,27 @@ router.post('/motoring-conviction-answer', function (req, res) {
   }
 })
 
+//Motoring ban length
+
+router.post('/prototype-2/ban-length-continued-answer, function (req, res) {
+
+    let banLength = req.session.data['ban-length']
+  
+    if (banLength === 'Weeks') {
+      res.redirect('/prototype-2/ban-length-continued')
+    } else if (banLength === 'Months') {
+      res.redirect('/prototype-2/ban-length-continued')
+    } else if (banLength === 'Years') {
+      res.redirect('/prototype-2/ban-length-continued')
+    } else if (banLength === 'Until further order') {
+      res.redirect('/prototype-2/add-another-sentence')
+    } else if (banLength === 'No length was given') {
+      res.redirect('/prototype-2/add-another-sentence')
+    } else {
+      res.redirect('/prototype-2/add-another-sentence')
+    }
+  })
+
 // Add another sentence to a conviction
 
 router.post('/add-another-sentence-answer', function (req, res) {
