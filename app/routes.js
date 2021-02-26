@@ -23,7 +23,7 @@ router.post('/conviction-type-answer', function (req, res) {
   let typeConviction = req.session.data['conviction-type']
 
   if (typeConviction === 'Custodial sentence') {
-    res.redirect('/prototype-2/start-page')
+    res.redirect('/prototype-2/custody-order/custody-order')
   } else if (typeConviction === 'Community or youth rehabilitation order') {
     res.redirect('/prototype-2/community-order/community-order-type')
   } else if (typeConviction === 'Discharge') {
