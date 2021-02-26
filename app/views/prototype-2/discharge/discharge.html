@@ -28,41 +28,43 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-    {{ govukRadios({
-      idPrefix: "discharge",
-      name: "discharge",
-      fieldset: {
-        legend: {
-          text: "What dischage were you given?",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--xl"
-        }
-      },
-      items: [
-        {
-          value: "bind-over",
-          text: "Bind over",
-          hint: {
-            text: "Your sentence was postoned as long as kept to certain conditions."
+    <form action="/discharge-answer" method="post" class="form">
+      {{ govukRadios({
+        idPrefix: "discharge",
+        name: "discharge",
+        fieldset: {
+          legend: {
+            text: "What discharge were you given?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl"
           }
         },
-        {
-          value: "absolute-discharge",
-          text: "Absolute discharge",
-          hint: {
-            text: "You were found guilty of a crime but did not get sentenced"
+        items: [
+          {
+            value: "bind-over",
+            text: "Bind over",
+            hint: {
+              text: "Your sentence was postoned as long as kept to certain conditions."
+            }
+          },
+          {
+            value: "absolute-discharge",
+            text: "Absolute discharge",
+            hint: {
+              text: "You were found guilty of a crime but did not get sentenced"
+            }
+          },
+          {
+            value: "conditional-discharge",
+            text: "Conditional discharge",
+            hint: {
+              text: "You were not sentenced, as long as you didn't commit another crime"
+            }
           }
-        },
-        {
-          value: "conditional-discharge",
-          text: "Conditional discharge",
-          hint: {
-            text: "You were not sentenced, as long as you didn't commit another crime"
-          }
-        }
-      ]
-    }) }}
+        ]
+      }) }}
+      <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
+    </form>
   </div>
 </div>
 {% endblock %}
