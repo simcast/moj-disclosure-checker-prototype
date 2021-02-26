@@ -93,11 +93,11 @@ router.post('/prototype-2/ban-length-continued-answer', function (req, res) {
 
     let banLength = req.session.data['ban-length']
   
-    if (banLength === 'Weeks') {
+    if (banLength === 'weeks') {
       res.redirect('/prototype-2/ban-length-continued')
-    } else if (banLength === 'Months') {
+    } else if (banLength === 'months') {
       res.redirect('/prototype-2/ban-length-continued')
-    } else if (banLength === 'Years') {
+    } else if (banLength === 'years') {
       res.redirect('/prototype-2/ban-length-continued')
     } else if (banLength === 'Until further order') {
       res.redirect('/prototype-2/add-another-sentence')
