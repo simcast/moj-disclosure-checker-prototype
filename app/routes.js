@@ -27,7 +27,7 @@ router.post('/conviction-type-answer', function (req, res) {
   } else if (typeConviction === 'Community or youth rehabilitation order') {
     res.redirect('/prototype-2/community-order/community-order-type')
   } else if (typeConviction === 'Discharge') {
-    res.redirect('/prototype-2/start-page')
+    res.redirect('/prototype-2/discharge/discharge')
   } else if (typeConviction === 'Prison sentence') {
     res.redirect('/prototype-2/start-page')
   } else if (typeConviction === 'Financial penalty') {
