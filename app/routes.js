@@ -38,7 +38,7 @@ router.post('/conviction-type-answer', function (req, res) {
     res.redirect('/prototype-2/start-page')
   } else if (typeConviction === 'Prevention and reparation orders') {
     res.redirect('/prototype-2/start-page')
-  } else if (typeConviction === 'Military convictions') {
+  } else if (typeConviction === 'Military') {
     res.redirect('/prototype-2/military/military')
   } else {
     res.redirect('/prototype-2/start-page')
