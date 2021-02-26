@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check when to disclose cautions or convictions
+{% endblock %}
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag ">beta</strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service, <a href="/about/contact" class="govuk-link govuk-link--no-visited-state">your feedback</a> will help us improve.
+      </span>
+    </p>
+  </div>
+    {{ govukBackLink({
+    text: "Back",
+    href: "/prototype-2/conviction-type"
+  }) }}
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukRadios({
+      idPrefix: "discharge",
+      name: "discharge",
+      fieldset: {
+        legend: {
+          text: "What dischage were you given?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--xl"
+        }
+      },
+      items: [
+        {
+          value: "bind-over",
+          text: "Bind over",
+          hint: {
+            text: "Your sentence was postoned as long as kept to certain conditions."
+          }
+        },
+        {
+          value: "absolute-discharge",
+          text: "Absolute discharge",
+          hint: {
+            text: "You were found guilty of a crime but did not get sentenced"
+          }
+        },
+        {
+          value: "conditional-discharge",
+          text: "Conditional discharge",
+          hint: {
+            text: "You were not sentenced, as long as you didn't commit another crime"
+          }
+        }
+      ]
+    }) }}
+  </div>
+</div>
+{% endblock %}
