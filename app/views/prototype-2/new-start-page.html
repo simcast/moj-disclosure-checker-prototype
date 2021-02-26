@@ -1,5 +1,25 @@
 {% extends "layout.html" %}
 
+{% block pageTitle %}
+  Check when to disclose cautions or convictions
+{% endblock %}
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag ">beta</strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service, <a href="/about/contact" class="govuk-link govuk-link--no-visited-state">your feedback</a> will help us improve.
+      </span>
+    </p>
+  </div>
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
 <style>
 .app-inverted--card {
     margin-top: -15px;
@@ -92,29 +112,7 @@
     color: #e8f1f8
 }
 </style>
-
-
-{% block pageTitle %}
-  Check when to disclose cautions or convictions
-{% endblock %}
-{% block beforeContent %}
-  <div class="govuk-phase-banner">
-    <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag ">beta</strong>
-      <span class="govuk-phase-banner__text">
-        This is a new service, <a href="/about/contact" class="govuk-link govuk-link--no-visited-state">your feedback</a> will help us improve.
-      </span>
-    </p>
-  </div>
-{% endblock %}
-
-{% block header %}
-  <!-- Blank header with no service name for the start page -->
-  {{ govukHeader() }}
-{% endblock %}
-
-{% block content %}
-  <div class="govuk-grid-column-full app-inverted--card app-inverted-text">
+  <div class="app-inverted--card app-inverted-text">
     <span class="govuk-caption-xl app-inverted-text">Before you continue</span>
     <h1 class="govuk-heading-xl app-inverted-text">What you’ll need to complete your application</h1>
 
