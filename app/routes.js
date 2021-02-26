@@ -59,8 +59,8 @@ router.post('/community-order-type-answer', function (req, res) {
     res.redirect('/prototype-2/community-order/community-order-type')
   } else if (communityOrder === 'Reparation order') {
     res.redirect('/prototype-2/start-page')
-  } else if (communityOrder === 'community-order/community-order-type') {
-    res.redirect('/prototype-2/fine-type')
+  } else if (communityOrder === 'Restraining order') {
+    res.redirect('/prototype-2/community-order/community-order-type')
   } else if (communityOrder === 'Serious crime prevention order') {
     res.redirect('/prototype-2/community-order/community-order-type')
   } else if (communityOrder === 'Sexual prevention order') {
