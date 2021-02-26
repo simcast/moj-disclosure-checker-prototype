@@ -60,7 +60,15 @@
               Length of sentence
             </dt>
             <dd class="govuk-summary-list__value">
-              {{{ data['steps_conviction_conviction_date_form[conviction_date(3i)]']['steps_conviction_conviction_date_form[conviction_date(2i)]']['steps_conviction_conviction_date_form[conviction_date(1i)]'] }}
+              {{ data['steps_conviction_conviction_date_form[conviction_date(3i)]']['steps_conviction_conviction_date_form[conviction_date(2i)]']['steps_conviction_conviction_date_form[conviction_date(1i)]'] }}
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Age
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['steps_check_under_age_form[under_age]'] }}
             </dd>
           </div>
         </dl>
