@@ -31,12 +31,7 @@
   <div class="govuk-grid-column-two-thirds">
     <form class="edit_steps_conviction_conviction_subtype_form" id="new_steps_conviction_conviction_subtype_form" action="/steps/conviction/conviction_subtype" accept-charset="UTF-8" method="post">
       <fieldset class="govuk-fieldset" aria-describedby="steps-conviction-known-date-form-known-date-hint steps-conviction-known-date-form-known-date-supplemental">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-          <h1 class="govuk-fieldset__heading">
-            <span class="govuk-caption-xl">Hospital order</span>
-            When were you given the order?
-          </h1>
-        </legend>
+        <span class="govuk-caption-xl">Hospital order</span>
         <div id="steps-conviction-known-date-form-known-date-supplemental">
           <p class="govuk-body-m">This is usually the day you were sentenced in court.</p>
         </div>
@@ -44,31 +39,16 @@
           <p>For example, 23 9 2018</p>
         </span>
 
-        {{ govukInput({
-          label: {
-            text: "Day"
-          },
-          classes: "govuk-input--width-2",
-          id: "width-2",
-          name: "day"
-        }) }}
-
-        {{ govukInput({
-          label: {
-            text: "Month"
-          },
-          classes: "govuk-input--width-2",
-          id: "width-2",
-          name: "month"
-        }) }}
-
-        {{ govukInput({
-          label: {
-            text: "Year"
-          },
-          classes: "govuk-input--width-4",
-          id: "width-4",
-          name: "year"
+        {{ govukDateInput({
+          id: "hospital-order-date",
+          namePrefix: "hospital-order-date",
+          fieldset: {
+            legend: {
+              text: "When were you given the hospital order?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          }
         }) }}
         
         <div class="govuk-form-group">
