@@ -1,5 +1,99 @@
 {% extends "layout.html" %}
 
+<style>
+.app-inverted--card {
+    margin-top: -15px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px
+}
+
+@media (min-width: 40.0625em) {
+    .app-inverted--card {
+        padding:40px
+    }
+}
+
+.app-inverted-text,.app-inset-text--inverted {
+    color: #ffffff;
+    background-color: #1d70b8
+}
+
+@media (min-width: 40.0625em) {
+    .app-inverted-narrow-width {
+        width:82%
+    }
+}
+
+.app-inset-text--inverted {
+    font-weight: 700;
+    border-left: 10px solid #ffffff
+}
+
+.app-button--l {
+    font-weight: 700;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1;
+    min-height: auto;
+    justify-content: center;
+    padding-left: 3rem;
+    padding-right: 3rem
+}
+
+@media (min-width: 40.0625em) {
+    .app-button--l {
+        font-size:24px;
+        font-size: 1.5rem;
+        line-height: 1
+    }
+}
+
+@media print {
+    .app-button--l {
+        font-size: 18pt;
+        line-height: 1
+    }
+}
+
+.app-button--inverted,.app-button--inverted:link,.app-button--inverted:visited {
+    color: #1d70b8;
+    background-color: #ffffff;
+    box-shadow: 0 2px 0 #144e81
+}
+
+.app-button--inverted:hover {
+    color: #1d70b8;
+    background-color: #e8f1f8
+}
+
+.app-button--inverted:focus:not(:hover) {
+    color: #0b0c0c;
+    background-color: #ffdd00
+}
+
+.app-button--inverted:active,.app-button--inverted:focus {
+    border-color: #ffdd00;
+    color: #1d70b8;
+    background-color: #e8f1f8;
+    box-shadow: inset 0 0 0 2px #ffdd00
+}
+
+.app-link--inverted,.app-link--inverted:link,.app-link--inverted:active,.app-link--inverted:visited {
+    color: #ffffff;
+    font-weight: 700
+}
+
+.app-link--inverted:focus,.app-link--inverted:hover:focus {
+    color: #0b0c0c
+}
+
+.app-link--inverted:hover {
+    color: #e8f1f8
+}
+</style>
+
+
 {% block pageTitle %}
   Check when to disclose cautions or convictions
 {% endblock %}
@@ -19,6 +113,7 @@
   {{ govukHeader() }}
 {% endblock %}
 
+{% block content %}
   <div class="govuk-grid-column-full app-inverted--card app-inverted-text">
     <span class="govuk-caption-xl app-inverted-text">Before you continue</span>
     <h1 class="govuk-heading-xl app-inverted-text">What you’ll need to complete your application</h1>
@@ -38,3 +133,4 @@
     <a class="govuk-button app-button--l app-button--inverted govuk-!-margin-top-3 govuk-!-margin-bottom-1" role="button" draggable="false" data-module="govuk-button" href="/prototype-2/were-you-cautioned-or-convicted">Continue</a>
   </div>
 
+{% endblock %}
