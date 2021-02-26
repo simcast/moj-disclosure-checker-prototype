@@ -89,7 +89,7 @@ router.post('/motoring-conviction-answer', function (req, res) {
 
 //Motoring ban length
 
-router.post('/prototype-2/ban-length-continued-answer, function (req, res) {
+router.post('/prototype-2/ban-length-continued-answer', function (req, res) {
 
     let banLength = req.session.data['ban-length']
   
