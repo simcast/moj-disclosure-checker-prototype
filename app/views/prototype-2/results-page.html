@@ -25,6 +25,7 @@
       <p>As you entered an approcimate date, your results will be approximate.</p>
       
       {% if data['conviction-type'] == "Financial penalty" %}
+      
       <div class="moj-results-box">
         <h2 class="govuk-heading-l">
           Conviction: {{ data['conviction-type'] }}
@@ -59,11 +60,7 @@
               Length of sentence
             </dt>
             <dd class="govuk-summary-list__value">
-              {% if data['formatted-spent-date'] %}
-                {{ data['formatted-spent-date'] }}
-                {% else %}
-                  6 June 2019
-              {% endif %}
+              {{{ data['steps_conviction_conviction_date_form[conviction_date(3i)]']['steps_conviction_conviction_date_form[conviction_date(2i)]']['steps_conviction_conviction_date_form[conviction_date(1i)]'] }}
             </dd>
           </div>
         </dl>
@@ -73,6 +70,7 @@
           This <strong>will</strong> appear on a <a class="govuk-link" href="x" >standard or enhanced DBS check</a>. 
         </div>
       </div>
+      
       {% endif %}
       
       
