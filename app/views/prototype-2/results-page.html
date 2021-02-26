@@ -26,7 +26,7 @@
       
       {% if data['conviction-type'] == "Motoring endorsement" %}
       
-            <div class="moj-results-box">
+      <div class="moj-results-box">
         <h2 class="govuk-heading-l">
           Conviction: {{ data['conviction-type'] }}
         </h2>
@@ -60,7 +60,7 @@
               Length of sentence
             </dt>
             <dd class="govuk-summary-list__value">
-             
+             {{ data['ban-length-extra'] }}
             </dd>
           </div>
           <div class="govuk-summary-list__row">
