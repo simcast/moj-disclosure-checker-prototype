@@ -45,6 +45,31 @@ router.post('/conviction-type-answer', function (req, res) {
   }
 })
 
+//Community or youth rehabilitation order
+
+router.post('/community-order-type-answer', function (req, res) {
+
+  let communityOrder = req.session.data['community-order-type']
+  
+  if (communityOrder === 'Attendance centre order') {
+    res.redirect('/prototype-2/community-order/attendance-order-date')
+  } else if (communityOrder === 'Community order') {
+    res.redirect('/prototype-2/community-order/community-order-type')
+  } else if (communityOrder === 'Criminal behaviour order') {
+    res.redirect('/prototype-2/community-order/community-order-type')
+  } else if (communityOrder === 'Reparation order') {
+    res.redirect('/prototype-2/start-page')
+  } else if (communityOrder === 'community-order/community-order-type') {
+    res.redirect('/prototype-2/fine-type')
+  } else if (communityOrder === 'Serious crime prevention order') {
+    res.redirect('/prototype-2/community-order/community-order-type')
+  } else if (communityOrder === 'Sexual prevention order') {
+    res.redirect('/prototype-2/community-order/community-order-type')
+  } else {
+    res.redirect('/prototype-2/community-order/community-order-type')
+  } 
+})
+
 // Motoring conviction
 
 router.post('/motoring-conviction-answer', function (req, res) {
