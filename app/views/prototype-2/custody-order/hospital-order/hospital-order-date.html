@@ -1,4 +1,3 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -15,7 +14,7 @@
   </div>
     {{ govukBackLink({
     text: "Back",
-    href: "/prototype-2/start-page"
+    href: "/prototype-2/custody-order"
   }) }}
 {% endblock %}
 
@@ -26,74 +25,60 @@
 
 
 {% block content %}
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form class="edit_steps_conviction_conviction_subtype_form" id="new_steps_conviction_conviction_subtype_form" action="/" accept-charset="UTF-8" method="post">
-      <fieldset class="govuk-fieldset" aria-describedby="steps-conviction-known-date-form-known-date-hint steps-conviction-known-date-form-known-date-supplemental">
-        <span class="govuk-caption-xl">Hospital order</span>
-
-                <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                  <h1 class="govuk-fieldset__heading">What was your community, prevention or reparation order?</h1>
-               </legend>
-               <div class="govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input id="adult_attendance_centre_order" aria-describedby="steps-conviction-conviction-subtype-form-conviction-subtype-adult-attendance-centre-order-hint" class="govuk-radios__input" type="radio" value="adult_attendance_centre_order" name="community-order-type">
-                    <label for="adult_attendance_centre_order" class="govuk-label govuk-radios__label">Attendance centre order</label>
-                    <span class="govuk-hint govuk-radios__hint" id="adult_attendance_centre_order-hint">You were ordered to go to an attendance centre for a set number of hours</span>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input id="adult_community_order" aria-describedby="steps-conviction-conviction-subtype-form-conviction-subtype-adult-community-order-hint" class="govuk-radios__input" type="radio" value="adult_community_order" name="community-order-type">
-                    <label for="adult_community_order" class="govuk-label govuk-radios__label">Community order</label>
-                    <span class="govuk-hint govuk-radios__hint" id="adult_community_order-hint">You were given a curfew, ordered to do unpaid work or receive treatment in the community</span>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input id="adult_criminal_behaviour" aria-describedby="steps-conviction-conviction-subtype-form-conviction-subtype-adult-criminal-behaviour-hint" class="govuk-radios__input" type="radio" value="adult_criminal_behaviour" name="community-order-type">
-                    <label for="adult_criminal_behaviour" class="govuk-label govuk-radios__label">Criminal behaviour order</label>
-                    <span class="govuk-hint govuk-radios__hint" id="adult_criminal_behaviour-hint">You had to stick to certain conditions that stopped you committing crimes or behaving antisocially</span>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input id="steps-conviction-conviction-subtype-form-conviction-subtype-adult-reparation-order-field" aria-describedby="steps-conviction-conviction-subtype-form-conviction-subtype-adult-reparation-order-hint" class="govuk-radios__input" type="radio" value="adult_reparation_order" name="community-order-type">
-                    <label for="steps-conviction-conviction-subtype-form-conviction-subtype-adult-reparation-order-field" class="govuk-label govuk-radios__label">Reparation order</label>
-                    <span class="govuk-hint govuk-radios__hint" id="steps-conviction-conviction-subtype-form-conviction-subtype-adult-reparation-order-hint">You were given help understanding the effect your crime had on someone</span>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input id="steps-conviction-conviction-subtype-form-conviction-subtype-adult-restraining-order-field" aria-describedby="steps-conviction-conviction-subtype-form-conviction-subtype-adult-restraining-order-hint" class="govuk-radios__input" type="radio" value="adult_restraining_order" name="community-order-type">
-                    <label for="steps-conviction-conviction-subtype-form-conviction-subtype-adult-restraining-order-field" class="govuk-label govuk-radios__label">Restraining order</label>
-                    <span class="govuk-hint govuk-radios__hint" id="steps-conviction-conviction-subtype-form-conviction-subtype-adult-restraining-order-hint">You were ordered not to do something, such as approach or contact a certain person</span>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input id="steps-conviction-conviction-subtype-form-conviction-subtype-adult-serious-crime-prevention-field" aria-describedby="steps-conviction-conviction-subtype-form-conviction-subtype-adult-serious-crime-prevention-hint" class="govuk-radios__input" type="radio" value="adult_serious_crime_prevention" name="community-order-type">
-                    <label for="steps-conviction-conviction-subtype-form-conviction-subtype-adult-serious-crime-prevention-field" class="govuk-label govuk-radios__label">Serious crime prevention order</label>
-                    <span class="govuk-hint govuk-radios__hint" id="steps-conviction-conviction-subtype-form-conviction-subtype-adult-serious-crime-prevention-hint">A court ruled that you had been involved in a serious crime, such as money laundering, drug trafficking or armed robbery</span>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input id="steps-conviction-conviction-subtype-form-conviction-subtype-adult-sexual-harm-prevention-order-field" aria-describedby="steps-conviction-conviction-subtype-form-conviction-subtype-adult-sexual-harm-prevention-order-hint" class="govuk-radios__input" type="radio" value="adult_sexual_harm_prevention_order" name="community-order-type">
-                    <label for="steps-conviction-conviction-subtype-form-conviction-subtype-adult-sexual-harm-prevention-order-field" class="govuk-label govuk-radios__label">Sexual prevention order</label>
-                    <span class="govuk-hint govuk-radios__hint" id="steps-conviction-conviction-subtype-form-conviction-subtype-adult-sexual-harm-prevention-order-hint">A court ruled that you pose a risk of causing a sexual offence or sexual harm</span>
-                  </div>
-               </div>
-            </fieldset>
-         </div>
-
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s govuk-visually-hidden">Approximate date</legend>
-            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input id="steps-conviction-known-date-form-approximate-known-date-true-field" class="govuk-checkboxes__input" type="checkbox" value="true" name="steps_conviction_known_date_form[approximate_known_date]">
-                <label for="steps-conviction-known-date-form-approximate-known-date-true-field" class="govuk-label govuk-checkboxes__label">This is not the exact date</label>
+    <form class="edit_steps_conviction_conviction_date_form" id="new_steps_conviction_conviction_date_form" action="/prototype-2/conviction-type" accept-charset="UTF-8" method="post">
+      <input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="authenticity_token" value="8e6UIqGN1xc7NZkfu6U1C/LfRK2RJf5jrXroKxuy6jBmyWdndsbJ4JnjqhbvQdxsFfoSiqlgwjtLaoFcWVLJrw==">
+      <div class="govuk-form-group app-util--compact-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="steps-conviction-conviction-date-form-conviction-date-hint steps-conviction-conviction-date-form-conviction-date-supplemental">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              <span class="govuk-caption-xl">Hospital order</span>
+              When were you given the order?
+            </h1>
+          </legend>
+          <div id="steps-conviction-conviction-date-form-conviction-date-supplemental">
+            <p class="govuk-body-m">This is usually the day you were sentenced in court..</p>
+          </div>
+          <span class="govuk-hint" id="steps-conviction-conviction-date-form-conviction-date-hint">If you do not know the exact date, you can enter an approximate one. However, if you use an approximate date, your results will be approximate.<p>For example, 23 9 2018</p>
+          </span>
+          <div class="govuk-date-input">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="steps_conviction_conviction_date_form_conviction_date_3i">Day</label>
+                <input id="steps_conviction_conviction_date_form_conviction_date_3i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="conviction-date-day" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['conviction-date-day'] }}">
               </div>
             </div>
-          </fieldset>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="steps_conviction_conviction_date_form_conviction_date_2i">Month</label>
+                <input id="steps_conviction_conviction_date_form_conviction_date_2i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="conviction-date-month" type="text" pattern="[0-9]*" inputmode="numeric" vvalue="{{ data['conviction-date-month'] }}">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="steps_conviction_conviction_date_form_conviction_date_1i">Year</label>
+                <input id="steps_conviction_conviction_date_form_conviction_date_1i" class="govuk-input govuk-date-input__input govuk-input--width-4" name="conviction-date-year" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['conviction-date-year'] }}">
+              </div>
+            </div>
+          </div>
+      </fieldset>
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s govuk-visually-hidden">Approximate date</legend>
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input id="steps-conviction-conviction-date-form-approximate-conviction-date-true-field" class="govuk-checkboxes__input" type="checkbox" value="true" name="steps_conviction_conviction_date_form[approximate_conviction_date]">
+            <label for="steps-conviction-conviction-date-form-approximate-conviction-date-true-field" class="govuk-label govuk-checkboxes__label">This is not the exact date</label>
+          </div>
         </div>
+     </fieldset>
+   </div>
+
       <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
     </form>
   </div>
 </div>
-
 {% endblock %}
-  
- 
