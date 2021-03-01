@@ -134,9 +134,9 @@ router.post('/prototype-2/hospital-order-ban-length-answer', function (req, res)
     if (hospitalBan === 'Weeks') {
       res.redirect('/prototype-2/custody-order/hospital-order/hospital-order-ban-length')
     } else if (hospitalBan === 'Months') {
-      res.redirect('/prototype-2/custody-order/hospital-order/hospital-order-ban-length)
+      res.redirect('/prototype-2/custody-order/hospital-order/hospital-order-ban-length')
     } else if (hospitalBan === 'Years') {
-      res.redirect('/prototype-2/custody-order/hospital-order/hospital-order-ban-length)
+      res.redirect('/prototype-2/custody-order/hospital-order/hospital-order-ban-length')
     } else {
       res.redirect('/prototype-2/results-page')
     }
