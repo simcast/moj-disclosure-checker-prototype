@@ -131,11 +131,11 @@ router.post('/prototype-2/hospital-order-ban-length-answer', function (req, res)
 
     let hospitalBan = req.session.data['hospital-ban-length']
   
-    if (hospitalBan === 'Hospital order') {
+    if (hospitalBan === 'Weeks') {
       res.redirect('/prototype-2/custody-order/hospital-order/hospital-order-ban-length')
-    } else if (hospitalBan === 'Prison sentence') {
+    } else if (hospitalBan === 'Months') {
       res.redirect('/prototype-2/custody-order/hospital-order/hospital-order-ban-length)
-    } else if (hospitalBan === 'Suspended prison sentence') {
+    } else if (hospitalBan === 'Years') {
       res.redirect('/prototype-2/custody-order/hospital-order/hospital-order-ban-length)
     } else {
       res.redirect('/prototype-2/results-page')
