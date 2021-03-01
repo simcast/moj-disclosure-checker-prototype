@@ -27,32 +27,37 @@
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    
-    {{ govukRadios({
-      classes: "govuk-radios--inline",
-      idPrefix: "prison-sentence-tag",
-      name: "prison-sentence-tag",
-      fieldset: {
-        legend: {
-          text: "Did you spend any time on bail with an electronic tag?",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--xl"
-        }
-      },
-      hint: {
-        text: "Time spent on bail with an electronic tag affects the spent date of your conviction. Time spent on bail without a tag does not."
-      },
-      items: [
-        {
-          value: "yes",
-          text: "Yes"
+    <form action="/prototype-2/custody-order-answer" accept-charset="UTF-8" method="post">
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        idPrefix: "prison-sentence-tag",
+        name: "prison-sentence-tag",
+        fieldset: {
+          legend: {
+            text: "Did you spend any time on bail with an electronic tag?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl"
+          }
         },
-        {
-          value: "no",
-          text: "No"
-        }
-      ]
-    }) }}
+        hint: {
+          text: "Time spent on bail with an electronic tag affects the spent date of your conviction. Time spent on bail without a tag does not."
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
+      <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
+    </form>
+  </div>
+</div>
+    </form>
   </div>
 </div>
 {% endblock %}
