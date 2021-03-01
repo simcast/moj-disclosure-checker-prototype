@@ -87,7 +87,7 @@ router.post('/motoring-conviction-answer', function (req, res) {
   }
 })
 
-//Motoring ban length
+// Motoring ban length
 
 router.post('/prototype-2/ban-length-continued-answer', function (req, res) {
 
@@ -105,6 +105,23 @@ router.post('/prototype-2/ban-length-continued-answer', function (req, res) {
       res.redirect('/prototype-2/add-another-sentence')
     } else {
       res.redirect('/prototype-2/add-another-sentence')
+    }
+  })
+
+// Custody order
+
+router.post('/prototype-2/custody-order-answer', function (req, res) {
+
+    let custodyOrder = req.session.data['custody-order']
+  
+    if (custodyOrder === 'Hospital order') {
+      res.redirect('/prototype-2/custody-order/hospital-order/hospital-order-date')
+    } else if (custodyOrder === 'Prison sentence') {
+      res.redirect('/prototype-2/custody-order/prison-sentence/prison-sentence')
+    } else if (custodyOrder === 'Suspended prison sentence') {
+      res.redirect('/prototype-2/custody-order/suspended-prison-sentence/suspended-prison')
+    } else {
+      res.redirect('/prototype-2/new-start-page')
     }
   })
 
