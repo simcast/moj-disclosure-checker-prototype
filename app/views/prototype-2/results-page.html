@@ -24,6 +24,63 @@
       <p>Your results are calculated using the information you have given and the current law.</p>
       <p>As you entered an approcimate date, your results will be approximate.</p>
       
+      {% if data['custody-order'] == "Hospital order" %}
+      
+      <div class="moj-results-box">
+        <h2 class="govuk-heading-l">
+          Conviction: {{ data['custody-order'] }}
+        </h2>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Type of sentence
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['x'] }}
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of conviction
+            </dt>
+            <dd class="govuk-summary-list__value">
+
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Spent date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Length of sentence
+            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['ban-length-extra'] }}
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Age
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['conviction-age'] }}
+            </dd>
+          </div>
+        </dl>
+        <div class="govuk-inset-text">
+          This <strong>will</strong> appear on a <a class="govuk-link" href="#basic-DBS-checks">basic DBS check</a>.
+          <br>
+          This <strong>will</strong> appear on a <a class="govuk-link" href="x" >standard or enhanced DBS check</a>. 
+        </div>
+      </div>
+      
+      {% endif %}
+      
       {% if data['conviction-type'] == "Motoring endorsement" %}
       
       <div class="moj-results-box">
