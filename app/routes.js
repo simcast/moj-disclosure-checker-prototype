@@ -125,6 +125,23 @@ router.post('/prototype-2/custody-order-answer', function (req, res) {
     }
   })
 
+// Hospital order
+
+router.post('/prototype-2/hospital-order-ban-length-answer', function (req, res) {
+
+    let hospitalBan = req.session.data['hospital-ban-length']
+  
+    if (hospitalBan === 'Hospital order') {
+      res.redirect('/prototype-2/custody-order/hospital-order/hospital-order-ban-length')
+    } else if (hospitalBan === 'Prison sentence') {
+      res.redirect('/prototype-2/custody-order/hospital-order/hospital-order-ban-length)
+    } else if (hospitalBan === 'Suspended prison sentence') {
+      res.redirect('/prototype-2/custody-order/hospital-order/hospital-order-ban-length)
+    } else {
+      res.redirect('/prototype-2/results-page')
+    }
+  })
+  
 // Add another sentence to a conviction
 
 router.post('/add-another-sentence-answer', function (req, res) {
