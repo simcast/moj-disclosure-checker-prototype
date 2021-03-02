@@ -125,6 +125,23 @@ router.post('/prototype-2/custody-order-answer', function (req, res) {
     }
   })
 
+// Prison sentence
+
+router.post('/prototype-2/prison-sentence-length-answer', function (req, res) {
+
+    let prisonSentence = req.session.data['prison-sentence-length']
+  
+    if (prisonSentence === 'Weeks') {
+      res.redirect('/prototype-2/custody-order/prison-sentence/prison-sentence-date-2')
+    } else if (prisonSentence === 'Months') {
+      res.redirect('/prototype-2/custody-order/prison-sentence/prison-sentence-date-2')
+    } else if (prisonSentence === 'Years') {
+      res.redirect('/prototype-2/custody-order/prison-sentence/prison-sentence-date-2')
+    } else {
+      res.redirect('/prototype-2/results-page')
+    }
+  })
+
 // Hospital order
 
 router.post('/prototype-2/hospital-order-ban-length-answer', function (req, res) {
