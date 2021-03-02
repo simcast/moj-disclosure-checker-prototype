@@ -27,6 +27,48 @@
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <form class="edit_steps_conviction_conviction_length_type_form" id="new_steps_conviction_conviction_length_type_form" action="/prototype-2/prison-sentence-length-answer" accept-charset="UTF-8" method="post">
+      <input name="utf8" type="hidden" value="✓">
+      <input type="hidden" name="_method" value="put">
+      <input type="hidden" name="authenticity_token" value="oSEyqMqw6Tc3itJNzTD07vmOKM1gai/Ukywi/jAnGDg2BsHtHfv3wJVc4USZ1B2JHqt+6lgvE4x1PEuJcsc7pw==">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              <span class="govuk-caption-xl">Prison sentence</span>
+              Was the length of the disqualification given in weeks, months or years?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input id="steps-conviction-conviction-length-type-form-conviction-length-type-weeks-field" class="govuk-radios__input" type="radio" value="weeks" name="prison-sentence-length">
+              <label for="steps-conviction-conviction-length-type-form-conviction-length-type-weeks-field" class="govuk-label govuk-radios__label">Weeks</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input id="steps-conviction-conviction-length-type-form-conviction-length-type-months-field" class="govuk-radios__input" type="radio" value="months" name="prison-sentence-length">
+              <label for="steps-conviction-conviction-length-type-form-conviction-length-type-months-field" class="govuk-label govuk-radios__label">Months</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input id="steps-conviction-conviction-length-type-form-conviction-length-type-years-field" class="govuk-radios__input" type="radio" value="years" name="prison-sentence-length">
+              <label for="steps-conviction-conviction-length-type-form-conviction-length-type-years-field" class="govuk-label govuk-radios__label">Years</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input id="steps-conviction-conviction-length-type-form-conviction-length-type-indefinite-field" class="govuk-radios__input" type="radio" value="indefinite" name="prison-sentence-length">
+              <label for="steps-conviction-conviction-length-type-form-conviction-length-type-indefinite-field" class="govuk-label govuk-radios__label">Until further order</label>
+            </div>
+            <div class="govuk-radios__item">
+              <input id="steps-conviction-conviction-length-type-form-conviction-length-type-no-length-field" class="govuk-radios__input" type="radio" value="no length" name="prison-sentence-length">
+              <label for="steps-conviction-conviction-length-type-form-conviction-length-type-no-length-field" class="govuk-label govuk-radios__label">No length was given</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
+    </form>
+  </div>
+</div>
+{% endblock %}
   </div>
 </div>
 {% endblock %}
