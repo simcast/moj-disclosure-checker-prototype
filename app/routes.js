@@ -131,11 +131,11 @@ router.post('/prototype-2/prison-sentence-length-answer', function (req, res) {
 
     let prisonSentence = req.session.data['prison-sentence-length']
   
-    if (prisonSentence === 'Weeks') {
+    if (prisonSentence === 'weeks') {
       res.redirect('/prototype-2/custody-order/prison-sentence/prison-sentence-date-2')
-    } else if (prisonSentence === 'Months') {
+    } else if (prisonSentence === 'months') {
       res.redirect('/prototype-2/custody-order/prison-sentence/prison-sentence-date-2')
-    } else if (prisonSentence === 'Years') {
+    } else if (prisonSentence === 'years') {
       res.redirect('/prototype-2/custody-order/prison-sentence/prison-sentence-date-2')
     } else {
       res.redirect('/prototype-2/results-page')
