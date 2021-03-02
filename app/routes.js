@@ -174,7 +174,7 @@ router.post('/add-another-sentence-answer', function (req, res) {
 
 // Add another caution or conviction
 
-router.post('prototype-2/add-another-conviction-answer', function (req, res) {
+router.post('/prototype-2/add-another-conviction-answer', function (req, res) {
 
   let additionalConviction = req.session.data['add-caution']
 
