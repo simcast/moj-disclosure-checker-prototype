@@ -172,6 +172,19 @@ router.post('/add-another-sentence-answer', function (req, res) {
   }
 })
 
+// Add another caution or conviction
+
+router.post('prototype-2/add-another-conviction-answer', function (req, res) {
+
+  let additionalConviction = req.session.data['add-caution']
+
+  if (additionalConviction === 'Yes') {
+    res.redirect('/prototype-2/add-another-caution-or-conviction')
+  }  else {
+    res.redirect('/prototype-2/check-your-answers/check-your-answers')
+  }
+})
+
 // *********** Prototype 1 ***********
 
 //Approximate dates
