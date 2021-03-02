@@ -179,7 +179,7 @@ router.post('/prototype-2/add-another-conviction-answer', function (req, res) {
   let additionalConviction = req.session.data['add-caution']
 
   if (additionalConviction === 'Yes') {
-    res.redirect('/prototype-2/add-another-caution-or-conviction')
+    res.redirect('/prototype-2/conviction-type')
   }  else {
     res.redirect('/prototype-2/check-your-answers/check-your-answers')
   }
