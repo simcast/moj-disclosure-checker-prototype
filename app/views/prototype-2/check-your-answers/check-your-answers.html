@@ -192,6 +192,31 @@
           }
         ]
       }) }}
+ 
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-2">Fine</h3>
+      
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-8',
+        rows: [
+          {
+            key: {
+              text: "Date of conviction"
+            },
+            value: {
+              text: "10 June 2011"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " date of conviction"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
       
       <!-- hidden for prototype info for demo with Unlock
       
