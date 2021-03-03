@@ -1,8 +1,8 @@
-{{% extends "layout.html" %}
-{{% block pageTitle %}
+{% extends "layout.html" %}
+{% block pageTitle %}
   Check when to disclose cautions or convictions
-{{% endblock %}
-{{% block beforeContent %}
+{% endblock %}
+{% block beforeContent %}
   <div class="govuk-phase-banner">
     <p class="govuk-phase-banner__content">
       <strong class="govuk-tag govuk-phase-banner__content__tag ">beta</strong>
@@ -17,14 +17,14 @@
   }) }}
 {{% endblock %}
 
-{{% block header %}
+{% block header %}
   <!-- Blank header with no service name for the start page -->
   {{ govukHeader() }}
-{{% endblock %}
+{% endblock %}
 
 
-{{% block content %}
-<<div class="govuk-grid-row">
+{% block content %}
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     
     {% if data['suspended-prison-length'] == "weeks" %}
@@ -90,5 +90,5 @@
     
     {% endif %}
   </div>
-<</div>
-{{% endblock %}
+</div>
+{% endblock %}
