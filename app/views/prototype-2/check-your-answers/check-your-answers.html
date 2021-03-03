@@ -31,9 +31,74 @@
       
       {% if data['custody-order'] == "Hospital order" %}
       
-        <h2 class="govuk-heading-l">Conviction 1</h2>
+        <h2 class="govuk-heading-l">Conviction</h2>
 
         <h3 class="govuk-heading-m">Hospital order</h3>
+
+          {{ govukSummaryList({
+          classes: 'govuk-!-margin-bottom-8',
+          rows: [
+            {
+              key: {
+                text: "Date of conviction"
+              },
+              value: {
+                text: "add date fields"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: " date of conviction"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Spent date"
+              },
+              value: {
+                text: "add spend date"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "spent date"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Length of sentence"
+              },
+              value: {
+                html: "add dates"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "length of sentence"
+                  }
+                ]
+              }
+            }
+          ]
+        }) }}
+      
+      {% endif %}
+      
+      {% if data['custody-order'] == "Prison sentence" %}
+      
+        <h2 class="govuk-heading-l">Conviction</h2>
+
+        <h3 class="govuk-heading-m">Prison sentence</h3>
 
           {{ govukSummaryList({
           classes: 'govuk-!-margin-bottom-8',
