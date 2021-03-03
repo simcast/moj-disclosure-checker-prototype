@@ -70,6 +70,23 @@ router.post('/community-order-type-answer', function (req, res) {
   } 
 })
 
+// Restraining order
+
+router.post('/prototype-2/restraining-order-date-answer', function (req, res) {
+
+    let restrainingOrder = req.session.data['restraining-order-length']
+  
+    if (restrainingOrder === 'weeks') {
+      res.redirect('/prototype-2/community-order/restraining-order/restraining-order-date-2')
+    } else if (restrainingOrder === 'months') {
+      res.redirect('/prototype-2/community-order/restraining-order/restraining-order-date-2')
+    } else if (restrainingOrder === 'years') {
+      res.redirect('/prototype-2/community-order/restraining-order/restraining-order-date-2')
+    } else {
+      res.redirect('/prototype-2/check-your-answers/check-your-answers')
+    }
+  })
+
 // Motoring conviction
 
 router.post('/motoring-conviction-answer', function (req, res) {
