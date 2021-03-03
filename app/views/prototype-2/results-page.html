@@ -25,6 +25,14 @@
       
       <p>As you entered an approximate date, your results will be approximate.</p>
       
+      <div class="moj-results-box">
+        <h2 class="govuk-heading-l">
+          Conviction: {{ data['custody-order'] }}
+        </h2>
+      </div>
+      
+      <!-- hidden for prototype demo
+      
       {% if data['custody-order'] == "Hospital order" %}
       
       <div class="moj-results-box">
@@ -196,6 +204,7 @@
       
       {% endif %}
       
+      -->
       
        <div class="moj-results-box govuk-!-margin-top-5 govuk-!-margin-bottom-8">
         <h2 class="govuk-heading-l govuk-!-margin-bottom-5">
