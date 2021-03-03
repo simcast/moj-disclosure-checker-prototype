@@ -142,23 +142,6 @@ router.post('/prototype-2/prison-sentence-length-answer', function (req, res) {
     }
   })
 
-// Suspended prison sentence
-
-router.post('/prototype-2/suspended-prison-sentence-length-answer', function (req, res) {
-
-    let suspendedPrison = req.session.data['suspended-prison-sentence-length']
-  
-    if (suspendedPrison === 'weeks') {
-      res.redirect('/prototype-2/custody-order/suspended-prison-sentence/suspended-prison-date-2')
-    } else if (suspendedPrison === 'months') {
-      res.redirect('/prototype-2/custody-order/suspended-prison-sentence/suspended-prison-date-2')
-    } else if (suspendedPrison === 'years') {
-      res.redirect('/prototype-2/custody-order/suspended-prison-sentence/suspended-prison-date-2')
-    } else {
-      res.redirect('/prototype-2/results-page')
-    }
-  })
-
 // Hospital order
 
 router.post('/prototype-2/hospital-order-ban-length-answer', function (req, res) {
