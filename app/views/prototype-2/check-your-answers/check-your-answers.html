@@ -29,85 +29,85 @@
 
       <h1 class="govuk-heading-xl">Check your answers</h1>
       
-      {% if data['custody-order'] == "Hospital order"] %}
+      {% if data['custody-order'] == "Hospital order" %}
       
-      <h2 class="govuk-heading-l">Conviction 1</h2>
-      
-      <h3 class="govuk-heading-m">Hospital order</h3>
-      
-        {{ govukSummaryList({
-        classes: 'govuk-!-margin-bottom-8',
-        rows: [
-          {
-            key: {
-              text: "Date of conviction"
+        <h2 class="govuk-heading-l">Conviction 1</h2>
+
+        <h3 class="govuk-heading-m">Hospital order</h3>
+
+          {{ govukSummaryList({
+          classes: 'govuk-!-margin-bottom-8',
+          rows: [
+            {
+              key: {
+                text: "Date of conviction"
+              },
+              value: {
+                text: "add date fields"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: " date of conviction"
+                  }
+                ]
+              }
             },
-            value: {
-              text: "add date fields"
+            {
+              key: {
+                text: "Spent date"
+              },
+              value: {
+                text: "add spend date"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "spent date"
+                  }
+                ]
+              }
             },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: " date of conviction"
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: "Spent date"
+            {
+              key: {
+                text: "Length of sentence"
+              },
+              value: {
+                html: "add dates"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "length of sentence"
+                  }
+                ]
+              }
             },
-            value: {
-              text: "add spend date"
+            {
+              key: {
+                text: "Electronic tag"
+              },
+              value: {
+                text: "add answer"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "spent date"
+                  }
+                ]
+              }
             },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "spent date"
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: "Length of sentence"
-            },
-            value: {
-              html: "add dates"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "length of sentence"
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: "Electronic tag"
-            },
-            value: {
-              text: "add answer"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "spent date"
-                }
-              ]
-            }
-          },
-        ]
-      }) }}
+          ]
+        }) }}
       
       {% endif %}
 
