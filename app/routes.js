@@ -51,19 +51,19 @@ router.post('/community-order-type-answer', function (req, res) {
 
   let communityOrder = req.session.data['community-order-type']
   
-  if (communityOrder === 'Attendance centre order') {
+  if (communityOrder === 'attendance centre order') {
     res.redirect('/prototype-2/community-order/attendance-order-date')
-  } else if (communityOrder === 'Community order') {
+  } else if (communityOrder === 'community order') {
     res.redirect('/prototype-2/community-order/community-order-type')
-  } else if (communityOrder === 'Criminal behaviour order') {
+  } else if (communityOrder === 'criminal behaviour order') {
     res.redirect('/prototype-2/community-order/community-order-type')
-  } else if (communityOrder === 'Reparation order') {
+  } else if (communityOrder === 'reparation order') {
     res.redirect('/prototype-2/start-page')
-  } else if (communityOrder === 'Restraining order') {
+  } else if (communityOrder === 'restraining order') {
+    res.redirect('/prototype-2/community-order/restraining-order/restraining-order')
+  } else if (communityOrder === 'serious crime prevention order') {
     res.redirect('/prototype-2/community-order/community-order-type')
-  } else if (communityOrder === 'Serious crime prevention order') {
-    res.redirect('/prototype-2/community-order/community-order-type')
-  } else if (communityOrder === 'Sexual prevention order') {
+  } else if (communityOrder === 'sexual prevention order') {
     res.redirect('/prototype-2/community-order/community-order-type')
   } else {
     res.redirect('/prototype-2/community-order/community-order-type')
