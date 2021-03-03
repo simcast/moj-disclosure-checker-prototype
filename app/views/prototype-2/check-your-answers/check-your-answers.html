@@ -29,66 +29,70 @@
 
       <h1 class="govuk-heading-xl">Check your answers</h1>
       
-      <h2 class="govuk-heading-l govuk-!-margin-bottom-4">Conviction 1</h2>
+      {% if data['custody-order'] == "Suspended prison sentence" %}
       
-      <h3 class="govuk-heading-m govuk-!-margin-bottom-2">Suspended prison sentence</h3>
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-4">Conviction 1</h2>
+
+        <h3 class="govuk-heading-m govuk-!-margin-bottom-2">Suspended prison sentence</h3>
       
-      {{ govukSummaryList({
-        classes: 'govuk-!-margin-bottom-8',
-        rows: [
-          {
-            key: {
-              text: "Date of conviction"
+        {{ govukSummaryList({
+          classes: 'govuk-!-margin-bottom-8',
+          rows: [
+            {
+              key: {
+                text: "Date of conviction"
+              },
+              value: {
+                text: "01 August 2009"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: " date of conviction"
+                  }
+                ]
+              }
             },
-            value: {
-              text: "01 August 2009"
+            {
+              key: {
+                text: "Length of sentence"
+              },
+              value: {
+                html: "3 months"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "length of sentence"
+                  }
+                ]
+              }
             },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: " date of conviction"
-                }
-              ]
+            {            
+              key: {
+                text: "Electronic tag"
+              },
+              value: {
+                html: "Yes"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: " electronic tag"
+                  }
+                ]
+              }
             }
-          },
-          {
-            key: {
-              text: "Length of sentence"
-            },
-            value: {
-              html: "3 months"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "length of sentence"
-                }
-              ]
-            }
-          },
-          {            
-            key: {
-              text: "Electronic tag"
-            },
-            value: {
-              html: "Yes"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: " electronic tag"
-                }
-              ]
-            }
-          }
-        ]
-      }) }}
+          ]
+        }) }}
+      
+      {% endif %}
 
       <h2 class="govuk-heading-l govuk-!-margin-bottom-4">Conviction 2</h2>
       
