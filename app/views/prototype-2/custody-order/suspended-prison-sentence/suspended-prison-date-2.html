@@ -1,9 +1,7 @@
 {% extends "layout.html" %}
-
 {% block pageTitle %}
   Check when to disclose cautions or convictions
 {% endblock %}
-
 {% block beforeContent %}
   <div class="govuk-phase-banner">
     <p class="govuk-phase-banner__content">
@@ -15,7 +13,7 @@
   </div>
   {{ govukBackLink({
     text: "Back",
-    href: "/prototype-2/custody-order/suspended-prison-sentence/suspended-prison-date"
+    href: "/prototype-2/custody-order/suspended-prison-sentence/suspended-prison-length"
   }) }}
 {% endblock %}
 
@@ -24,22 +22,26 @@
   {{ govukHeader() }}
 {% endblock %}
 
+
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <!--
-    {% if data['suspended-prison-length'] == "weeks" %}
     
-    <form class="edit_steps_conviction_conviction_length_form" id="new_steps_conviction_conviction_length_form" action="/prototype-2/suspended-prison-length-answer" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="authenticity_token" value="8FIm/jVm+Sk28SqBDuZJa7wR9LnwvMxQwzmTwFRkcNNnddW74i3n3pQnGYhaAqAMWzSinsj58AglKfq3FoRTTA==">
+    {% if data['suspended-prison-sentence-length'] == "weeks" %}
+    
+    <form class="edit_steps_conviction_conviction_length_form" id="new_steps_conviction_conviction_length_form" action="/prototype-2/check-your-answers/check-your-answers" accept-charset="UTF-8" method="post">
+      <input name="utf8" type="hidden" value="✓">
+      <input type="hidden" name="_method" value="put">
+      <input type="hidden" name="authenticity_token" value="8FIm/jVm+Sk28SqBDuZJa7wR9LnwvMxQwzmTwFRkcNNnddW74i3n3pQnGYhaAqAMWzSinsj58AglKfq3FoRTTA==">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
           <h1 class="govuk-fieldset__heading">
-            <span class="govuk-caption-xl">Suspended prison sentence</span>
+            <span class="govuk-caption-xl">Prison sentence</span>
             What was the length of the disqualification?</h1>
         </legend>
         <div class="govuk-form-group">
           <label for="steps-conviction-conviction-length-form-conviction-length-field" class="govuk-label">Number of weeks</label>
-          <input id="steps-conviction-conviction-length-form-conviction-length-field" class="govuk-input govuk-input--width-3" pattern="[0-9]*" inputmode="numeric" type="text" name="suspended-prison-length-2">
+          <input id="steps-conviction-conviction-length-form-conviction-length-field" class="govuk-input govuk-input--width-3" pattern="[0-9]*" inputmode="numeric" type="text" name="ban-length-extra">
         </div>
       </fieldset>
       <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
@@ -47,9 +49,9 @@
     
     {% endif %}
     
-    {% if data['suspended-prison-length'] == "months" %}
+    {% if data['suspended-prison-sentence-length'] == "months" %}
     
-    <form class="edit_steps_conviction_conviction_length_form" id="new_steps_conviction_conviction_length_form" action="/prototype-2/suspended-prison-length-answer" accept-charset="UTF-8" method="post">
+    <form class="edit_steps_conviction_conviction_length_form" id="new_steps_conviction_conviction_length_form" action="/prototype-2/add-another-sentence" accept-charset="UTF-8" method="post">
       <input name="utf8" type="hidden" value="✓">
       <input type="hidden" name="_method" value="put">
       <input type="hidden" name="authenticity_token" value="8FIm/jVm+Sk28SqBDuZJa7wR9LnwvMxQwzmTwFRkcNNnddW74i3n3pQnGYhaAqAMWzSinsj58AglKfq3FoRTTA==">
@@ -61,7 +63,7 @@
         </legend>
         <div class="govuk-form-group">
           <label for="steps-conviction-conviction-length-form-conviction-length-field" class="govuk-label">Number of months</label>
-          <input id="steps-conviction-conviction-length-form-conviction-length-field" class="govuk-input govuk-input--width-3" pattern="[0-9]*" inputmode="numeric" type="text" name="suspended-prison-length-2">
+          <input id="steps-conviction-conviction-length-form-conviction-length-field" class="govuk-input govuk-input--width-3" pattern="[0-9]*" inputmode="numeric" type="text" name="ban-length-extra">
         </div>
       </fieldset>
       <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
@@ -69,27 +71,27 @@
     
     {% endif %}
     
-    {% if data['suspended-prison-length] == "years" %}
+    {% if data['suspended-prison-sentence-length'] == "years" %}
     
-    <form class="edit_steps_conviction_conviction_length_form" id="new_steps_conviction_conviction_length_form" action="/prototype-2/suspended-prison-length-answer" accept-charset="UTF-8" method="post">
+    <form class="edit_steps_conviction_conviction_length_form" id="new_steps_conviction_conviction_length_form" action="/prototype-2/add-another-sentence" accept-charset="UTF-8" method="post">
       <input name="utf8" type="hidden" value="✓">
-      <input type="hidden" name="_method" value="put">
-      <input type="hidden" name="authenticity_token" value="8FIm/jVm+Sk28SqBDuZJa7wR9LnwvMxQwzmTwFRkcNNnddW74i3n3pQnGYhaAqAMWzSinsj58AglKfq3FoRTTA==">
+      <input type="hidden" name="_method" value="put"><input type="hidden" name="authenticity_token" value="8FIm/jVm+Sk28SqBDuZJa7wR9LnwvMxQwzmTwFRkcNNnddW74i3n3pQnGYhaAqAMWzSinsj58AglKfq3FoRTTA==">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
           <h1 class="govuk-fieldset__heading">
-            <span class="govuk-caption-xl">Suspended prison sentence</span>
+            <span class="govuk-caption-xl">Prison sentence</span>
             What was the length of the order?</h1>
         </legend>
         <div class="govuk-form-group">
           <label for="steps-conviction-conviction-length-form-conviction-length-field" class="govuk-label">Number of months</label>
-          <input id="steps-conviction-conviction-length-form-conviction-length-field" class="govuk-input govuk-input--width-3" pattern="[0-9]*" inputmode="numeric" type="text" name="suspended-prison-length-2">
+          <input id="steps-conviction-conviction-length-form-conviction-length-field" class="govuk-input govuk-input--width-3" pattern="[0-9]*" inputmode="numeric" type="text" name="ban-length-extra">
         </div>
       </fieldset>
       <input type="submit" name="commit" value="Continue" class="govuk-button" formnovalidate="formnovalidate" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Continue">
     </form>
-    -->
+    
     {% endif %}
+    
   </div>
 </div>
 {% endblock %}
