@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check when to disclose cautions or convictions
+{% endblock %}
+{% block beforeContent %}
+    <div class="govuk-phase-banner">
+      <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag ">beta</strong>
+        <span class="govuk-phase-banner__text">
+          This is a new service, <a href="/about/contact" class="govuk-link govuk-link--no-visited-state">your feedback</a> will help us improve.
+        </span>
+      </p>
+    </div>
+    {{ govukBackLink({
+    text: "Back",
+    href: "/prototype-2/ban-length"
+  }) }}
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers</h1>
+      
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Prison sentence</h2>
+      
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-8',
+        rows: [
+          {
+            key: {
+              text: "Date of conviction"
+            },
+            value: {
+              text: "10 June 2011"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " date of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Length of sentence"
+            },
+            value: {
+              html: "6 months"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "length of sentence"
+                }
+              ]
+            }
+          },
+          {            
+            key: {
+              text: "Electronic tag"
+            },
+            value: {
+              html: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " electronic tag"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+    </div>
+  </div>
+{% endblock %}
