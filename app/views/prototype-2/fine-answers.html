@@ -27,7 +27,123 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h1 class="govuk-heading-xl">Check your answers</h1>
+      <h1 class="govuk-heading-xl">What you've told us so far</h1>
+      
+      <h2 class="govuk-heading-l">Conviction 1</h2>
+      
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-2">Suspended prison sentence</h3>
+      
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-8',
+        rows: [
+          {
+            key: {
+              text: "Date of conviction"
+            },
+            value: {
+              text: "01 August 2009"
+            }
+          },
+          {
+            key: {
+              text: "Length of sentence"
+            },
+            value: {
+              html: "3 months"
+            }
+          },
+          {            
+            key: {
+              text: "Electronic tag"
+            },
+            value: {
+              html: "No"
+            }
+          },
+          {            
+            key: {
+              text: "Age"
+            },
+            value: {
+              html: "18 or over"
+            }
+          }
+        ]
+      }) }}
+      
+      <h2 class="govuk-heading-l">Conviction 2</h2>
+      
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-2">Prison sentence</h3>
+      
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-8',
+        rows: [
+          {
+            key: {
+              text: "Date of conviction"
+            },
+            value: {
+              text: "10 June 2011"
+            }
+          },
+          {
+            key: {
+              text: "Length of sentence"
+            },
+            value: {
+              html: "6 months"
+            }
+          },
+          {            
+            key: {
+              text: "Electronic tag"
+            },
+            value: {
+              html: "No"
+            }
+          },
+          {            
+            key: {
+              text: "Age"
+            },
+            value: {
+              html: "18 or over"
+            }
+          }
+        ]
+      }) }}
+      
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Restraining order</h2>
+      
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-8',
+        rows: [
+          {
+            key: {
+              text: "Date of conviction"
+            },
+            value: {
+              text: "10 June 2011"
+            }
+          },
+          {
+            key: {
+              text: "Length of sentence"
+            },
+            value: {
+              html: "Until further order"
+            }
+          },
+          {            
+            key: {
+              text: "Age"
+            },
+            value: {
+              html: "18 or over"
+            }
+          }     
+        ]
+      }) }}
       
       <h2 class="govuk-heading-m govuk-!-margin-bottom-2">A fine</h2>
       
@@ -40,21 +156,18 @@
             },
             value: {
               text: "10 June 2011"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: " date of conviction"
-                }
-              ]
             }
-          }    
+          },
+          {            
+            key: {
+              text: "Age"
+            },
+            value: {
+              html: "18 or over"
+            }
+          }   
         ]
       }) }}
-      
-      <h2 class="govuk-heading-l">Continue</h2>
 
       <form action="/prototype-2/add-another-sentence" method="post" novalidate>
 
