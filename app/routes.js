@@ -83,7 +83,7 @@ router.post('/prototype-2/restraining-order-date-answer', function (req, res) {
     } else if (restrainingOrder === 'years') {
       res.redirect('/prototype-2/community-order/restraining-order/restraining-order-date-2')
     } else {
-      res.redirect('/prototype-2/check-your-answers/check-your-answers')
+      res.redirect('/prototype-2/community-order/restraining-order/restraining-order-answers')
     }
   })
 
