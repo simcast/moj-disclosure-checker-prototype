@@ -87,6 +87,18 @@
           }
         ]
       }) }}
+      
+      <h2 class="govuk-heading-l">Continue</h2>
+
+      <form action="/prototype-2/add-another-sentence" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
     </div>
   </div>
 {% endblock %}
