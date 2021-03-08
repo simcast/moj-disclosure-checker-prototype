@@ -11,7 +11,7 @@ router.post('/caution-type-answer', function (req, res) {
 
   let cautionAge = req.session.data['caution-age']
 
-  if (cautionConviction === 'Under 18') {
+  if (cautionAge === 'Under 18') {
     res.redirect('/prototype-2/caution/caution-type')
   }  else {
     res.redirect('/prototype-2/start-page')
