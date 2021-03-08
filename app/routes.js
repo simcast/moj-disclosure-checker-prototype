@@ -5,6 +5,7 @@ const router = express.Router()
 
 // Were you cautioned or convicted?
 
+/*
 router.post('/how-old-were-you-answer', function (req, res) {
 
   let cautionConviction = req.session.data['caution-conviction']
@@ -15,6 +16,7 @@ router.post('/how-old-were-you-answer', function (req, res) {
     res.redirect('/prototype-2/start-page')
   }
 })
+*/
 
 // Conviction type
 
