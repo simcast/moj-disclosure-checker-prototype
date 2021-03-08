@@ -1,1 +1,66 @@
+{% extends "layout.html" %}
 
+{% block pageTitle %}
+  Check when to disclose cautions or convictions
+{% endblock %}
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag ">beta</strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service, <a href="/about/contact" class="govuk-link govuk-link--no-visited-state">your feedback</a> will help us improve.
+      </span>
+    </p>
+  </div>
+    {{ govukBackLink({
+    text: "Back",
+    href: "/prototype-2/start-page"
+  }) }}
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/how-old-were-you-answer" accept-charset="UTF-8" method="post">
+
+      {{ govukRadios({
+        idPrefix: "caution-type",
+        name: "caution-type",
+        fieldset: {
+          legend: {
+            text: "What type of caution did you get?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl"
+          }
+        },
+        items: [
+          {
+            value: "Youth caution",
+            text: "Youth caution",
+            hint: {
+              text: "You did not have to agree to any conditions"
+            }
+          },
+          {
+            value: "Youth conditional caution",
+            text: "Youth conditional caution",
+            hint: {
+              text: "You agreed to certain conditions, such as paying a fine or learning about the effects of drugs"
+            }
+          }
+        ]
+      }) }}
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+    </form>
+  </div>
+</div>
+
+{% endblock %}
