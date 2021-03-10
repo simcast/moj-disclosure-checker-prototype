@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 
+{% set pageCaption = 'Name of conviction' %}
+
 {% block pageTitle %}
   Check when to disclose cautions or convictions
 {% endblock %}
@@ -29,6 +31,7 @@
         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
+              <span class="govuk-caption-xl">{{pageCaption}}</span>
               Were you given other sentences as part of this conviction?
             </h1>
           </legend>
