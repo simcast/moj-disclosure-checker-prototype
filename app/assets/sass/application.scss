@@ -108,6 +108,11 @@ $govuk-global-styles: true;
   background: govuk-tint(govuk-colour("red"), 80);
 }
 
+// delete link
+
+.moj-link--red {
+  color: govuk-color ("red");
+}
 // results box
 
 .moj-results-box {
