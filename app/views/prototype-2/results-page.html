@@ -29,27 +29,24 @@
         
         <p class="govuk-body">This conviction was spent on 10 December 2013.</p>
 
-        {{ govukSummaryList({
-          rows: [
-            {
-              key: {
-                text: "Date of conviction"
-              },
-              key.classes: govuk-!-width-one-third govuk-!-font-weight-regular,
-              value: {
-                text: "01 August 2009"
-              }
-            },
-            {
-              key: {
-                text: "Age"
-              },
-              value: {
-                text: "18 or over"
-              }
-            }
-          ]
-        }) }}
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
+              Date of conviction
+            </dt>
+            <dd class="govuk-summary-list__value">
+              01 August 2009
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
+              Age
+            </dt>
+            <dd class="govuk-summary-list__value">
+              18 or over
+            </dd>
+          </div>
+        </dl>
         
         <h3 class="govuk-heading-m">Suspended prison sentence</h3>
             
@@ -93,26 +90,24 @@
         
         <p class="govuk-body">This conviction is unspent until further order.</p>
         
-        {{ govukSummaryList({
-          rows: [
-            {
-              key: {
-                text: "Date of conviction"
-              },
-              value: {
-                text: "10 June 2011"
-              }
-            },
-            {
-              key: {
-                text: "Age"
-              },
-              value: {
-                text: "18 or over"
-              }
-            }
-          ]
-        }) }}
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
+              Date of conviction
+            </dt>
+            <dd class="govuk-summary-list__value">
+              10 June 2011
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
+              Age
+            </dt>
+            <dd class="govuk-summary-list__value">
+              18 or over
+            </dd>
+          </div>
+        </dl>
 
         <h3 class="govuk-heading-m">Prison sentence</h3>
         
