@@ -112,6 +112,10 @@ $govuk-global-styles: true;
 
 .moj-link--red {
   color: govuk-colour("red") !important; //override default blue colour
+  
+  &:hover {
+    color:#942514 !important;
+  }
 }
 // results box
 
