@@ -116,6 +116,10 @@ $govuk-global-styles: true;
   &:hover {
     color:#942514 !important;
   }
+  
+  &:focus {
+    color: govuk-colour("black") !important;
+  }
 }
 // results box
 
