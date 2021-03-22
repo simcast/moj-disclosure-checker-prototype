@@ -228,3 +228,8 @@ $govuk-global-styles: true;
     border: 0
 }
 
+//MOJ button group
+
+.moj-button-group--right {
+  flex-direction: row-reverse;
+}
