@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Your results - Check when to disclose cautions or convictions
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        You have unspent cautions or convictions
+      </h1>
+      <p>Your results are calculated using the information you have given and the current law. Read more about <a class="govuk-link" href="https://www.gov.uk/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give">what a spent caution or conviction is</a> on GOV.UK.</p>
+      
+      <div class="moj-results-box govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-5">
+          Conviction 1 <span class="govuk-visually-hidden">has been</span><strong class="govuk-tag govuk-tag--green">Spent</strong>
+        </h2>
+        
+        <p class="govuk-body">This conviction was given on 2 August 2015 and was spent on 7 May 2019.</p>
+
+        <h3 class="govuk-heading-m">Custodial prison sentence</h3>
+            
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
+              Date of sentence
+            </dt>
+            <dd class="govuk-summary-list__value">
+              27 May 2015
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
+              Length of sentence
+            </dt>
+            <dd class="govuk-summary-list__value">
+              4 months
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
+              Electronic tag
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No
+            </dd>
+          </div>
+        </dl>
+        
+        <div class="govuk-inset-text">
+          This <strong>will not</strong> appear on a <a class="govuk-link" href="#discloure-and-barring-service">basic DBS check</a>.
+          <br>
+          This <strong>may</strong> appear on a <a class="govuk-link" href="#discloure-and-barring-service" >standard or enhanced DBS check</a>. 
+        </div>
+      </div>
+      
+      <div class="moj-results-box govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-5">
+          Conviction 2 <span class="govuk-visually-hidden">has been</span><strong class="govuk-tag govuk-tag--green">Spent</strong>
+        </h2>
+      
+        <h3 class="govuk-heading-m">Motoring disqualification</h3>
+        
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
+              Date of sentence
+            </dt>
+            <dd class="govuk-summary-list__value">
+              5 February 2018
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
+              Length of sentence
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2 years
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
+              Electronic tag
+            </dt>
+            <dd class="govuk-summary-list__value">
+              No
+            </dd>
+          </div>
+        </dl>
+      </div>
+    
+      <h2 class="govuk-heading-l" id="dbs-checks-and-results">
+        Using your results
+      </h2>
+      
+      <p class="govuk-body">Your results are correct if you served your sentence in full as the court ordered you to. The conviction might not be spent if you did not stick to the terms of your sentence.</p>
+
+      <p class="govuk-body">You do not have to tell anyone about spent cautions or convictions unless you are asked. And employers and other organisations can only ask if they have a good reason. Read more about <a class="govuk-link" href="www.gov.uk/tell-employer-or-college-about-criminal-record/what-information-you-need-to-give">this on GOV.UK</a>.
+      </p>
+      
+      <h3 id="discloure-and-barring-service" class="govuk-heading-m">
+        Disclosure and Barring Service (DBS) checks 
+      </h3>
+      
+      <p class="govuk-body">DBS checks are criminal record checks. If you’re applying for a job, university, college or insurance, you may be told a DBS check is needed. You should also be told what type of check will be done.</p>
+      <p class="govuk-body">Criminal record checks are usually done through the Disclosure and Barring Service (DBS).</p>
+      <p class="govuk-body">Some spent cautions and convictions are ‘<a class="govuk-link" href="https://www.gov.uk/government/publications/dbs-filtering-guidance">protected</a>’ and will not show on a DBS certificate.</p>
+
+      <p>Criminal record checks are usually done through the <a class="govuk-link" href="https://www.gov.uk/government/organisations/disclosure-and-barring-service">Disclosure and Barring Service (DBS)</a>. The 4 types of DBS checks are:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Basic - shows only cautions and convictions that are not spent.</li>
+        <li>Standard - shows all convictions, cautions, reprimands and final warnings, even if they’re spent</li>
+        <li>Enhanced - shows the same information as a standard check but also includes any information held by the police that they think is relevant to your application.</li>
+        <li>Enhanced with barred list - shows the same information as an enhanced check but also tells employers if you’ve been barred from doing the role you’re applying for</li>
+      </ul>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}
