@@ -235,18 +235,38 @@ $govuk-global-styles: true;
 }
 // MOJ panel
 .moj-panel {
-  font-family: "nta", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.25;
-  box-sizing: border-box;
-  margin-bottom: 15px;
-  padding: 35px;
-  border: 5px solid transparent;
-  text-align: center;
+    @include govuk-font($size: 19);
+
+    box-sizing: border-box;
+
+    margin-bottom: govuk-spacing(3);
+    padding: govuk-spacing(7) - $govuk-border-width;
+
+    border: $govuk-border-width solid transparent;
+
+    text-align: center;
+
+    @include govuk-media-query($until: tablet) {
+      padding: govuk-spacing(6) - $govuk-border-width;
+    }
+  
+  .moj-panel__title {
+    margin-top: 0;
+    margin-bottom: govuk-spacing(6);
+
+    @include govuk-font($size: 48, $weight: bold);
+  }
+  
+  .moj-panel-body {
+  }
+
+  .moj-panel__title:last-child {
+    margin-bottom: 0;
+  }
+
+  .moj-panel__body {
+    @include govuk-font($size: 36);
+  }
 }
 .moj-panel--green {
   border:5px solid govuk-colour("green");
