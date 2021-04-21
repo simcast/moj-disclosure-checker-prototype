@@ -256,16 +256,13 @@ $govuk-global-styles: true;
 
     @include govuk-font($size: 48, $weight: bold);
   }
-  
-  .moj-panel-body {
-  }
 
   .moj-panel__title:last-child {
     margin-bottom: 0;
   }
 
   .moj-panel__body {
-    @include govuk-font($size: 36);
+    @include govuk-font($size: 24);
   }
 }
 .moj-panel--green {
