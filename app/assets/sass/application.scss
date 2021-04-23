@@ -124,8 +124,8 @@ $govuk-global-styles: true;
 
 //Link on the right
 .moj-link--right {
-  display:inline-block;
-  margin:10px 0;
+  float:right;
+  margin:5px 0;
 }
 .moj-heading--left {
   display:inline-block;
