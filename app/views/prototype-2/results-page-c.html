@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 
+{% set 
+
 {% block pageTitle %}
   Your results - Check when to disclose cautions or convictions
 {% endblock %}
@@ -81,7 +83,8 @@
         
         {{ govukDetails({
           summaryText: "Help with nationality",
-          html: "        <dl class="govuk-summary-list">
+          html:
+          <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
               Date of sentence
@@ -90,7 +93,7 @@
               18 September 2014
             </dd>
           </div>
-        </dl>",
+        </dl>
         }) }}
         
       
