@@ -24,6 +24,8 @@
         </h2>
         
         <p class="govuk-body">This conviction was given on 2 February 2010 and was spent on 2 February 2011.</p>
+        
+        <h3 class="govuk-heading-m">What you've told us</h3>
 
         <details class="govuk-details" data-module="govuk-details" open="">
           <summary class="govuk-details__summary">
@@ -31,32 +33,34 @@
               Custodial prison sentence
             </span>
           </summary>
-          <div class="govuk-details__text"><dl class="govuk-summary-list">
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
-                      Date of sentence
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                      27 May 2015
-                    </dd>
-                  </div>
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
-                      Length of sentence
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                      4 months
-                    </dd>
-                  </div>
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
-                      Electronic tag
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                      No
-                    </dd>
-                  </div>
-                </dl></div>
+          <div class="govuk-details__text">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                 <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
+                   Date of sentence
+                 </dt>
+                 <dd class="govuk-summary-list__value">
+                   27 May 2015
+                 </dd>
+               </div>
+               <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
+                        Length of sentence
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        4 months
+                      </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
+                    Electronic tag
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    No
+                  </dd>
+                </div>
+             </dl>
+            </div>
         </details>
         
         <div class="govuk-inset-text">
@@ -75,7 +79,9 @@
         
         <h3 class="govuk-heading-m">Fine</h3>
         
-        <dl class="govuk-summary-list">
+        {{ govukDetails({
+          summaryText: "Help with nationality",
+          html: "        <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key govuk-!-width-one-third govuk-!-font-weight-regular">
               Date of sentence
@@ -84,7 +90,9 @@
               18 September 2014
             </dd>
           </div>
-        </dl>
+        </dl>"
+        }) }}
+        
       
         <h3 class="govuk-heading-m">Motoring disqualification</h3>
         
