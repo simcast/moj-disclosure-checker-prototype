@@ -121,6 +121,15 @@ $govuk-global-styles: true;
     color: govuk-colour("black") !important;
   }
 }
+
+//Link on the right
+.moj-link--right {
+  display:inline-block;
+  margin:10px 0;
+}
+.moj-heading--left {
+  display:inline-block;
+}
 // results box
 
 .moj-results-box {
