@@ -252,17 +252,43 @@
 
         </div>
       </div> 
-      <!--
+      
       <form action="/prototype-2/add-another-caution-or-conviction" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
+        
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          idPrefix: "continue",
+          name: "continue",
+          fieldset: {
+            legend: {
+              text: "Do you want to add another caution or conviction?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "This includes changing your last name or spelling your name differently."
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
 
         {{ govukButton({
           text: "Continue"
         }) }}
 
       </form>
-      -->
+     
     </div>
   </div>
 {% endblock %}
