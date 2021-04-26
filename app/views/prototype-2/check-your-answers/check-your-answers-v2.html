@@ -238,22 +238,19 @@
       
       <h2 class="govuk-heading-l">Next steps</h2>
       
-      {% from "moj/components/button-menu/macro.njk" import mojButtonMenu %}
+      <div class="moj-button-menu">
+        <div class="moj-button-menu__wrapper">
 
-      {{ mojButtonMenu({
-        items: [{
-        text: "Primary action",
-        href: "#"
-        }, {
-        text: "Second action",
-        href: "#",
-        classes: "govuk-button--secondary"
-        }, {
-        text: "Third action",
-        href: "#",
-        classes: "govuk-button--secondary"
-        }]
-      }) }} 
+          <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary moj-button-menu__item" data-module="govuk-button">
+            Add a caution or conviction
+          </a>
+
+          <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item" data-module="govuk-button">
+            Your results
+          </a>
+
+        </div>
+      </div> 
       
       <form action="/prototype-2/add-another-caution-or-conviction" method="post" novalidate>
 
