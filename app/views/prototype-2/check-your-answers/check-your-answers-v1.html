@@ -1,0 +1,264 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers - Check when to disclose cautions or convictions
+{% endblock %}
+{% block beforeContent %}
+    <div class="govuk-phase-banner">
+      <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag ">beta</strong>
+        <span class="govuk-phase-banner__text">
+          This is a new service, <a href="/about/contact" class="govuk-link govuk-link--no-visited-state">your feedback</a> will help us improve.
+        </span>
+      </p>
+    </div>
+    {{ govukBackLink({
+    text: "Back",
+    href: "/prototype-2/ban-length"
+  }) }}
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Check your answers</h1>
+      
+      <p class="govuk-body">You can add more sentences to the convictions you’ve told us about on this page. You will be able to add more convictions later.</p>
+
+      <h2 class="govuk-heading-l govuk-!-margin-bottom-3">Conviction 1</h2>
+
+      <div class="moj-heading govuk-!-margin-bottom-3">
+        <h3 class="govuk-heading-m govuk-!-margin-bottom-1 moj-heading--left">Sentence 1</h3>
+        <a class="govuk-link moj-link--red govuk-body moj-link--right" href="x">Remove this sentence</a>
+      </div>
+      
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-4',
+        rows: [
+          {
+            key: {
+              text: "Type of conviction"
+            },
+            value: {
+              text: "Prison sentence"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " date of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Date of conviction"
+            },
+            value: {
+              text: "6 June 2010 (approximate date)"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " date of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Length of sentence"
+            },
+            value: {
+              html: "12 months"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "length of sentence"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+      
+      <p class="govuk-body">If you were given more than one sentence as part of this conviction you must add it now.</p>
+      
+      <div class="govuk-button-group govuk-!-margin-bottom-6">
+        <button class="govuk-button govuk-button--secondary" href="x">Add another sentence</button>
+        <!--<a class="govuk-link moj-link--red" href="x">Remove this sentence</a>-->
+      </div>
+
+      <h2 class="govuk-heading-l govuk-!-margin-bottom-4">Conviction 2</h2>
+      
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-1">Sentence 1</h3>
+      
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-4',
+        rows: [
+          {
+            key: {
+              text: "Type of conviction"
+            },
+            value: {
+              text: "Prison sentence"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " type of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Date of conviction"
+            },
+            value: {
+              text: "6 June 2010 (approximate date)"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " date of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Length of sentence"
+            },
+            value: {
+              html: "12 months"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "length of sentence"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+      
+      <div class="govuk-button-group moj-button-group--right govuk-!-margin-bottom-1">
+        <a class="govuk-link moj-link--red govuk-body" href="x">Remove this sentence</a>
+      </div>
+      
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-2">Sentence 2</h3>
+      
+      {{ govukSummaryList({
+        classes: 'govuk-!-margin-bottom-4',
+        rows: [
+          {
+            key: {
+              text: "Type of conviction"
+            },
+            value: {
+              text: "Fine"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " date of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Date of conviction"
+            },
+            value: {
+              text: "2 January 2021 (approximate date)"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: " date of conviction"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Length of sentence"
+            },
+            value: {
+              html: "12 months"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "length of sentence"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+      <div class="govuk-button-group moj-button-group--right govuk-!-margin-bottom-1">
+        <a class="govuk-link moj-link--red govuk-body" href="x">Remove this sentence</a>
+      </div>
+      
+      <p class="govuk-body">If you were given more than one sentence as part of this conviction you must add it now.</p>
+      
+      <div class="govuk-button-group govuk-!-margin-bottom-6">
+        <button class="govuk-button govuk-button--secondary" href="x">Add another sentence</button>
+        <!--<a class="govuk-link moj-link--red" href="x">Remove this sentence</a>-->
+      </div>
+      
+      <h2 class="govuk-heading-l">Next steps</h2>
+      
+      <div class="moj-button-menu">
+        <div class="moj-button-menu__wrapper">
+
+          <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary moj-button-menu__item" data-module="govuk-button">
+            Add a caution or conviction
+          </a>
+
+          <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item" data-module="govuk-button">
+            Your results
+          </a>
+
+        </div>
+      </div> 
+      <!--
+      <form action="/prototype-2/add-another-caution-or-conviction" method="post" novalidate>
+        <input type="hidden" name="answers-checked" value="true">
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+      </form>
+      -->
+    </div>
+  </div>
+{% endblock %}
