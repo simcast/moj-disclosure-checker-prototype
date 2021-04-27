@@ -30,77 +30,80 @@
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Check your answers</h1>
       
       <p class="govuk-body">You can add more sentences to the convictions you’ve told us about on this page. You will be able to add more convictions later.</p>
+      
+      <div class="moj-results-box govuk-!-margin-bottom-3">
+        
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-3">Conviction 1</h2>
 
-      <h2 class="govuk-heading-l govuk-!-margin-bottom-3">Conviction 1</h2>
+        <h3 class="govuk-heading-m govuk-!-margin-bottom-1 moj-heading--left">Sentence 1</h3>
 
-      <h3 class="govuk-heading-m govuk-!-margin-bottom-1 moj-heading--left">Sentence 1</h3>
-      
-      {{ govukSummaryList({
-        classes: 'govuk-!-margin-bottom-4',
-        rows: [
-          {
-            key: {
-              text: "Type of conviction"
+        {{ govukSummaryList({
+          classes: 'govuk-!-margin-bottom-4',
+          rows: [
+            {
+              key: {
+                text: "Type of conviction"
+              },
+              value: {
+                text: "Prison sentence"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: " date of conviction"
+                  }
+                ]
+              }
             },
-            value: {
-              text: "Prison sentence"
+            {
+              key: {
+                text: "Date of conviction"
+              },
+              value: {
+                text: "6 June 2010 (approximate date)"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: " date of conviction"
+                  }
+                ]
+              }
             },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: " date of conviction"
-                }
-              ]
+            {
+              key: {
+                text: "Length of sentence"
+              },
+              value: {
+                html: "12 months"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "length of sentence"
+                  }
+                ]
+              }
             }
-          },
-          {
-            key: {
-              text: "Date of conviction"
-            },
-            value: {
-              text: "6 June 2010 (approximate date)"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: " date of conviction"
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: "Length of sentence"
-            },
-            value: {
-              html: "12 months"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "length of sentence"
-                }
-              ]
-            }
-          }
-        ]
-      }) }}
-      
-      <div class="govuk-button-group moj-button-group--right govuk-!-margin-bottom-1">
-        <a class="govuk-link moj-link--red govuk-body" href="x">Remove this sentence</a>
-      </div>
-      
-      <p class="govuk-body">If you were given more than one sentence as part of this conviction you must add it now.</p>
-      
-      <div class="govuk-button-group govuk-!-margin-bottom-6">
-        <button class="govuk-button govuk-button--secondary" href="x">Add another sentence</button>
-        <!--<a class="govuk-link moj-link--red" href="x">Remove this sentence</a>-->
+          ]
+        }) }}
+
+        <div class="govuk-button-group moj-button-group--right govuk-!-margin-bottom-1">
+          <a class="govuk-link moj-link--red govuk-body" href="x">Remove this sentence</a>
+        </div>
+
+        <p class="govuk-body">If you were given more than one sentence as part of this conviction you must add it now.</p>
+
+        <div class="govuk-button-group govuk-!-margin-bottom-6">
+          <button class="govuk-button govuk-button--secondary" href="x">Add another sentence</button>
+          <!--<a class="govuk-link moj-link--red" href="x">Remove this sentence</a>-->
+        </div>
       </div>
 
       <h2 class="govuk-heading-l govuk-!-margin-bottom-4">Conviction 2</h2>
