@@ -127,6 +127,12 @@ $govuk-global-styles: true;
   float:right;
   margin:5px 0;
 }
+@media (min-width: 40.0625em) {
+  .moj-link--right {
+    margin:0; // ensures remove link is level on mobile and tablet
+    float:right;
+  }
+}
 
 .moj-heading--left {
   display:inline-block;
