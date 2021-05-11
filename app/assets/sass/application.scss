@@ -129,8 +129,8 @@ $govuk-global-styles: true;
 }
 @media (min-width: 40.0625em) {
   .moj-link--right {
-    margin:0; // ensures remove link is level on mobile and tablet
-    float:right;
+    display:block; // ensures the remove link falls under the h3 title to match the check your answers pattern
+    margin:5px 0 15px; // ensures equal spacing to match the check your answers pattern
   }
 }
 
