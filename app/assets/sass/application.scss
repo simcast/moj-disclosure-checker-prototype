@@ -130,6 +130,7 @@ $govuk-global-styles: true;
 @media (max-width: 40.0625em) {
   .moj-link--right {
     display:block; // ensures the remove link falls under the h3 title to match the check your answers pattern
+    float:none;
     margin:5px 0 15px; // ensures equal spacing to match the check your answers pattern
   }
 }
